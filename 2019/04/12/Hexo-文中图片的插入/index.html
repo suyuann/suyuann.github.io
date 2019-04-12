@@ -2,19 +2,24 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Hexo</title>
+<title>Hexo 文中图片的插入 - Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+    <meta name="description" content="Blog">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 文中图片的插入">
+<meta property="og:url" content="http://yoursite.com/2019/04/12/Hexo-文中图片的插入/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-04-12T14:19:30.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Hexo 文中图片的插入">
+<meta name="twitter:description" content="Blog">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -89,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hexo" height="28">
+                <img src="/images/logo.svg" alt="Hexo 文中图片的插入" height="28">
             
             </a>
         </div>
@@ -97,7 +102,7 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active" href="/">Home</a>
+                <a class="navbar-item" href="/">Home</a>
                 
                 <a class="navbar-item" href="/archives">Archives</a>
                 
@@ -134,48 +139,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T14:22:59.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-只显示文章部分内容的设置/">Hexo 只显示文章部分内容的设置</a>
-            
-        </h1>
-        <div class="content">
-            <p>当文章内容太长却在博客界面全文显示时，很影响其他文章内容的概览，为了让博客界面的每一篇文章只显示文章摘要等一小部分重要信息作为文章内容的预览，可采用 <code>&lt;!--more--&gt;</code> 手动进行文章内容的截断。</p>
-<p>使用 <code>&lt;!--more--&gt;</code> 标签时，只需将其放在文中合适的位置即可。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
@@ -190,21 +154,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-文中图片的插入/">Hexo 文中图片的插入</a>
+                Hexo 文中图片的插入
             
         </h1>
         <div class="content">
             <p>直接在 Markdown 编辑器中进行图片的插入会导致发布到博客后图片无法正常显示，本文主要介绍两种图片插入的方法。</p>
+<a id="more"></a>
+<h2 id="方法一：文章资源文件夹"><a href="#方法一：文章资源文件夹" class="headerlink" title="方法一：文章资源文件夹"></a>方法一：文章资源文件夹</h2><p>将 <code>\Hexo</code> 目录下的 <code>_config.yml</code> 配置文件中的 “post_asset_folder: false” 改为 “post_asset_folder: true”，再执行文章创建命令 <code>$ hexo new &quot;article title&quot;</code>  时，将会在  <code>\ _posts</code> 目录下生成一个与所创建的文章标题同名的文件夹。</p>
+<p>将要插入的图片放在生成的该文件夹内，引用时，首先将图片拖入文中，然后对 Markdown 中图片的引用格式作如下的修改：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图题](文章标题\picturename.png)</span><br></pre></td></tr></table></figure>
+<p>其中 “picture name” 为所引用图片的名称。</p>
+<p>通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确，为了解决这个问题，可以采用如下的方法进行图片的引用：</p>
+<h2 id="方法二：相对路径引用的标签插件"><a href="#方法二：相对路径引用的标签插件" class="headerlink" title="方法二：相对路径引用的标签插件"></a>方法二：相对路径引用的标签插件</h2><p>标签插件的下载：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p>或者通过：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
+<p>插件下载成功后，将要插入的图片放在文章资源文件夹中，文章中图片的引用格式如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img picturename.jpg 图题 %&#125;</span><br></pre></td></tr></table></figure>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/Hexo-文中图片的插入/#more">Read More</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -214,141 +192,26 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T13:36:37.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-文章的发布/">Hexo 文章的发布</a>
-            
-        </h1>
-        <div class="content">
-            <p>用 Hexo 框架结合 Github pages 搭建好博客平台后，接下来便是博客文章的创建和发布，本文主要对博客文章的创建和发布方法做了详细介绍。</p>
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/12/Hexo-只显示文章部分内容的设置/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Hexo 只显示文章部分内容的设置</span>
+            </a>
         </div>
         
         
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/Hexo-文章的发布/#more">Read More</a>
-                </div>
-            </div>
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/12/Hexo-文章的发布/">
+                <span class="level-item">Hexo 文章的发布</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T12:42:56.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-常用指令/">Hexo 常用指令</a>
-            
-        </h1>
-        <div class="content">
-            <p>Hexo 是一个快速、简洁而且高效的博客框架，本文主要对 Hexo 的常用指令含义和用法作简要说明。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/Hexo-常用指令/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-10T11:21:56.738Z">2019-04-10</time>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/10/hello-world/">Hello World</a>
-            
-        </h1>
-        <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/10/hello-world/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
@@ -816,7 +679,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Hexo" height="28">
+                    <img src="/images/logo.svg" alt="Hexo 文中图片的插入" height="28">
                 
                 </a>
                 <p class="is-size-7">

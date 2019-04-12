@@ -2,19 +2,23 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Hexo</title>
+<title>second blog - Hexo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+    <meta name="description" content="this is my second blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="second blog">
+<meta property="og:url" content="http://yoursite.com/2019/04/12/second-blog/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="this is my second blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-04-12T12:29:51.484Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="second blog">
+<meta name="twitter:description" content="this is my second blog">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -89,7 +93,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hexo" height="28">
+                <img src="/images/logo.svg" alt="second blog" height="28">
             
             </a>
         </div>
@@ -97,7 +101,7 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active" href="/">Home</a>
+                <a class="navbar-item" href="/">Home</a>
                 
                 <a class="navbar-item" href="/archives">Archives</a>
                 
@@ -134,18 +138,13 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    <div class="card">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T14:22:59.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2019-04-12T12:23:19.000Z">2019-04-12</time>
                 
                 
                 
@@ -154,12 +153,31 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-只显示文章部分内容的设置/">Hexo 只显示文章部分内容的设置</a>
+                second blog
             
         </h1>
         <div class="content">
-            <p>当文章内容太长却在博客界面全文显示时，很影响其他文章内容的概览，为了让博客界面的每一篇文章只显示文章摘要等一小部分重要信息作为文章内容的预览，可采用 <code>&lt;!--more--&gt;</code> 手动进行文章内容的截断。</p>
-<p>使用 <code>&lt;!--more--&gt;</code> 标签时，只需将其放在文中合适的位置即可。</p>
+            <p>这篇博客主要对ICARUS主题的个性化配置做了相关的说明。</p>
+<a id="more"></a>
+<p>ont-size: 14px</p>
+<p>rem表示相对长度单位，相对于根元素font-size计算的倍数</p>
+<p>navbar：导航栏</p>
+<p>pagination：编页码</p>
+<p>margin-left：左外边距</p>
+<p>pedding-left：左边距</p>
+<p>first-child：第一个元素</p>
+<p>blockquote：块引用</p>
+<p>padding-top：顶部间隙</p>
+<p>hsl：代表色相、饱和度、明度三个通道的颜色。H为色相，S为饱和度，L为明度，每种成分范围为0~255（0为黑，255为白）</p>
+<p>icon fixes：图标固定</p>
+<p>font-weight：字体加粗</p>
+<p>em：相对长度单位，指相对于当前对象内文本的字体尺寸</p>
+<p>任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。</p>
+<p>font-family：规定元素的字体系列，ont-family 可以把多个字体名称作为一个“回退”系统来保存。如果浏览器不支持第一个字体，则会尝试下一个。也就是说，font-family 属性的值是用于某个元素的字体族名称或/及类族名称的一个优先表。浏览器会使用它可识别的第一个值。</p>
+<p>rem是[CSS3]新增的一个相对单位（root em，根em），这个单位引起了广泛关注。这个单位与em有什么区别呢？区别在于使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。目前，除了IE8及更早版本外，所有浏览器均已支持rem。</p>
+<p>family-mono：明兰_Mono字体家族系列主要提供Bold,Regular等字体风格样式。</p>
+<p>figcaption：图幅</p>
+<p>span：跨度</p>
 
         </div>
         
@@ -172,183 +190,19 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T14:04:54.000Z">2019-04-12</time>
-                
-                
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/12/This-is-a-test/">
+                <span class="level-item">This is a test</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-文中图片的插入/">Hexo 文中图片的插入</a>
-            
-        </h1>
-        <div class="content">
-            <p>直接在 Markdown 编辑器中进行图片的插入会导致发布到博客后图片无法正常显示，本文主要介绍两种图片插入的方法。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/Hexo-文中图片的插入/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T13:36:37.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-文章的发布/">Hexo 文章的发布</a>
-            
-        </h1>
-        <div class="content">
-            <p>用 Hexo 框架结合 Github pages 搭建好博客平台后，接下来便是博客文章的创建和发布，本文主要对博客文章的创建和发布方法做了详细介绍。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/Hexo-文章的发布/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T12:42:56.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-常用指令/">Hexo 常用指令</a>
-            
-        </h1>
-        <div class="content">
-            <p>Hexo 是一个快速、简洁而且高效的博客框架，本文主要对 Hexo 的常用指令含义和用法作简要说明。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/Hexo-常用指令/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-10T11:21:56.738Z">2019-04-10</time>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/10/hello-world/">Hello World</a>
-            
-        </h1>
-        <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/10/hello-world/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
@@ -394,7 +248,7 @@
                         Entradas
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        4
                     </p>
                 </div>
             </div>
@@ -477,12 +331,12 @@
             </h3>
             <ul class="menu-list">
             <li>
-        <a class="level is-marginless" href="/categories/Blog/">
+        <a class="level is-marginless" href="/categories/Machine-Learning/">
             <span class="level-start">
-                <span class="level-item">Blog</span>
+                <span class="level-item">Machine Learning</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">1</span>
             </span>
         </a></li>
             </ul>
@@ -502,35 +356,16 @@
         
         <article class="media">
             
-            <a href="/2019/04/12/Hexo-只显示文章部分内容的设置/" class="media-left">
+            <a href="/2019/04/12/second-blog/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo 只显示文章部分内容的设置">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="second blog">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T14:22:59.000Z">2019-04-12</time></div>
-                    <a href="/2019/04/12/Hexo-只显示文章部分内容的设置/" class="has-link-black-ter is-size-6">Hexo 只显示文章部分内容的设置</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/04/12/Hexo-文中图片的插入/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo 文中图片的插入">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T14:04:54.000Z">2019-04-12</time></div>
-                    <a href="/2019/04/12/Hexo-文中图片的插入/" class="has-link-black-ter is-size-6">Hexo 文中图片的插入</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T12:23:19.000Z">2019-04-12</time></div>
+                    <a href="/2019/04/12/second-blog/" class="has-link-black-ter is-size-6">second blog</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -540,18 +375,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/12/Hexo-文章的发布/" class="media-left">
+            <a href="/2019/04/12/This-is-a-test/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo 文章的发布">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="This is a test">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T13:36:37.000Z">2019-04-12</time></div>
-                    <a href="/2019/04/12/Hexo-文章的发布/" class="has-link-black-ter is-size-6">Hexo 文章的发布</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T06:27:50.000Z">2019-04-12</time></div>
+                    <a href="/2019/04/12/This-is-a-test/" class="has-link-black-ter is-size-6">This is a test</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                        
                     </p>
                 </div>
             </div>
@@ -559,18 +394,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/12/Hexo-常用指令/" class="media-left">
+            <a href="/2019/04/11/Empirirical-Risk-Minimization/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo 常用指令">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Empirirical Risk Minimization">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T12:42:56.000Z">2019-04-12</time></div>
-                    <a href="/2019/04/12/Hexo-常用指令/" class="has-link-black-ter is-size-6">Hexo 常用指令</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-11T14:16:29.000Z">2019-04-11</time></div>
+                    <a href="/2019/04/11/Empirirical-Risk-Minimization/" class="has-link-black-ter is-size-6">Empirirical Risk Minimization</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -613,7 +448,7 @@
                     <span class="level-item">April 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -632,9 +467,9 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Hexo/">
-                        <span class="tag">Hexo</span>
-                        <span class="tag is-grey">4</span>
+                    <a class="tags has-addons" href="/tags/ERM/">
+                        <span class="tag">ERM</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -663,35 +498,16 @@
         
         <article class="media">
             
-            <a href="/2019/04/12/Hexo-只显示文章部分内容的设置/" class="media-left">
+            <a href="/2019/04/12/second-blog/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo 只显示文章部分内容的设置">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="second blog">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T14:22:59.000Z">2019-04-12</time></div>
-                    <a href="/2019/04/12/Hexo-只显示文章部分内容的设置/" class="has-link-black-ter is-size-6">Hexo 只显示文章部分内容的设置</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/04/12/Hexo-文中图片的插入/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo 文中图片的插入">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T14:04:54.000Z">2019-04-12</time></div>
-                    <a href="/2019/04/12/Hexo-文中图片的插入/" class="has-link-black-ter is-size-6">Hexo 文中图片的插入</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T12:23:19.000Z">2019-04-12</time></div>
+                    <a href="/2019/04/12/second-blog/" class="has-link-black-ter is-size-6">second blog</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -701,18 +517,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/12/Hexo-文章的发布/" class="media-left">
+            <a href="/2019/04/12/This-is-a-test/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo 文章的发布">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="This is a test">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T13:36:37.000Z">2019-04-12</time></div>
-                    <a href="/2019/04/12/Hexo-文章的发布/" class="has-link-black-ter is-size-6">Hexo 文章的发布</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T06:27:50.000Z">2019-04-12</time></div>
+                    <a href="/2019/04/12/This-is-a-test/" class="has-link-black-ter is-size-6">This is a test</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                        
                     </p>
                 </div>
             </div>
@@ -720,18 +536,18 @@
         
         <article class="media">
             
-            <a href="/2019/04/12/Hexo-常用指令/" class="media-left">
+            <a href="/2019/04/11/Empirirical-Risk-Minimization/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo 常用指令">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Empirirical Risk Minimization">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T12:42:56.000Z">2019-04-12</time></div>
-                    <a href="/2019/04/12/Hexo-常用指令/" class="has-link-black-ter is-size-6">Hexo 常用指令</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-11T14:16:29.000Z">2019-04-11</time></div>
+                    <a href="/2019/04/11/Empirirical-Risk-Minimization/" class="has-link-black-ter is-size-6">Empirirical Risk Minimization</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -774,7 +590,7 @@
                     <span class="level-item">April 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -793,9 +609,9 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/Hexo/">
-                        <span class="tag">Hexo</span>
-                        <span class="tag is-grey">4</span>
+                    <a class="tags has-addons" href="/tags/ERM/">
+                        <span class="tag">ERM</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -816,7 +632,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Hexo" height="28">
+                    <img src="/images/logo.svg" alt="second blog" height="28">
                 
                 </a>
                 <p class="is-size-7">
