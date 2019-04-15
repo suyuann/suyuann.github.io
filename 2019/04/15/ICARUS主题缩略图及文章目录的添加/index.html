@@ -2,25 +2,25 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Hexo 文中图片的插入 - Suyuan&#39;s Blog</title>
+<title>ICARUS主题缩略图及文章目录的添加 - Suyuan&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Blog">
-<meta name="keywords" content="Hexo">
+    <meta name="description" content="一：缩略图（thumbnail）的添加 二：目录（catalogue）的添加">
+<meta name="keywords" content="ICARUS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 文中图片的插入">
-<meta property="og:url" content="http://yoursite.com/2019/04/12/Hexo-文中图片的插入/index.html">
+<meta property="og:title" content="ICARUS主题缩略图及文章目录的添加">
+<meta property="og:url" content="http://yoursite.com/2019/04/15/ICARUS主题缩略图及文章目录的添加/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
-<meta property="og:description" content="Blog">
+<meta property="og:description" content="一：缩略图（thumbnail）的添加 二：目录（catalogue）的添加">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-04-12T14:19:30.690Z">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//flower.jpg">
+<meta property="og:updated_time" content="2019-04-15T12:53:47.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 文中图片的插入">
-<meta name="twitter:description" content="Blog">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="ICARUS主题缩略图及文章目录的添加">
+<meta name="twitter:description" content="一：缩略图（thumbnail）的添加 二：目录（catalogue）的添加">
+<meta name="twitter:image" content="http://blog-009.test.upcdn.net//flower.jpg">
 
 
 
@@ -94,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hexo 文中图片的插入" height="28">
+                <img src="/images/logo.svg" alt="ICARUS主题缩略图及文章目录的添加" height="28">
             
             </a>
         </div>
@@ -126,6 +126,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -141,11 +145,21 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net//flower.jpg" alt="ICARUS主题缩略图及文章目录的添加">
+        </span>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T14:04:54.000Z">2019-04-12</time>
+                <time class="level-item has-text-grey" datetime="2019-04-15T12:04:27.000Z">2019-04-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/ICARUS/">ICARUS</a>
+                </div>
                 
                 
                 
@@ -154,23 +168,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Hexo 文中图片的插入
+                ICARUS主题缩略图及文章目录的添加
             
         </h1>
         <div class="content">
-            <p>直接在 Markdown 编辑器中进行图片的插入会导致发布到博客后图片无法正常显示，本文主要介绍两种图片插入的方法。</p>
+            <p>一：缩略图（thumbnail）的添加</p>
+<p>二：目录（catalogue）的添加</p>
 <a id="more"></a>
-<h2 id="方法一：文章资源文件夹"><a href="#方法一：文章资源文件夹" class="headerlink" title="方法一：文章资源文件夹"></a>方法一：文章资源文件夹</h2><p>将 <code>\Hexo</code> 目录下的 <code>_config.yml</code> 配置文件中的 “post_asset_folder: false” 改为 “post_asset_folder: true”，再执行文章创建命令 <code>$ hexo new &quot;article title&quot;</code>  时，将会在  <code>\ _posts</code> 目录下生成一个与所创建的文章标题同名的文件夹。</p>
-<p>将要插入的图片放在生成的该文件夹内，引用时，首先将图片拖入文中，然后对 Markdown 中图片的引用格式作如下的修改：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图题](文章标题\picturename.png)</span><br></pre></td></tr></table></figure>
-<p>其中 “picture name” 为所引用图片的名称。</p>
-<p>通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确，为了解决这个问题，可以采用如下的方法进行图片的引用：</p>
-<h2 id="方法二：相对路径引用的标签插件"><a href="#方法二：相对路径引用的标签插件" class="headerlink" title="方法二：相对路径引用的标签插件"></a>方法二：相对路径引用的标签插件</h2><p>标签插件的下载：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-<p>或者通过：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
-<p>插件下载成功后，将要插入的图片放在文章资源文件夹中，文章中图片的引用格式如下：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img picturename.jpg 图题 %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="一：缩略图（thumbnail）的添加"><a href="#一：缩略图（thumbnail）的添加" class="headerlink" title="一：缩略图（thumbnail）的添加"></a>一：缩略图（thumbnail）的添加</h2><ol>
+<li><p>首先将 ICARUS 主题的配置文件 <code>_config.yml</code> 中的 thumbnail 这一项设置成 “true”：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Article display setting</span><br><span class="line">thumbnail: true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 <code>/Hexo /scaffolds</code> 目录下的 <code>post</code> 文件中添加 thumbnail 这一项：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">thumbnail:                  # 添加该项</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>每次创建新的文件后，将要插入的缩略图的链接（URL）填入上述 thumbnail 后面即可。</p>
+</li>
+<li><p>缩略图如果在本地的话，则需要在  <code>/Hexo /source</code> 目录下新建一个名为 <code>gallery</code> 的文件夹，并将缩略图放在该文件夹中，这种情况下缩略图的路径格式为：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thumbnail：/gallery/picturename.jpg</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="二：目录（catalogue）的添加"><a href="#二：目录（catalogue）的添加" class="headerlink" title="二：目录（catalogue）的添加"></a>二：目录（catalogue）的添加</h2><ol>
+<li><p>在 <code>/Hexo /scaffolds</code> 目录下的 <code>post</code> 文件中添加 toc 这一项：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">thumbnail: </span><br><span class="line">toc: true                    # 添加该项</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 ICARUS 主题的配置文件<code>_config.yml</code> 中添加 toc 控件：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">widgets:</span><br><span class="line">    -</span><br><span class="line">        type: toc</span><br><span class="line">        position: left</span><br></pre></td></tr></table></figure>
+<p>一般来说 toc 控件在ICARUS 主题的 <code>_config.yml</code> 配置文件中就已经存在的，已经有的情况下，就不需要再添加。 </p>
+</li>
+</ol>
 
         </div>
         
@@ -178,7 +204,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>
+                    <a class="has-link-grey -link" href="/tags/ICARUS/">ICARUS</a>
                 </div>
             </div>
         </div>
@@ -195,17 +221,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/12/Hexo-只显示文章部分内容的设置/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Hexo 只显示文章部分内容的设置</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/12/Hexo-文章的发布/">
-                <span class="level-item">Hexo 文章的发布</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/14/用又拍云进行图片云存储/">
+                <span class="level-item">用又拍云进行图片云存储</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -326,6 +345,25 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#一：缩略图（thumbnail）的添加">
+        <span class="has-mr-6">1</span>
+        <span>一：缩略图（thumbnail）的添加</span>
+        </a></li><li>
+        <a class="is-flex" href="#二：目录（catalogue）的添加">
+        <span class="has-mr-6">2</span>
+        <span>二：目录（catalogue）的添加</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -701,7 +739,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Hexo 文中图片的插入" height="28">
+                    <img src="/images/logo.svg" alt="ICARUS主题缩略图及文章目录的添加" height="28">
                 
                 </a>
                 <p class="is-size-7">
