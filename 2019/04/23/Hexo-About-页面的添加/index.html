@@ -2,20 +2,25 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Catégorie: ICARUS - Suyuan&#39;s Blog</title>
+<title>Hexo-About 页面的添加 - Suyuan&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Suyuan&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/categories/ICARUS/index.html">
+    <meta name="description" content="ICARUS主题不经配置的 “About” 菜单在访问时，会转至 404 页面，为了在 “About” 链接页面中添加个人简介及相关信息时，应进行相应的配置！">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo-About 页面的添加">
+<meta property="og:url" content="http://yoursite.com/2019/04/23/Hexo-About-页面的添加/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
+<meta property="og:description" content="ICARUS主题不经配置的 “About” 菜单在访问时，会转至 404 页面，为了在 “About” 链接页面中添加个人简介及相关信息时，应进行相应的配置！">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//1478021802196682.png">
+<meta property="og:updated_time" content="2019-04-23T10:54:18.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Suyuan&#39;s Blog">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="Hexo-About 页面的添加">
+<meta name="twitter:description" content="ICARUS主题不经配置的 “About” 菜单在访问时，会转至 404 页面，为了在 “About” 链接页面中添加个人简介及相关信息时，应进行相应的配置！">
+<meta name="twitter:image" content="http://blog-009.test.upcdn.net//1478021802196682.png">
 
 
 
@@ -89,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Suyuan&#39;s Blog" height="28">
+                <img src="/images/logo.svg" alt="Hexo-About 页面的添加" height="28">
             
             </a>
         </div>
@@ -121,6 +126,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -135,34 +144,18 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">Catégories</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">ICARUS</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-image">
-        <a href="/2019/04/15/ICARUS主题缩略图及文章目录的添加/" class="image is-7by1">
-            <img class="thumbnail" src="http://blog-009.test.upcdn.net//flower.jpg" alt="ICARUS主题缩略图及文章目录的添加">
-        </a>
+        <span class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net//1478021802196682.png" alt="Hexo-About 页面的添加">
+        </span>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-15T12:04:27.000Z">2019-04-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/ICARUS/">ICARUS</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2019-04-23T09:33:07.000Z">2019-04-23</time>
                 
                 
                 
@@ -171,22 +164,30 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/04/15/ICARUS主题缩略图及文章目录的添加/">ICARUS主题缩略图及文章目录的添加</a>
+                Hexo-About 页面的添加
             
         </h1>
         <div class="content">
-            <p>一：缩略图（thumbnail）的添加</p>
-<p>二：目录（catalogue）的添加</p>
+            <p>ICARUS主题不经配置的 “About” 菜单在访问时，会转至 404 页面，为了在 “About” 链接页面中添加个人简介及相关信息时，应进行相应的配置！</p>
+<a id="more"></a>
+<h2 id="一：ICARUS主题配置文件的更改"><a href="#一：ICARUS主题配置文件的更改" class="headerlink" title="一：ICARUS主题配置文件的更改"></a>一：ICARUS主题配置文件的更改</h2><p>在ICARUS主题的配置文件 _config.yml 文件中找到关键字 “menu” ，按如下方式修改并保存：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu</span><br><span class="line">	Home: /</span><br><span class="line">	Archives: /archives</span><br><span class="line">	Categories: /categories</span><br><span class="line">	Tags: /tags</span><br><span class="line">	About: /about               # 与该项修改一致即可</span><br></pre></td></tr></table></figure>
+<h2 id="二：-“About”-页面的创建"><a href="#二：-“About”-页面的创建" class="headerlink" title="二： “About” 页面的创建"></a>二： “About” 页面的创建</h2><p>将 Git Bash 定位至 Hexo 配置文件所在目录下，运行如下指令：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br></pre></td></tr></table></figure>
+<p>此时会在 “source” 文件夹中生成一个名为 “about” 的文件夹，打开该文件夹中的 index.md 文件并添加自己需要展示的个人介绍等信息，保存后运行如下的指令进行博客的更新部署：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/15/ICARUS主题缩略图及文章目录的添加/#more">Read More</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -196,7 +197,19 @@
 
 
 
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/15/ICARUS主题缩略图及文章目录的添加/">
+                <span class="level-item">ICARUS主题缩略图及文章目录的添加</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -311,6 +324,25 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#一：ICARUS主题配置文件的更改">
+        <span class="has-mr-6">1</span>
+        <span>一：ICARUS主题配置文件的更改</span>
+        </a></li><li>
+        <a class="is-flex" href="#二：-“About”-页面的创建">
+        <span class="has-mr-6">2</span>
+        <span>二： “About” 页面的创建</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -686,7 +718,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Suyuan&#39;s Blog" height="28">
+                    <img src="/images/logo.svg" alt="Hexo-About 页面的添加" height="28">
                 
                 </a>
                 <p class="is-size-7">
