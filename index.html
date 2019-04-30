@@ -142,6 +142,164 @@
     <div class="card">
     
     <div class="card-image">
+        <a href="/2019/04/30/Ubuntu18-04上WPS2019的安装/" class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net//wps02.png" alt="Ubuntu18.04上WPS2019的安装">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-30T14:11:53.000Z">2019-04-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/04/30/Ubuntu18-04上WPS2019的安装/">Ubuntu18.04上WPS2019的安装</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="一、WPS安装包的下载"><a href="#一、WPS安装包的下载" class="headerlink" title="一、WPS安装包的下载"></a>一、WPS安装包的下载</h4><p>在 <a href="https://www.wps.cn/product/wpslinux/#" target="_blank" rel="noopener">WPS官网</a> 下载 WPS Office 2019 For Linux 的 Deb 格式安装包：</p>
+<p><img src="http://blog-009.test.upcdn.net//wps01.png" alt="图1 安装包下载"></p>
+<h4 id="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："><a href="#二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：" class="headerlink" title="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："></a>二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i wps-office_11.1.0.8392_amd64.deb</span><br></pre></td></tr></table></figure>
+<h4 id="三、修复字体缺失"><a href="#三、修复字体缺失" class="headerlink" title="三、修复字体缺失"></a>三、修复字体缺失</h4><p>安装好的WPS在第一次打开时，会提示系统缺失字体。</p>
+<p>下载 <a href="https://pan.baidu.com/s/1mh0lcbY" target="_blank" rel="noopener">字体包</a> 并解压，运行如下的命令将解压后的字体文件移至 <code>/usr/share/fonts</code> 目录下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line">sudo mv /home/suyuan/下载/wps_symbol_fonts/ /usr/share/fonts/</span><br></pre></td></tr></table></figure>
+<p>之后运行以下指令生成字体的索引信息以及更新字体的缓存：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/share/fonts</span><br><span class="line">sudo mkfontscale</span><br><span class="line">sudo mkfontdir</span><br><span class="line">sudo fc-cache</span><br></pre></td></tr></table></figure>
+<h4 id="四、Libreoffice-的卸载"><a href="#四、Libreoffice-的卸载" class="headerlink" title="四、Libreoffice 的卸载"></a>四、Libreoffice 的卸载</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
+<p>或者进入软件管理中心进行卸载。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-30T14:08:35.000Z">2019-04-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/">Ubuntu18.04关机卡死的解决方法</a>
+            
+        </h1>
+        <div class="content">
+            <p>联想拯救者R720因为带有独立显卡，在安装Win10/Ubuntu18.04双系统时大概率上会遇到Ubuntu系统关机或者关机重启电脑时就卡死的情况。解决方法如下：</p>
+<p>在终端输入如下命令：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">software-properties-gtk</span><br></pre></td></tr></table></figure>
+<p>会弹出如下的 “软件和更新” 窗口：</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/04/30/Ubuntu18-04上Github的安装/" class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net//github01.png" alt="Ubuntu18.04上Github的安装">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-30T14:02:59.000Z">2019-04-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/04/30/Ubuntu18-04上Github的安装/">Ubuntu18.04上Github的安装</a>
+            
+        </h1>
+        <div class="content">
+            <p>git 安装前，需先进行 Github 账号的注册。</p>
+<h4 id="一、Git-的安装"><a href="#一、Git-的安装" class="headerlink" title="一、Git 的安装"></a>一、Git 的安装</h4><p>在 Ubuntu 命令终端输入如下指令进行 git 的安装：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+<p>根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/04/30/Ubuntu18-04上Github的安装/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
         <a href="/2019/04/24/Hexo-网站分析插件配置/" class="image is-7by1">
             <img class="thumbnail" src="http://blog-009.test.upcdn.net//busuanzi01.png" alt="Hexo-网站分析插件配置">
         </a>
@@ -154,7 +312,7 @@
                 <time class="level-item has-text-grey" datetime="2019-04-24T02:36:52.000Z">2019-04-24</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Hexo/">Hexo</a>
+                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
                 </div>
                 
                 
@@ -256,7 +414,7 @@
                 <time class="level-item has-text-grey" datetime="2019-04-15T12:04:27.000Z">2019-04-15</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/ICARUS/">ICARUS</a>
+                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
                 </div>
                 
                 
@@ -493,158 +651,25 @@
 
 
 
-    <div class="card">
+
     
-    <div class="card-image">
-        <a href="/2019/04/12/Hexo-文章的发布/" class="image is-7by1">
-            <img class="thumbnail" src="http://blog-009.test.upcdn.net//fabu.png" alt="Hexo 文章的发布">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T13:36:37.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                
-            </div>
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/page/0/">Previous</a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/page/2/">Next</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
             
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-文章的发布/">Hexo 文章的发布</a>
+            <li><a class="pagination-link is-current" href="/">1</a></li>
             
-        </h1>
-        <div class="content">
-            <p>用 Hexo 框架结合 Github pages 搭建好博客平台后，接下来便是博客文章的创建和发布，本文主要对博客文章的创建和发布方法做了详细介绍。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/Hexo-文章的发布/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
+            <li><a class="pagination-link has-text-black-ter" href="/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/04/12/Hexo-常用指令/" class="image is-7by1">
-            <img class="thumbnail" src="http://blog-009.test.upcdn.net//u=2035530606,2762358597&amp;fm=26&amp;gp=0%20(1).jpg" alt="Hexo 常用指令">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-12T12:42:56.000Z">2019-04-12</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/12/Hexo-常用指令/">Hexo 常用指令</a>
-            
-        </h1>
-        <div class="content">
-            <p>Hexo 是一个快速、简洁而且高效的博客框架，本文主要对 Hexo 的常用指令含义和用法作简要说明。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/12/Hexo-常用指令/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/04/10/hello-world/" class="image is-7by1">
-            <img class="thumbnail" src="http://blog-009.test.upcdn.net//timg44DB37TU.jpg" alt="Hello World">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-10T11:21:56.738Z">2019-04-10</time>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/10/hello-world/">Hello World</a>
-            
-        </h1>
-        <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/10/hello-world/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 </div>
                 
 
@@ -688,7 +713,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        10
+                        13
                     </p>
                 </div>
             </div>
@@ -698,7 +723,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        2
                     </p>
                 </div>
             </div>
@@ -776,23 +801,15 @@
                 <span class="level-item">Blog</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">7</span>
             </span>
         </a></li><li>
-        <a class="level is-marginless" href="/categories/Hexo/">
+        <a class="level is-marginless" href="/categories/Ubuntu/">
             <span class="level-start">
-                <span class="level-item">Hexo</span>
+                <span class="level-item">Ubuntu</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/ICARUS/">
-            <span class="level-start">
-                <span class="level-item">ICARUS</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li>
             </ul>
@@ -812,6 +829,63 @@
         
         <article class="media">
             
+            <a href="/2019/04/30/Ubuntu18-04上WPS2019的安装/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//wps02.png" alt="Ubuntu18.04上WPS2019的安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T14:11:53.000Z">2019-04-30</time></div>
+                    <a href="/2019/04/30/Ubuntu18-04上WPS2019的安装/" class="has-link-black-ter is-size-6">Ubuntu18.04上WPS2019的安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Ubuntu18.04关机卡死的解决方法">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T14:08:35.000Z">2019-04-30</time></div>
+                    <a href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/" class="has-link-black-ter is-size-6">Ubuntu18.04关机卡死的解决方法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/30/Ubuntu18-04上Github的安装/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//github01.png" alt="Ubuntu18.04上Github的安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T14:02:59.000Z">2019-04-30</time></div>
+                    <a href="/2019/04/30/Ubuntu18-04上Github的安装/" class="has-link-black-ter is-size-6">Ubuntu18.04上Github的安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/04/24/Hexo-网站分析插件配置/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="http://blog-009.test.upcdn.net//busuanzi01.png" alt="Hexo-网站分析插件配置">
@@ -823,7 +897,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-24T02:36:52.000Z">2019-04-24</time></div>
                     <a href="/2019/04/24/Hexo-网站分析插件配置/" class="has-link-black-ter is-size-6">Hexo-网站分析插件配置</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Hexo/">Hexo</a>
+                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
                     </p>
                 </div>
             </div>
@@ -848,63 +922,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/04/15/ICARUS主题缩略图及文章目录的添加/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//flower.jpg" alt="ICARUS主题缩略图及文章目录的添加">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-15T12:04:27.000Z">2019-04-15</time></div>
-                    <a href="/2019/04/15/ICARUS主题缩略图及文章目录的添加/" class="has-link-black-ter is-size-6">ICARUS主题缩略图及文章目录的添加</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/ICARUS/">ICARUS</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/04/14/用又拍云进行图片云存储/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//2019-04-15-20-56-50.jpg" alt="用又拍云进行图片云存储">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-14T13:04:19.000Z">2019-04-14</time></div>
-                    <a href="/2019/04/14/用又拍云进行图片云存储/" class="has-link-black-ter is-size-6">用又拍云进行图片云存储</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/04/13/Hexo-个性化域名的配置/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//timgAPQZWJEL%20(1).jpg" alt="Hexo 个性化域名的配置">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-13T12:09:14.000Z">2019-04-13</time></div>
-                    <a href="/2019/04/13/Hexo-个性化域名的配置/" class="has-link-black-ter is-size-6">Hexo 个性化域名的配置</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -923,7 +940,7 @@
                     <span class="level-item">April 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">10</span>
+                    <span class="level-item tag">13</span>
                 </span>
             </a>
         </li>
@@ -980,6 +997,63 @@
         
         <article class="media">
             
+            <a href="/2019/04/30/Ubuntu18-04上WPS2019的安装/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//wps02.png" alt="Ubuntu18.04上WPS2019的安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T14:11:53.000Z">2019-04-30</time></div>
+                    <a href="/2019/04/30/Ubuntu18-04上WPS2019的安装/" class="has-link-black-ter is-size-6">Ubuntu18.04上WPS2019的安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Ubuntu18.04关机卡死的解决方法">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T14:08:35.000Z">2019-04-30</time></div>
+                    <a href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/" class="has-link-black-ter is-size-6">Ubuntu18.04关机卡死的解决方法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/04/30/Ubuntu18-04上Github的安装/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//github01.png" alt="Ubuntu18.04上Github的安装">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T14:02:59.000Z">2019-04-30</time></div>
+                    <a href="/2019/04/30/Ubuntu18-04上Github的安装/" class="has-link-black-ter is-size-6">Ubuntu18.04上Github的安装</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/04/24/Hexo-网站分析插件配置/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="http://blog-009.test.upcdn.net//busuanzi01.png" alt="Hexo-网站分析插件配置">
@@ -991,7 +1065,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-24T02:36:52.000Z">2019-04-24</time></div>
                     <a href="/2019/04/24/Hexo-网站分析插件配置/" class="has-link-black-ter is-size-6">Hexo-网站分析插件配置</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Hexo/">Hexo</a>
+                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
                     </p>
                 </div>
             </div>
@@ -1016,63 +1090,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/04/15/ICARUS主题缩略图及文章目录的添加/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//flower.jpg" alt="ICARUS主题缩略图及文章目录的添加">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-15T12:04:27.000Z">2019-04-15</time></div>
-                    <a href="/2019/04/15/ICARUS主题缩略图及文章目录的添加/" class="has-link-black-ter is-size-6">ICARUS主题缩略图及文章目录的添加</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/ICARUS/">ICARUS</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/04/14/用又拍云进行图片云存储/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//2019-04-15-20-56-50.jpg" alt="用又拍云进行图片云存储">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-14T13:04:19.000Z">2019-04-14</time></div>
-                    <a href="/2019/04/14/用又拍云进行图片云存储/" class="has-link-black-ter is-size-6">用又拍云进行图片云存储</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/04/13/Hexo-个性化域名的配置/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//timgAPQZWJEL%20(1).jpg" alt="Hexo 个性化域名的配置">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-13T12:09:14.000Z">2019-04-13</time></div>
-                    <a href="/2019/04/13/Hexo-个性化域名的配置/" class="has-link-black-ter is-size-6">Hexo 个性化域名的配置</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1091,7 +1108,7 @@
                     <span class="level-item">April 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">10</span>
+                    <span class="level-item tag">13</span>
                 </span>
             </a>
         </li>
