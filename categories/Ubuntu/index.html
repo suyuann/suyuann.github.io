@@ -182,16 +182,16 @@
             <h4 id="一、WPS安装包的下载"><a href="#一、WPS安装包的下载" class="headerlink" title="一、WPS安装包的下载"></a>一、WPS安装包的下载</h4><p>在 <a href="https://www.wps.cn/product/wpslinux/#" target="_blank" rel="noopener">WPS官网</a> 下载 WPS Office 2019 For Linux 的 Deb 格式安装包：</p>
 <p><img src="http://blog-009.test.upcdn.net//wps01.png" alt="图1 安装包下载"></p>
 <h4 id="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："><a href="#二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：" class="headerlink" title="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："></a>二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i wps-office_11.1.0.8392_amd64.deb</span><br></pre></td></tr></table></figure>
-<h4 id="三、修复字体缺失"><a href="#三、修复字体缺失" class="headerlink" title="三、修复字体缺失"></a>三、修复字体缺失</h4><p>安装好的WPS在第一次打开时，会提示系统缺失字体。</p>
-<p>下载 <a href="https://pan.baidu.com/s/1mh0lcbY" target="_blank" rel="noopener">字体包</a> 并解压，运行如下的命令将解压后的字体文件移至 <code>/usr/share/fonts</code> 目录下：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line">sudo mv /home/suyuan/下载/wps_symbol_fonts/ /usr/share/fonts/</span><br></pre></td></tr></table></figure>
-<p>之后运行以下指令生成字体的索引信息以及更新字体的缓存：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/share/fonts</span><br><span class="line">sudo mkfontscale</span><br><span class="line">sudo mkfontdir</span><br><span class="line">sudo fc-cache</span><br></pre></td></tr></table></figure>
-<h4 id="四、Libreoffice-的卸载"><a href="#四、Libreoffice-的卸载" class="headerlink" title="四、Libreoffice 的卸载"></a>四、Libreoffice 的卸载</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
-<p>或者进入软件管理中心进行卸载。</p>
-
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/04/30/Ubuntu18-04上WPS2019的安装/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -205,6 +205,12 @@
 
 
     <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/" class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net//guanji.png" alt="Ubuntu18.04关机卡死的解决方法">
+        </a>
+    </div>
     
     <div class="card-content article ">
         
@@ -488,7 +494,7 @@
             
             <a href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Ubuntu18.04关机卡死的解决方法">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//guanji.png" alt="Ubuntu18.04关机卡死的解决方法">
                 </p>
             </a>
             
@@ -656,7 +662,7 @@
             
             <a href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Ubuntu18.04关机卡死的解决方法">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//guanji.png" alt="Ubuntu18.04关机卡死的解决方法">
                 </p>
             </a>
             
