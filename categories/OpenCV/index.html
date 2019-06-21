@@ -2,15 +2,14 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Tags - Suyuan&#39;s Blog</title>
+<title>Category: OpenCV - Suyuan&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="Hexo,ICARUS,Opencv,python">
-<meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Suyuan&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/OpenCV/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
@@ -108,7 +107,7 @@
                 
                 <a class="navbar-item" href="/categories">Categories</a>
                 
-                <a class="navbar-item is-active" href="/tags">Tags</a>
+                <a class="navbar-item" href="/tags">Tags</a>
                 
                 <a class="navbar-item" href="/about">About</a>
                 
@@ -139,46 +138,180 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Tags
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">Categories</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">OpenCV</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/06/21/OpenCV-Python-绘图基本操作/" class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv02.png" alt="OpenCV-Python 绘图基本操作">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-21T04:16:55.000Z">2019-06-21</time>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Hexo/">
-                        <span class="tag">Hexo</span>
-                        <span class="tag is-grey">6</span>
-                    </a>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
                 </div>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/ICARUS/">
-                        <span class="tag">ICARUS</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Opencv/">
-                        <span class="tag">Opencv</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/python/">
-                        <span class="tag">python</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
                 
             </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/21/OpenCV-Python-绘图基本操作/">OpenCV-Python 绘图基本操作</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="一、直线的绘制"><a href="#一、直线的绘制" class="headerlink" title="一、直线的绘制"></a><strong>一、直线的绘制</strong></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">img = np.zeros((512,512,3), np.uint8)    # 画布大小512*512，空白</span><br><span class="line"></span><br><span class="line">cv.line(img,(0,0),(511,511),(255,0,0),5) # 第一条直线，宽度5px</span><br><span class="line">cv.line(img,(0,511),(511,0),(0,255,0),5) # 第二条直线 宽度5px</span><br><span class="line"></span><br><span class="line">cv.imshow(&apos;image&apos;, img)</span><br><span class="line"></span><br><span class="line">k = cv.waitKey(0)</span><br><span class="line">if k == 27:</span><br><span class="line">    cv.destroyAllWindows()</span><br><span class="line">elif k == ord(&apos;s&apos;):</span><br><span class="line">    cv.imwrite(&apos;line.png&apos;,img)</span><br><span class="line">    cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/21/OpenCV-Python-绘图基本操作/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
-</div></div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/06/21/OpenCV-Python-视频的基本操作/" class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv01.png" alt="OpenCV-Python 视频的基本操作">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-21T04:13:11.000Z">2019-06-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/21/OpenCV-Python-视频的基本操作/">OpenCV-Python 视频的基本操作</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="一、Capture-Video-from-camera"><a href="#一、Capture-Video-from-camera" class="headerlink" title="一、Capture Video from camera"></a><strong>一、Capture Video from camera</strong></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(0)</span><br><span class="line">while(True):</span><br><span class="line">    ret, frame = cap.read() #从摄像头读取图片</span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) # 转为灰度图</span><br><span class="line">    cv.imshow(&apos;frame&apos;,gray) # 显示图像</span><br><span class="line">    k = cv.waitKey(0)</span><br><span class="line">    if k == 27:             # 按ESC键推出摄像</span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        break</span><br><span class="line">    elif k == ord(&quot;s&quot;):     # 按S键保存图像</span><br><span class="line">        cv.imwrite(&quot;image2.jpg&quot;,frame)</span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        break</span><br><span class="line">cap.release() # 关闭摄像头</span><br></pre></td></tr></table></figure>
+<p>注：ESC的ASCLL码为27。</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/21/OpenCV-Python-视频的基本操作/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2019/06/21/OpenCV-Python-图像的基本操作/" class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv00.png" alt="OpenCV-Python 图像的基本操作">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-21T03:59:02.000Z">2019-06-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/21/OpenCV-Python-图像的基本操作/">OpenCV-Python 图像的基本操作</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li><strong>cv.imread()</strong> : 读取图像</li>
+<li><strong>cv.imshow()</strong> : 显示图像</li>
+<li><strong>cv.imwrite()</strong> : 保存图像</li>
+</ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/21/OpenCV-Python-图像的基本操作/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
                 
 
 
