@@ -2,20 +2,25 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Tag: Opencv - Suyuan&#39;s Blog</title>
+<title>AlexNet网络模型 - Suyuan&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Suyuan&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Opencv/index.html">
+    <meta name="description" content="We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achiev">
+<meta name="keywords" content="AlexNet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AlexNet网络模型">
+<meta property="og:url" content="http://yoursite.com/2019/06/21/AlexNet网络模型/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
+<meta property="og:description" content="We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achiev">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net/网络模型/AlexNet00.png">
+<meta property="og:updated_time" content="2019-06-23T09:43:12.957Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Suyuan&#39;s Blog">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="AlexNet网络模型">
+<meta name="twitter:description" content="We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achiev">
+<meta name="twitter:image" content="http://blog-009.test.upcdn.net/网络模型/AlexNet00.png">
 
 
 
@@ -93,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Suyuan&#39;s Blog" height="28">
+                <img src="/images/logo.svg" alt="AlexNet网络模型" height="28">
             
             </a>
         </div>
@@ -125,6 +130,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -139,59 +148,145 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Opencv</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-image">
-        <a href="/2019/05/03/Ubuntu18-04上OpenCV3-4-0的安装和测试/" class="image is-7by1">
-            <img class="thumbnail" src="http://blog-009.test.upcdn.net//cv07.png" alt="Ubuntu18.04上OpenCV3.4.0的安装和测试">
-        </a>
+        <span class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net/网络模型/AlexNet00.png" alt="AlexNet网络模型">
+        </span>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-03T14:27:05.000Z">2019-05-03</time>
+                <time class="level-item has-text-grey" datetime="2019-06-21T13:13:05.000Z">2019-06-21</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
+                <a class="has-link-grey -link" href="/categories/Netwaork-Model/">Netwaork Model</a>
                 </div>
                 
                 
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/05/03/Ubuntu18-04上OpenCV3-4-0的安装和测试/">Ubuntu18.04上OpenCV3.4.0的安装和测试</a>
+                AlexNet网络模型
             
         </h1>
         <div class="content">
-            <p>Ubuntu上OpenCV的安装由于要安装各种依赖，而且编译过程稍有不慎便会遇到各种意外状况，导致安装的难度较大，为此我也是参考了很多资料安装了很多次才安装并且测试成功。此文记录了安装的详细过程，希望能为同样需要搭建 OpenCV 环境却在安装过程中遇到各种棘手问题的人提供一些有益的参考。</p>
-<h4 id="一、OpenCV3-4-0安装包的下载"><a href="#一、OpenCV3-4-0安装包的下载" class="headerlink" title="一、OpenCV3.4.0安装包的下载"></a>一、OpenCV3.4.0安装包的下载</h4><p><a href="https://opencv.org/releases/page/2/" target="_blank" rel="noopener">下载地址</a> （选择Sources项下载保存到本地）</p>
-<p>我是在主目录位置新建了一个名为 “Software” 的文件夹，并将下载的 opencv-3.4.0 解压在此目录下。</p>
-<p><img src="http://blog-009.test.upcdn.net//cv01.png" alt></p>
+            <p>We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of ﬁve convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a ﬁnal 1000-way softmax. To make training faster, we used non-saturating neurons and a very efﬁcient GPU implementation of the convolution operation. To reduce overﬁtting in the fully-connected layers we employed a recently-developed regularization method called “dropout” that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved  a winning top-5testerrorrateof15.3%, compared to 26.2% achieved by the second-best entry.</p>
+<h4 id="一：结构分析"><a href="#一：结构分析" class="headerlink" title="一：结构分析"></a><strong>一：结构分析</strong></h4><p>AlexNet网络结构示意图（双GPU并行运算）如下图所示，共由5个卷积层（convolution layer）和3个全连接层（fully-connected layer）共8层网络组成，输入图像尺寸为 227*227*3，经过5层的卷积操作和部分池化运算得到大小为 6*6*256 的特征图（feature map），最后通过全连接层输出 1000*1 的 特征向量。</p>
+<p><img src="http://blog-009.test.upcdn.net/网络模型/AlexNet01.png" alt="AlexNet网络模型"></p>
+<a id="more"></a>
+<hr>
+<p><strong>输入图像大小：</strong>227*227*3 （对原始的图像224*224*3 进行了Padding操作）</p>
+<hr>
+<p><strong>卷积层1：</strong></p>
+<blockquote>
+<p>​    输入数据：227*227*3 </p>
+<p>​    卷积核：大小11*11*3  ，步长4，数量96</p>
+<p>​    卷积后的数据：（227 - 11）/ 4 + 1 = 55 ，即 55*55*96 </p>
+<p>​    ReLU1后的数据：55*55*96 </p>
+<p>​    最大池化层1（Max Pooling）：核大小3*3，步长2</p>
+<p>​    池化运算后的数据（降采样）：（55 -3 ）/ 2 + 1 = 27 ，即27*27*96 </p>
+<p>​    局部响应归一化层（LRN）</p>
+</blockquote>
+<hr>
+<p><strong>卷积层2：</strong></p>
+<blockquote>
+<p>​    输入数据：27*27*96 （需进行Padding操作）</p>
+<p>​    卷积核：大小5*5*48，步长1，数量256</p>
+<p>​    卷积后的数据：（27 + 4 - 5）/ 1 + 1 = 27，即27*27*256</p>
+<p>​     ReLU2后的数据：27*27*256</p>
+<p>​    局部响应归一化层（LRN）</p>
+<p>​    最大池化层2：核大小3*3，步长2</p>
+<p>​    池化运算后的数据（降采样）：（27 -3 ）/ 2 + 1 = 13 ，即13*13*256</p>
+<p>​    局部响应归一化层（LRN）</p>
+</blockquote>
+<hr>
+<p><strong>卷积层3：</strong></p>
+<blockquote>
+<p>​    输入数据：13*13*256（需进行Padding操作）</p>
+<p>​    卷积核：大小3*3*128，步长1，数量384</p>
+<p>​    卷积后的数据：（13 + 2 - 3）/ 1 + 1 = 13，即13*13*384</p>
+<p>​     ReLU3后的数据：13*13*384</p>
+<p>​    无LRN层和最大池化层</p>
+</blockquote>
+<hr>
+<p><strong>卷积层4：</strong></p>
+<blockquote>
+<p>​    输入数据：13*13*384（需进行Padding操作）</p>
+<p>​    卷积核：大小3*3*192，步长1，数量384</p>
+<p>​    卷积后的数据：（13 + 2 - 3）/ 1 + 1 = 13，即13*13*384</p>
+<p>​     ReLU4后的数据：13*13*384</p>
+<p>​    无LRN层和最大池化层</p>
+</blockquote>
+<hr>
+<p><strong>卷积层5：</strong></p>
+<blockquote>
+<p>​    输入数据：13*13*384（需进行Padding操作）</p>
+<p>​    卷积核：大小3*3*192，步长1，数量256</p>
+<p>​    卷积后的数据：（13 + 2 - 3）/ 1 + 1 = 13，即13*13*256</p>
+<p>​     ReLU5后的数据：13*13*256</p>
+<p>​    最大池化层：核大小3*3，步长2</p>
+<p>​    池化运算后的数据（降采样）：（13 -3 ）/ 2 + 1 = 6 ，即6*6*256</p>
+</blockquote>
+<hr>
+<p><strong>全连接层6：</strong></p>
+<blockquote>
+<p>​    输入数据：6*6*256</p>
+<p>​    用4096个大小为 6*6*256 的卷积核对输入数据进行卷积操作，通过4096个神经元输出运算结果，4096个运算结果通过ReLU6生成4096个数据，再进行ReLU6激活函数和Dropout处理后输出4096个数据。</p>
+</blockquote>
+<hr>
+<p><strong>全连接层7：</strong></p>
+<blockquote>
+<p>​    第6层输出的4096个数据与第7层的4096个神经元进行全连接，经由ReLU7进行处理后生成4096个数据，再进行Dropout处理后输出4096个数据。</p>
+</blockquote>
+<hr>
+<p><strong>全连接层8：</strong></p>
+<blockquote>
+<p>​    第7层输出的4096个数据与第8层的1000个神经元进行全连接，输出1000*1的一维向量。最后用softmax输出1000类物体各类的概率值。</p>
+</blockquote>
+<hr>
+<h4 id="二：主要特点"><a href="#二：主要特点" class="headerlink" title="二：主要特点"></a><strong>二：主要特点</strong></h4><p><strong>1. Training on Multiple GPUs</strong></p>
+<p>利用两块NVIDIA GTX 580 3GB GPU并行运算来提高训练速度（通过120万张图像训练网络并训练了90轮，花费时间5到6天）。应用于所有卷积层和所有全连接层（GPU之间仅在特定的层间通信）。</p>
+<p><strong>2. ReLU Nonlinearity（Rectified Linear Unit）</strong></p>
+<p>使用ReLU激活函数代替了Sigmoid激活函数，并验证其效果在较深的网络超过了Sigmoid，解决了Sigmoid在网络较深时的梯度弥散问题。</p>
+<p><strong>3. LRN（Local Response Normalization）</strong></p>
+<p>LRN一般是在激活、池化后进行的一种处理方法，通过对局部神经元的活动创建竞争机制，使得其中响应比较大的值变得相对更大，并抑制其他反馈较小的神经元，增强了模型的泛化能力。AlexNet中LRN层应用于卷积层1、2后。</p>
+<p><strong>4. Overlapping Pooling</strong></p>
+<p>AlexNet全部采用最大池化而非此前普遍采用的平均池化，一方面避免了采用平均池化所导致的图像模糊，另一方面覆叠的池化操作（pool_size &gt; stride）使得特征信息更完善，在训练模型过程中更不容易过拟合。在AlexNet中最大池化操作应用于卷积层1、2、5后。</p>
+<p><strong>5. Date Augmentation</strong></p>
+<p>采用数据增强的方式扩充了数据库的同时避免过拟合。</p>
+<p><strong>6. Dropout</strong></p>
+<p>随机dropout一些神经元,以避免模型过拟合，在AlexNet网络模型中应用于全连接层6和全连接层7。</p>
+<h4 id="三：学习细节"><a href="#三：学习细节" class="headerlink" title="三：学习细节"></a><strong>三：学习细节</strong></h4><p>使用随机梯度下降法（stochastic gradient descent ）进行训练，每个训练批次（batch size）有128个样本，动力（momentum）为0.9，权重衰减因子（weight decay factor）为0.0005。</p>
+<h4 id="四：参考文献"><a href="#四：参考文献" class="headerlink" title="四：参考文献"></a><strong>四：参考文献</strong></h4><blockquote>
+<p>1.原文：<a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networ" target="_blank" rel="noopener">http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networ</a></p>
+<p>2.原文翻译参考：<a href="https://blog.csdn.net/qq_39727487/article/details/88653215" target="_blank" rel="noopener">https://blog.csdn.net/qq_39727487/article/details/88653215</a></p>
+<p>3.<a href="https://blog.csdn.net/qq_24695385/article/details/80368618" target="_blank" rel="noopener">https://blog.csdn.net/qq_24695385/article/details/80368618</a></p>
+<p>4.<a href="https://blog.csdn.net/zyqdragon/article/details/72353420" target="_blank" rel="noopener">https://blog.csdn.net/zyqdragon/article/details/72353420</a></p>
+<p>5.<a href="https://link.zhihu.com/?target=http%3A//www.cs.toronto.edu/~fritz/absps/imagenet.pdf" target="_blank" rel="noopener">https://link.zhihu.com/?target=http%3A//www.cs.toronto.edu/~fritz/absps/imagenet.pdf</a></p>
+</blockquote>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/05/03/Ubuntu18-04上OpenCV3-4-0的安装和测试/#more">Read More</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/AlexNet/">AlexNet</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -201,7 +296,19 @@
 
 
 
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/21/OpenCV-Python-绘图基本操作/">
+                <span class="level-item">OpenCV-Python 绘图基本操作</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -316,6 +423,33 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#一：结构分析">
+        <span class="has-mr-6">1</span>
+        <span>一：结构分析</span>
+        </a></li><li>
+        <a class="is-flex" href="#二：主要特点">
+        <span class="has-mr-6">2</span>
+        <span>二：主要特点</span>
+        </a></li><li>
+        <a class="is-flex" href="#三：学习细节">
+        <span class="has-mr-6">3</span>
+        <span>三：学习细节</span>
+        </a></li><li>
+        <a class="is-flex" href="#四：参考文献">
+        <span class="has-mr-6">4</span>
+        <span>四：参考文献</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -793,7 +927,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Suyuan&#39;s Blog" height="28">
+                    <img src="/images/logo.svg" alt="AlexNet网络模型" height="28">
                 
                 </a>
                 <p class="is-size-7">

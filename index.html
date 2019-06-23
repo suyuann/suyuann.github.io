@@ -142,6 +142,60 @@
     <div class="card">
     
     <div class="card-image">
+        <a href="/2019/06/21/AlexNet网络模型/" class="image is-7by1">
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net/网络模型/AlexNet00.png" alt="AlexNet网络模型">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-21T13:13:05.000Z">2019-06-21</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Netwaork-Model/">Netwaork Model</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/06/21/AlexNet网络模型/">AlexNet网络模型</a>
+            
+        </h1>
+        <div class="content">
+            <p>We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of ﬁve convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a ﬁnal 1000-way softmax. To make training faster, we used non-saturating neurons and a very efﬁcient GPU implementation of the convolution operation. To reduce overﬁtting in the fully-connected layers we employed a recently-developed regularization method called “dropout” that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved  a winning top-5testerrorrateof15.3%, compared to 26.2% achieved by the second-best entry.</p>
+<h4 id="一：结构分析"><a href="#一：结构分析" class="headerlink" title="一：结构分析"></a><strong>一：结构分析</strong></h4><p>AlexNet网络结构示意图（双GPU并行运算）如下图所示，共由5个卷积层（convolution layer）和3个全连接层（fully-connected layer）共8层网络组成，输入图像尺寸为 227*227*3，经过5层的卷积操作和部分池化运算得到大小为 6*6*256 的特征图（feature map），最后通过全连接层输出 1000*1 的 特征向量。</p>
+<p><img src="http://blog-009.test.upcdn.net/网络模型/AlexNet01.png" alt="AlexNet网络模型"></p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/21/AlexNet网络模型/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
         <a href="/2019/06/21/OpenCV-Python-绘图基本操作/" class="image is-7by1">
             <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv02.png" alt="OpenCV-Python 绘图基本操作">
         </a>
@@ -621,60 +675,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/04/24/Hexo-网站分析插件配置/" class="image is-7by1">
-            <img class="thumbnail" src="http://blog-009.test.upcdn.net//busuanzi01.png" alt="Hexo-网站分析插件配置">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-24T02:36:52.000Z">2019-04-24</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/04/24/Hexo-网站分析插件配置/">Hexo-网站分析插件配置</a>
-            
-        </h1>
-        <div class="content">
-            <p>为了统计博客的访问量等信息，需要安装并配置相关网站分析插件，ICRUS主题提供了四种分析插件：谷歌分析（Google Analytics）、百度分析(Baidu Analytics)、Hotjar 以及不蒜子(Busuanzi)。</p>
-<p><strong>不蒜子：两行代码搞定计数</strong></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/04/24/Hexo-网站分析插件配置/#more">Read More</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -737,7 +737,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        19
+                        20
                     </p>
                 </div>
             </div>
@@ -747,7 +747,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        4
                     </p>
                 </div>
             </div>
@@ -757,7 +757,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -828,6 +828,14 @@
                 <span class="level-item tag">7</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/Netwaork-Model/">
+            <span class="level-start">
+                <span class="level-item">Netwaork Model</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/OpenCV/">
             <span class="level-start">
                 <span class="level-item">OpenCV</span>
@@ -858,6 +866,25 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/21/AlexNet网络模型/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/网络模型/AlexNet00.png" alt="AlexNet网络模型">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T13:13:05.000Z">2019-06-21</time></div>
+                    <a href="/2019/06/21/AlexNet网络模型/" class="has-link-black-ter is-size-6">AlexNet网络模型</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Netwaork-Model/">Netwaork Model</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -935,25 +962,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/05/03/Ubuntu18-04上OpenCV3-4-0的安装和测试/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//cv07.png" alt="Ubuntu18.04上OpenCV3.4.0的安装和测试">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-03T14:27:05.000Z">2019-05-03</time></div>
-                    <a href="/2019/05/03/Ubuntu18-04上OpenCV3-4-0的安装和测试/" class="has-link-black-ter is-size-6">Ubuntu18.04上OpenCV3.4.0的安装和测试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -972,7 +980,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1011,6 +1019,13 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/AlexNet/">
+                        <span class="tag">AlexNet</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Hexo/">
@@ -1065,6 +1080,25 @@
         
         <article class="media">
             
+            <a href="/2019/06/21/AlexNet网络模型/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/网络模型/AlexNet00.png" alt="AlexNet网络模型">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T13:13:05.000Z">2019-06-21</time></div>
+                    <a href="/2019/06/21/AlexNet网络模型/" class="has-link-black-ter is-size-6">AlexNet网络模型</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Netwaork-Model/">Netwaork Model</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/06/21/OpenCV-Python-绘图基本操作/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv02.png" alt="OpenCV-Python 绘图基本操作">
@@ -1139,25 +1173,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/05/03/Ubuntu18-04上OpenCV3-4-0的安装和测试/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//cv07.png" alt="Ubuntu18.04上OpenCV3.4.0的安装和测试">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-03T14:27:05.000Z">2019-05-03</time></div>
-                    <a href="/2019/05/03/Ubuntu18-04上OpenCV3-4-0的安装和测试/" class="has-link-black-ter is-size-6">Ubuntu18.04上OpenCV3.4.0的安装和测试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1176,7 +1191,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1215,6 +1230,13 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/AlexNet/">
+                        <span class="tag">AlexNet</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Hexo/">
