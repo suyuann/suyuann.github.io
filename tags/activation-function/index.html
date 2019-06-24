@@ -180,50 +180,16 @@
         <div class="content">
             <h4 id="一：引入"><a href="#一：引入" class="headerlink" title="一：引入"></a><strong>一：引入</strong></h4><p>激活函数（activation function）用于对输入信息进行非线性变换，然后将变换后的输出信息作为输入信息传给下一层神经元，解决了线性模型表达能力不足的问题（如果没有非线性的激活函数，每一层节点的输入都是上一层输出的线性组合，线性函数容易解决，但是其复杂性有限，无法学习复杂类型的数据，而且无论网络有多少层，输出都是输入的线性组合）。</p>
 <p>激活函数使反向传播成为可能，因为激活函数的误差梯度可以用来调整权重和偏差。如果没有可微的非线性函数，这就不可能实现。</p>
-<p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 1.png" alt="图1 神经网络和它的数学模型"></p>
-<p>为了更直观的理解为什么要引入激活函数，以如下的例子作以说明：</p>
-<p>图2为一个单层的感知机，它的输出为一个线性方程，即函数图像为一条直线，可以用于线性可分的二分类问题：</p>
-<p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 6.png" alt="图2"></p>
-<p>其输出为：<br>$$<br>y=w_1x_1+w_2x_2+b \tag{1}<br>$$<br>如果将其用于线性不可分的二分类情况呢？显然一条直线无法做到完全分开两类数据，但是为了能有更好的分类能力，我们试着将多个感知机组合起来，如下图所示：</p>
-<p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 7.png" alt="图3"></p>
-<p>得到的最终输出为：<br>$$<br>y=w_{211}(w_{111}x_1+w_{121}x_2+b_{11})\+w_{221}(w_{112}x_1+w_{122}x_2+b_{12})\+w_{231}(w_{113}x_1+w_{123}x_2+b_{13}) \tag{2}<br>$$<br>整理上式（2）得到：<br>$$<br>y=（w_{211}w_{111}+w_{221}w_{112}+w_{231}w_{113}）x_1\<br>+(w_{211}w_{121}+w_{221}w_{122}+w_{231}w_{123})x_2\<br>+(w_{211}b_{11}+w_{221}b_{12}+w_{231}b_{13}) \tag{3}<br>$$<br>从上式（3）可以看出网络的输出结果是类似式（1）一样的线性方程，只不过是直线的位置和角度发生了变化而已。</p>
-<p>再继续将网络加深，依然得到类似的结果。也就是说不管神经网络有多少层，它都会像单层网络一样工作，最终只能得到一个线性函数，而这根本不足解决线性不可分乃至更复杂的分类问题。</p>
-<p>正是为了应对这一问题，在神经网络中引入了激活函数，非线性的激活函数使得输入到输出的映射变成非线性，从而能够学习和执行更复杂的任务。</p>
-<p>如下图所示，在网络中添加一个非线性的激活函数：</p>
-<p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 8.png" alt="图4"></p>
-<p>得到如式（5）的输出，很明显该输出是非线性的：<br>$$<br>a=w_1x_1+w_2x_2+b \tag{4}<br>$$</p>
-<p>$$<br>y=\sigma(a) \tag{5}<br>$$</p>
-<p>在图（3）的网络中加入非线性的激活函数后其示意图如图（5）所示：</p>
-<p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 9.png" alt="图5"></p>
-<p>经过计算得到：<br>$$<br>a_1=w_{111}x_1+w_{121}x_2+b_{11}\<br>a_2=w_{112}x_1+w_{122}x_2+b_{12}\<br>a_3=w_{113}x_1+w_{123}x_2+b_{13}\<br>\tag{6}<br>$$<br>网络最终的输出为：<br>$$<br>y=\sigma[(w_{211}\sigma(a_1))+(w_{221}\sigma(a_2))+(w_{231}\sigma(a_3))]<br>\tag{7}<br>$$<br>非线性激活函数的加入，解决了线性模型不能解决的问题。</p>
-<p>常用的激活函数有Sigmoid激活函数，Tanh激活函数，ReLU激活函数以及ReLU的改进版本Leakey ReLU 和 ELU。</p>
-<hr>
-<h4 id="二：Sigmoid激活函数"><a href="#二：Sigmoid激活函数" class="headerlink" title="二：Sigmoid激活函数"></a><strong>二：Sigmoid激活函数</strong></h4><p>Sigmoid函数的表达式及图像如下所示：<br>$$<br>Sigmoid(x)=\frac{1}{1+e^{-x}} \tag{8}<br>$$<br><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 2.jpg" alt="图6 Sigmoid与Tanh函数图像"></p>
-<p>Sigmoid函数的输出映射在0到1区间，当神经元的输出为1时，表示该神经元完全被激活，否则为未被激活。</p>
-<p>Sigmoid激活函数存在的问题是当神经元的激活状态接近0或者1时，这些区域的梯度会变的非常小接近于0，导致梯度消失，网络不能进行真正的学习。此外，该函数的另一个缺点是其图像并不关于原点对称。</p>
-<hr>
-<h4 id="三：Tanh激活函数"><a href="#三：Tanh激活函数" class="headerlink" title="三：Tanh激活函数"></a><strong>三：Tanh激活函数</strong></h4><p>Tanh函数是Sigmoid函数的一种变形，其图像被限制在两个水平线$y=-1$ 与$y=1$ 之间，如上图（6）所示。当神经元的输出为1时，表示该神经元完全被激活，否则为未被激活，函数表达式为：<br>$$<br>Tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}=2sigmoid(2x)-1 \tag{9}<br>$$<br>Tanh函数比Sigmoid函数优异的地方在于其图像关于原点对称，后续处理起来比较方便，而且相比sigmoid函数训练时收敛速度更快。</p>
-<p>Tanh激活函数的缺点是也会像Sigmoid激活函数一样，会导致模型的梯度消失。</p>
-<p>Tanh和Sigmoid作为激活函数两者的共同缺点在于都存在两端梯度弥散，计算量大的问题，而ReLU激活函数可以很好地解决这个问题。</p>
-<hr>
-<h4 id="四：ReLU激活函数"><a href="#四：ReLU激活函数" class="headerlink" title="四：ReLU激活函数"></a><strong>四：ReLU激活函数</strong></h4><p>ReLU函数的表达式和函数图像如下所示：<br>$$<br>ReLU=max(0,x) \tag{10}<br>$$<br><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 3.bmp" alt="图7 ReLU函数图像"></p>
-<p>ReLU激活函数梯度要么是1要么是0，有效的解决了梯度消失问题，此外ReLU激活函数（修正线性单元）优于其他激活函数的一点在于它不会同时激活所有的神经元，如果输入值是负的，ReLU函数会转换为0，而神经元不被激活。这意味着，在一段时间内，只有少量的神经元被激活，神经网络的这种稀疏性使其变得高效且易于计算。</p>
-<p>ReLU激活函数的缺点是训练的时候比较“脆弱”，输入持续为负的神经元激活值总是为0，会导致部分神经元“死亡”。而Leaky ReLU与ELU解决了该问题，在输入小于0时，存在一个很小很小的斜率。</p>
-<hr>
-<h4 id="五：Leakey-ReLU-和-ELU激活函数"><a href="#五：Leakey-ReLU-和-ELU激活函数" class="headerlink" title="五：Leakey ReLU 和 ELU激活函数"></a><strong>五：Leakey ReLU 和 ELU激活函数</strong></h4><p>$$<br>Leaky ReLU=max(0.01x,x) \tag{11}<br>$$</p>
-<p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 4.bmp" alt="图8 Leakey ReLU 函数图像"></p>
-<p>Leakey ReLU激活函数与ReLU激活函数不同的是，在$x&lt;0$时，有一个很小但不为0的斜率，避免了神经元“死亡”。<br>$$<br>ELU=\begin{cases}x\  \ x&gt;0 \ \alpha(e^x-1)\  \ others \end{cases} \tag{12}<br>$$<br><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 5.bmp" alt="图9 ELU函数图像"></p>
-<p>理论上Leakey ReLU激活函数与ELU激活函数有ReLU激活函数所有的优点，但是实际应用中的较少，ELU的一个小缺点在于计算量稍大。</p>
-<hr>
-<h4 id="六：激活函数的选择"><a href="#六：激活函数的选择" class="headerlink" title="六：激活函数的选择"></a><strong>六：激活函数的选择</strong></h4><p>综合以上各激活函数的优缺点，一般优先选择ReLU激活函数，其次Tanh，最后Sigmoid激活函数。</p>
-<p>注：ReLU函数只能在隐藏层中使用。</p>
-<hr>
-<h4 id="七：参考文献"><a href="#七：参考文献" class="headerlink" title="七：参考文献"></a><strong>七：参考文献</strong></h4><p><a href="https://zhuanlan.zhihu.com/p/45017091" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/45017091</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/30510596" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30510596</a></p>
-<p><a href="https://www.zhihu.com/question/22334626" target="_blank" rel="noopener">https://www.zhihu.com/question/22334626</a></p>
-
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/06/23/激活函数/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -276,7 +242,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Articles
+                        Posts
                     </p>
                     <p class="title has-text-weight-normal">
                         21
@@ -286,7 +252,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Catégories
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
                         5
@@ -306,7 +272,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="http://www.ndtsg.com" target="_blank">
-                SUIVRE</a>
+                Follow</a>
         </div>
         
         
@@ -358,7 +324,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Catégories
+                Categories
             </h3>
             <ul class="menu-list">
             <li>
@@ -414,7 +380,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recent
         </h3>
         
         <article class="media">
@@ -632,7 +598,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recent
         </h3>
         
         <article class="media">
@@ -856,7 +822,7 @@
                 
                 <br>
                 <span id="busuanzi_container_site_uv">
-                Thăm bởi <span id="busuanzi_value_site_uv">0</span> bạn đọc
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
                 </span>
                 
                 </p>
@@ -964,7 +930,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Trở lai đầu trang" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -1012,9 +978,9 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Articles',
+                POSTS: 'Posts',
                 PAGES: 'Pages',
-                CATEGORIES: 'Catégories',
+                CATEGORIES: 'Categories',
                 TAGS: 'Tags',
                 UNTITLED: '(Untitled)',
             },
