@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Suyuan&#39;s Blog</title>
+<title>激活函数 - Suyuan&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,15 +10,15 @@
     <meta name="description" content="一：引入激活函数（activation function）用于对输入信息进行非线性变换，然后将变换后的输出信息作为输入信息传给下一层神经元，解决了线性模型表达能力不足的问题（如果没有非线性的激活函数，每一层节点的输入都是上一层输出的线性组合，线性函数容易解决，但是其复杂性有限，无法学习复杂类型的数据，而且无论网络有多少层，输出都是输入的线性组合）。 激活函数使反向传播成为可能，因为激活函数的误差梯">
 <meta name="keywords" content="activation function">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Suyuan&#39;s Blog">
+<meta property="og:title" content="激活函数">
 <meta property="og:url" content="http://yoursite.com/2019/06/23/激活函数/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
 <meta property="og:description" content="一：引入激活函数（activation function）用于对输入信息进行非线性变换，然后将变换后的输出信息作为输入信息传给下一层神经元，解决了线性模型表达能力不足的问题（如果没有非线性的激活函数，每一层节点的输入都是上一层输出的线性组合，线性函数容易解决，但是其复杂性有限，无法学习复杂类型的数据，而且无论网络有多少层，输出都是输入的线性组合）。 激活函数使反向传播成为可能，因为激活函数的误差梯">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://blog-009.test.upcdn.net/机器学习/Activation function 0.png">
-<meta property="og:updated_time" content="2019-06-26T10:50:58.013Z">
+<meta property="og:updated_time" content="2019-06-27T00:43:58.394Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Suyuan&#39;s Blog">
+<meta name="twitter:title" content="激活函数">
 <meta name="twitter:description" content="一：引入激活函数（activation function）用于对输入信息进行非线性变换，然后将变换后的输出信息作为输入信息传给下一层神经元，解决了线性模型表达能力不足的问题（如果没有非线性的激活函数，每一层节点的输入都是上一层输出的线性组合，线性函数容易解决，但是其复杂性有限，无法学习复杂类型的数据，而且无论网络有多少层，输出都是输入的线性组合）。 激活函数使反向传播成为可能，因为激活函数的误差梯">
 <meta name="twitter:image" content="http://blog-009.test.upcdn.net/机器学习/Activation function 0.png">
 
@@ -98,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt height="28">
+                <img src="/images/logo.svg" alt="激活函数" height="28">
             
             </a>
         </div>
@@ -151,7 +151,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Activation function 0.png" alt>
+            <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Activation function 0.png" alt="激活函数">
         </span>
     </div>
     
@@ -177,7 +177,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                
+                激活函数
             
         </h1>
         <div class="content">
@@ -216,7 +216,7 @@
 <hr>
 <h4 id="五：Leakey-ReLU-和-ELU激活函数"><a href="#五：Leakey-ReLU-和-ELU激活函数" class="headerlink" title="五：Leakey ReLU 和 ELU激活函数"></a><strong>五：Leakey ReLU 和 ELU激活函数</strong></h4><p>$$<br>Leaky ReLU=max(0.01x,x)<br>$$</p>
 <p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 4.bmp" alt="图8 Leakey ReLU 函数图像"></p>
-<p>Leakey ReLU激活函数与ReLU激活函数不同的是，在$x&lt;0$时，有一个很小但不为0的斜率，避免了神经元“死亡”。<br>$$<br>ELU=\begin{cases}x\  \ x&gt;0 \ \alpha(e^x-1)\  \ others \end{cases}<br>$$<br><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 5.bmp" alt="图9 ELU函数图像"></p>
+<p>Leakey ReLU激活函数与ReLU激活函数不同的是，在$x&lt;0$时，有一个很小但不为0的斜率，避免了神经元“死亡”。<br>$$<br>ELU=\begin{cases}x\  \ x&gt;0 \\ \alpha(e^x-1)\  \ others \end{cases}<br>$$<br><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 5.bmp" alt="图9 ELU函数图像"></p>
 <p>理论上Leakey ReLU激活函数与ELU激活函数有ReLU激活函数所有的优点，但是实际应用中的较少，ELU的一个小缺点在于计算量稍大。</p>
 <hr>
 <h4 id="六：激活函数的选择"><a href="#六：激活函数的选择" class="headerlink" title="六：激活函数的选择"></a><strong>六：激活函数的选择</strong></h4><p>综合以上各激活函数的优缺点，一般优先选择ReLU激活函数，其次Tanh，最后Sigmoid激活函数。</p>
@@ -248,6 +248,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/27/随机梯度下降法/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">随机梯度下降</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -304,7 +311,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        21
+                        26
                     </p>
                 </div>
             </div>
@@ -324,7 +331,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        11
                     </p>
                 </div>
             </div>
@@ -439,7 +446,7 @@
                 <span class="level-item">Machine Learning</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">6</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/Netwaork-Model/">
@@ -483,16 +490,16 @@
         
         <article class="media">
             
-            <a href="/2019/06/23/激活函数/" class="media-left">
+            <a href="/2019/06/27/神经网络/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Activation function 0.png" alt>
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Neural network0.png" alt="神经网络">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-23T09:56:01.000Z">2019-06-23</time></div>
-                    <a href="/2019/06/23/激活函数/" class="has-link-black-ter is-size-6"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:22:17.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/神经网络/" class="has-link-black-ter is-size-6">神经网络</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
@@ -502,18 +509,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/21/AlexNet网络模型/" class="media-left">
+            <a href="/2019/06/27/正则化/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/网络模型/AlexNet00.png" alt="AlexNet网络模型">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Regularization0.png" alt="正则化">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T13:13:05.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/AlexNet网络模型/" class="has-link-black-ter is-size-6">AlexNet网络模型</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:20:04.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/正则化/" class="has-link-black-ter is-size-6">正则化</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Netwaork-Model/">Netwaork Model</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -521,18 +528,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/21/OpenCV-Python-绘图基本操作/" class="media-left">
+            <a href="/2019/06/27/损失函数/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv02.png" alt="OpenCV-Python 绘图基本操作">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Loss fuction0.png" alt="损失函数">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T04:16:55.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/OpenCV-Python-绘图基本操作/" class="has-link-black-ter is-size-6">OpenCV-Python 绘图基本操作</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:19:36.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/损失函数/" class="has-link-black-ter is-size-6">损失函数</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -540,18 +547,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/21/OpenCV-Python-视频的基本操作/" class="media-left">
+            <a href="/2019/06/27/欠拟合与过拟合/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv01.png" alt="OpenCV-Python 视频的基本操作">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Overfitting0.png" alt="欠拟合与过拟合">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T04:13:11.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/OpenCV-Python-视频的基本操作/" class="has-link-black-ter is-size-6">OpenCV-Python 视频的基本操作</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:18:46.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/欠拟合与过拟合/" class="has-link-black-ter is-size-6">欠拟合与过拟合</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -559,18 +566,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/21/OpenCV-Python-图像的基本操作/" class="media-left">
+            <a href="/2019/06/27/随机梯度下降法/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv00.png" alt="OpenCV-Python 图像的基本操作">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/SGD0.png" alt="随机梯度下降">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T03:59:02.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/OpenCV-Python-图像的基本操作/" class="has-link-black-ter is-size-6">OpenCV-Python 图像的基本操作</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:18:06.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/随机梯度下降法/" class="has-link-black-ter is-size-6">随机梯度下降</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -594,7 +601,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">11</span>
                 </span>
             </a>
         </li>
@@ -656,8 +663,43 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Loss-Function/">
+                        <span class="tag">Loss Function</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Neural-NetWorks/">
+                        <span class="tag">Neural NetWorks</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Opencv/">
                         <span class="tag">Opencv</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Overfitting/">
+                        <span class="tag">Overfitting</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Regularization/">
+                        <span class="tag">Regularization</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/SGD/">
+                        <span class="tag">SGD</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -701,16 +743,16 @@
         
         <article class="media">
             
-            <a href="/2019/06/23/激活函数/" class="media-left">
+            <a href="/2019/06/27/神经网络/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Activation function 0.png" alt>
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Neural network0.png" alt="神经网络">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-23T09:56:01.000Z">2019-06-23</time></div>
-                    <a href="/2019/06/23/激活函数/" class="has-link-black-ter is-size-6"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:22:17.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/神经网络/" class="has-link-black-ter is-size-6">神经网络</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
@@ -720,18 +762,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/21/AlexNet网络模型/" class="media-left">
+            <a href="/2019/06/27/正则化/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/网络模型/AlexNet00.png" alt="AlexNet网络模型">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Regularization0.png" alt="正则化">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T13:13:05.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/AlexNet网络模型/" class="has-link-black-ter is-size-6">AlexNet网络模型</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:20:04.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/正则化/" class="has-link-black-ter is-size-6">正则化</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Netwaork-Model/">Netwaork Model</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -739,18 +781,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/21/OpenCV-Python-绘图基本操作/" class="media-left">
+            <a href="/2019/06/27/损失函数/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv02.png" alt="OpenCV-Python 绘图基本操作">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Loss fuction0.png" alt="损失函数">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T04:16:55.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/OpenCV-Python-绘图基本操作/" class="has-link-black-ter is-size-6">OpenCV-Python 绘图基本操作</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:19:36.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/损失函数/" class="has-link-black-ter is-size-6">损失函数</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -758,18 +800,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/21/OpenCV-Python-视频的基本操作/" class="media-left">
+            <a href="/2019/06/27/欠拟合与过拟合/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv01.png" alt="OpenCV-Python 视频的基本操作">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Overfitting0.png" alt="欠拟合与过拟合">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T04:13:11.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/OpenCV-Python-视频的基本操作/" class="has-link-black-ter is-size-6">OpenCV-Python 视频的基本操作</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:18:46.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/欠拟合与过拟合/" class="has-link-black-ter is-size-6">欠拟合与过拟合</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -777,18 +819,18 @@
         
         <article class="media">
             
-            <a href="/2019/06/21/OpenCV-Python-图像的基本操作/" class="media-left">
+            <a href="/2019/06/27/随机梯度下降法/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net//opencv00.png" alt="OpenCV-Python 图像的基本操作">
+                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/SGD0.png" alt="随机梯度下降">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T03:59:02.000Z">2019-06-21</time></div>
-                    <a href="/2019/06/21/OpenCV-Python-图像的基本操作/" class="has-link-black-ter is-size-6">OpenCV-Python 图像的基本操作</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:18:06.000Z">2019-06-27</time></div>
+                    <a href="/2019/06/27/随机梯度下降法/" class="has-link-black-ter is-size-6">随机梯度下降</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/OpenCV/">OpenCV</a>
+                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
                     </p>
                 </div>
             </div>
@@ -812,7 +854,7 @@
                     <span class="level-item">June 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">11</span>
                 </span>
             </a>
         </li>
@@ -874,8 +916,43 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Loss-Function/">
+                        <span class="tag">Loss Function</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Neural-NetWorks/">
+                        <span class="tag">Neural NetWorks</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Opencv/">
                         <span class="tag">Opencv</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Overfitting/">
+                        <span class="tag">Overfitting</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Regularization/">
+                        <span class="tag">Regularization</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/SGD/">
+                        <span class="tag">SGD</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -911,7 +988,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt height="28">
+                    <img src="/images/logo.svg" alt="激活函数" height="28">
                 
                 </a>
                 <p class="is-size-7">
