@@ -1,205 +1,233 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-<title>Ubuntu18.04上Github的安装 - Suyuan&#39;s Blog</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-    <meta name="description" content="git 安装前，需先进行 Github 账号的注册。 一、Git 的安装在 Ubuntu 命令终端输入如下指令进行 git 的安装： 1sudo apt install git 根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="git 安装前，需先进行 Github 账号的注册。 一、Git 的安装在 Ubuntu 命令终端输入如下指令进行 git 的安装： 1sudo apt install git 根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu18.04上Github的安装">
 <meta property="og:url" content="http://yoursite.com/2019/04/30/Ubuntu18-04上Github的安装/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
 <meta property="og:description" content="git 安装前，需先进行 Github 账号的注册。 一、Git 的安装在 Ubuntu 命令终端输入如下指令进行 git 的安装： 1sudo apt install git 根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://blog-009.test.upcdn.net//github01.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz01.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz02.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz03.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz04.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//$009.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz06.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz07.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz08.png">
+<meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz09.png">
 <meta property="og:updated_time" content="2019-04-30T14:28:18.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu18.04上Github的安装">
 <meta name="twitter:description" content="git 安装前，需先进行 Github 账号的注册。 一、Git 的安装在 Ubuntu 命令终端输入如下指令进行 git 的安装： 1sudo apt install git 根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。">
-<meta name="twitter:image" content="http://blog-009.test.upcdn.net//github01.png">
+<meta name="twitter:image" content="http://blog-009.test.upcdn.net//gitaz01.png">
+
+<link rel="canonical" href="http://yoursite.com/2019/04/30/Ubuntu18-04上Github的安装/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'default'
+  };
+</script>
+
+  <title>Ubuntu18.04上Github的安装 | Suyuan's Blog</title>
+  
 
 
 
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-<link rel="icon" href="/images/favicon.svg">
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
-
-
-    
-    
-    
-    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
-    
-
-    
-    
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
-    
-
-    
-    
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
-
-
-    
-    
-    
-    
-
-<link rel="stylesheet" href="/css/back-to-top.css">
-
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-<link rel="stylesheet" href="/css/progressbar.css">
-<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-
-    
-    
-    
-
-    
-    
-    
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
-
-    
-
-
-<link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-3-column">
-    <nav class="navbar navbar-main">
-    <div class="container">
-        <div class="navbar-brand is-flex-center">
-            <a class="navbar-item navbar-logo" href="/">
-            
-                <img src="/images/logo.svg" alt="Ubuntu18.04上Github的安装" height="28">
-            
-            </a>
-        </div>
-        <div class="navbar-menu">
-            
-            <div class="navbar-start">
-                
-                <a class="navbar-item" href="/">Home</a>
-                
-                <a class="navbar-item" href="/archives">Archives</a>
-                
-                <a class="navbar-item" href="/categories">Categories</a>
-                
-                <a class="navbar-item" href="/tags">Tags</a>
-                
-                <a class="navbar-item" href="/about">About</a>
-                
-            </div>
-            
-            <div class="navbar-end">
-                
-                    
-                    
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
-                
-                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
-                
-                <a class="navbar-item search" title="Search" href="javascript:;">
-                    <i class="fas fa-search"></i>
-                </a>
-                
-            </div>
-        </div>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Suyuan's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
 </nav>
+
+
+
+
+</div>
+    </header>
+
     
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    
-    <div class="card-image">
-        <span class="image is-7by1">
-            <img class="thumbnail" src="http://blog-009.test.upcdn.net//github01.png" alt="Ubuntu18.04上Github的安装">
-        </span>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-04-30T14:02:59.000Z">2019-04-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Ubuntu/">Ubuntu</a>
-                </div>
-                
-                
-                
-                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
-                    <i class="far fa-eye"></i>
-                    <span id="busuanzi_value_page_pv">0</span> visits
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post">
             
-                Ubuntu18.04上Github的安装
-            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/30/Ubuntu18-04上Github的安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suyuan's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Ubuntu18.04上Github的安装
         </h1>
-        <div class="content">
-            <p>git 安装前，需先进行 Github 账号的注册。</p>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+              
+
+              <time title="أُنشأ: 2019-04-30 22:02:59 / عُدل: 22:28:18" itemprop="dateCreated datePublished" datetime="2019-04-30T22:02:59+08:00">2019-04-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">في</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>git 安装前，需先进行 Github 账号的注册。</p>
 <h4 id="一、Git-的安装"><a href="#一、Git-的安装" class="headerlink" title="一、Git 的安装"></a>一、Git 的安装</h4><p>在 Ubuntu 命令终端输入如下指令进行 git 的安装：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
 <p>根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。</p>
 <a id="more"></a>
 <p><img src="http://blog-009.test.upcdn.net//gitaz01.png" alt="图1 git 的安装"></p>
 <p> 接下来进行用户名和密码的配置</p>
 <p>在命令终端依次输入如下的指令：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;此处填入注册的github用户名&quot;</span><br><span class="line">git config --global user.email &quot;此处填入注册github时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;此处填入注册的github用户名&quot;</span><br><span class="line">git config --global user.email &quot;此处填入注册github时的邮箱&quot;</span><br></pre></td></tr></table></figure>
 <p>user.name 后边填入注册的 github 用户名；user.email 后边填入注册 github 时的邮箱。</p>
 <p>再次输入</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 <p>将会显示注册 github 时的用户名和邮箱地址。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz02.png" alt="图2 用户名和密码的配置"></p>
-<h4 id="二、SSH-Keys-的添加"><a href="#二、SSH-Keys-的添加" class="headerlink" title="二、SSH Keys 的添加"></a>二、SSH Keys 的添加</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;注册邮箱&quot;  # 此处填入注册邮箱</span><br></pre></td></tr></table></figure>
+<h4 id="二、SSH-Keys-的添加"><a href="#二、SSH-Keys-的添加" class="headerlink" title="二、SSH Keys 的添加"></a>二、SSH Keys 的添加</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;注册邮箱&quot;  # 此处填入注册邮箱</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz03.png" alt="图3 SSH Keys的生成"></p>
 <p>上述指令执行过程中连续回车即可，key 的默认保存位置为 /.ssh 目录，接下来转到该目录下，并输入如下的指令：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/suyuan/.ssh</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/suyuan/.ssh</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
 <p>会出现 id_rsa  id_rsa.pub , 接着输入：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>将会生成所需的一串公钥：</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz04.png" alt="图4 公钥"></p>
 <p>将该公钥进行备份，接下来登陆自己的 github 账号，点击自己头像处的小三角，在下拉菜单中找到 “Settings” ，进去后选择 “SSH and GPG keys” 这一项，之后点击 “New SSH key” 新建一个 SSH key。</p>
@@ -207,946 +235,203 @@
 <p>在 “ Title ” 处随意填写一个名称；</p>
 <p>在 “ Key ” 处，将刚才生成的一串公钥复制进去并保存。</p>
 <p>返回根目录，输入如下指令测试密钥是否配置成功</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /                       # 返回根目录</span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /                       # 返回根目录</span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>出现 “ You’ve successfully authenticated, but GitHub does not provide shell access. ” 等字样时，说明配置成功。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz06.png" alt="图6 密钥配置成功与否的验证"></p>
 <h4 id="三、远程仓库的创建"><a href="#三、远程仓库的创建" class="headerlink" title="三、远程仓库的创建"></a>三、远程仓库的创建</h4><p>点击自己 Github 头像左边的 “+” ，选择 “New Repository” 新建一个远程仓库，创建完成后，会生成一个如下所示的网页，HTTPS SSH 后面的那个网址保存下来以备创建本地仓库时用。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz07.png" alt="图7 远程仓库的创建"></p>
 <h4 id="四、本地仓库的创建"><a href="#四、本地仓库的创建" class="headerlink" title="四、本地仓库的创建"></a>四、本地仓库的创建</h4><p>在命令终端输入如下指令进行远程仓库的克隆和初始化：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &quot;此处复制进上述保存的那个网址&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &quot;此处复制进上述保存的那个网址&quot;</span><br></pre></td></tr></table></figure>
 <p>此时会在根目录下生成一个与远程仓库同名的文件夹，例如我所创建的仓库名称为 “github” 。</p>
 <p>转至所生成的本地仓库目录下，将仓库初始化：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd “本地仓库名”</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd “本地仓库名”</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz08.png" alt="图8 本地仓库初始化"></p>
 <h4 id="五、将本地仓库文件推送至远程仓库"><a href="#五、将本地仓库文件推送至远程仓库" class="headerlink" title="五、将本地仓库文件推送至远程仓库"></a>五、将本地仓库文件推送至远程仓库</h4><p>在本地仓库新建一个名为 “ceshi” 的文本，执行如下的指令将该文件即可推送至远程仓库：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add ceshi</span><br><span class="line">git commit -m &quot;first commit&quot;  # 提交说明</span><br><span class="line">git remote add origin https: https//github.com/Xavier01/github.git # 仓库地址</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add ceshi</span><br><span class="line">git commit -m &quot;first commit&quot;  # 提交说明</span><br><span class="line">git remote add origin https: https//github.com/Xavier01/github.git # 仓库地址</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz09.png" alt="图9 本地文件的提交"></p>
 <p>登陆Github 账号，在所创建的仓库中，即可看到从本地提交的文件及其信息。</p>
 
-        </div>
-        
-        
-        
     </div>
-</div>
-
-
-
-
-
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Ubuntu18.04关机卡死的解决方法</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/24/Hexo-网站分析插件配置/">
-                <span class="level-item">Hexo-网站分析插件配置</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
-
-
-</div>
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <nav class="level">
-            <div class="level-item has-text-centered">
-                <div>
-                    
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Xavier">
-                    
-                    
-                    <p class="is-size-4 is-block">
-                        Xavier
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-block">
-                        Computer Vision
-                    </p>
-                    
-                    
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
-                        <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Saint Petersburg</span>
-                    </p>
-                    
-                </div>
-            </div>
-        </nav>
-        <nav class="level is-mobile">
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        Posts
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        26
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        Categories
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        5
-                    </p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered is-marginless">
-                <div>
-                    <p class="heading">
-                        Tags
-                    </p>
-                    <p class="title has-text-weight-normal">
-                        11
-                    </p>
-                </div>
-            </div>
-        </nav>
-        <div class="level">
-            <a class="level-item button is-link is-rounded" href="http://www.ndtsg.com" target="_blank">
-                Follow</a>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/ppoffice">
-                
-                <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
-                
-                <i class="fab fa-facebook"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
-                
-                <i class="fab fa-twitter"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
-                
-                <i class="fab fa-dribbble"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
-                
-                <i class="fas fa-rss"></i>
-                
-            </a>
-            
-        </div>
-        
-    </div>
-</div>
-    
-        
-<div class="card widget" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Catalogue
-            </h3>
-            <ul class="menu-list"><li>
-        <a class="is-flex" href="#一、Git-的安装">
-        <span class="has-mr-6">1</span>
-        <span>一、Git 的安装</span>
-        </a></li><li>
-        <a class="is-flex" href="#二、SSH-Keys-的添加">
-        <span class="has-mr-6">2</span>
-        <span>二、SSH Keys 的添加</span>
-        </a></li><li>
-        <a class="is-flex" href="#三、远程仓库的创建">
-        <span class="has-mr-6">3</span>
-        <span>三、远程仓库的创建</span>
-        </a></li><li>
-        <a class="is-flex" href="#四、本地仓库的创建">
-        <span class="has-mr-6">4</span>
-        <span>四、本地仓库的创建</span>
-        </a></li><li>
-        <a class="is-flex" href="#五、将本地仓库文件推送至远程仓库">
-        <span class="has-mr-6">5</span>
-        <span>五、将本地仓库文件推送至远程仓库</span>
-        </a></li></ul>
-        </div>
-    </div>
-</div>
 
     
-        
-
-
     
+    
+
+      <footer class="post-footer">
+
         
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Categories
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/Blog/">
-            <span class="level-start">
-                <span class="level-item">Blog</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">7</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Machine-Learning/">
-            <span class="level-start">
-                <span class="level-item">Machine Learning</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">6</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Netwaork-Model/">
-            <span class="level-start">
-                <span class="level-item">Netwaork Model</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/OpenCV/">
-            <span class="level-start">
-                <span class="level-item">OpenCV</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">3</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/Ubuntu/">
-            <span class="level-start">
-                <span class="level-item">Ubuntu</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">5</span>
-            </span>
-        </a></li>
-            </ul>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/04/24/Hexo-网站分析插件配置/" rel="prev" title="Hexo-网站分析插件配置">
+      <i class="fa fa-chevron-left"></i> Hexo-网站分析插件配置
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/04/30/Ubuntu18-04关机卡死的解决方法/" rel="next" title="Ubuntu18.04关机卡死的解决方法">
+      Ubuntu18.04关机卡死的解决方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
-    </div>
-</div>
-    
-    
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
-            
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            Recent
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/神经网络/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Neural network0.png" alt="神经网络">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:22:17.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/神经网络/" class="has-link-black-ter is-size-6">神经网络</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/正则化/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Regularization0.png" alt="正则化">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:20:04.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/正则化/" class="has-link-black-ter is-size-6">正则化</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/损失函数/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Loss fuction0.png" alt="损失函数">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:19:36.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/损失函数/" class="has-link-black-ter is-size-6">损失函数</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/欠拟合与过拟合/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Overfitting0.png" alt="欠拟合与过拟合">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:18:46.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/欠拟合与过拟合/" class="has-link-black-ter is-size-6">欠拟合与过拟合</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/随机梯度下降法/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/SGD0.png" alt="随机梯度下降">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:18:06.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/随机梯度下降法/" class="has-link-black-ter is-size-6">随机梯度下降</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
 
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            Archives
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/06/">
-                <span class="level-start">
-                    <span class="level-item">June 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">11</span>
-                </span>
-            </a>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
         </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/05/">
-                <span class="level-start">
-                    <span class="level-item">May 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
+        <li class="sidebar-nav-overview">
+          عام
         </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、Git-的安装"><span class="nav-number">1.</span> <span class="nav-text">一、Git 的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、SSH-Keys-的添加"><span class="nav-number">2.</span> <span class="nav-text">二、SSH Keys 的添加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、远程仓库的创建"><span class="nav-number">3.</span> <span class="nav-text">三、远程仓库的创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、本地仓库的创建"><span class="nav-number">4.</span> <span class="nav-text">四、本地仓库的创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、将本地仓库文件推送至远程仓库"><span class="nav-number">5.</span> <span class="nav-text">五、将本地仓库文件推送至远程仓库</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
         
-        <li>
-            <a class="level is-marginless" href="/archives/2019/04/">
-                <span class="level-start">
-                    <span class="level-item">April 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">13</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">التصنيفات</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">الوسوم</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
     </div>
-</div>
-        
-            <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Tags
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/AlexNet/">
-                        <span class="tag">AlexNet</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Hexo/">
-                        <span class="tag">Hexo</span>
-                        <span class="tag is-grey">6</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/ICARUS/">
-                        <span class="tag">ICARUS</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Loss-Function/">
-                        <span class="tag">Loss Function</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Neural-NetWorks/">
-                        <span class="tag">Neural NetWorks</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Opencv/">
-                        <span class="tag">Opencv</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Overfitting/">
-                        <span class="tag">Overfitting</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Regularization/">
-                        <span class="tag">Regularization</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/SGD/">
-                        <span class="tag">SGD</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/activation-function/">
-                        <span class="tag">activation function</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/python/">
-                        <span class="tag">python</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-        
-        </div>
-    
-</div>
-
-                
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
+      </div>
+    </main>
 
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
-    
-        
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="menu-label">
-            Recent
-        </h3>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/神经网络/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Neural network0.png" alt="神经网络">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:22:17.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/神经网络/" class="has-link-black-ter is-size-6">神经网络</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/正则化/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Regularization0.png" alt="正则化">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:20:04.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/正则化/" class="has-link-black-ter is-size-6">正则化</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/损失函数/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Loss fuction0.png" alt="损失函数">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:19:36.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/损失函数/" class="has-link-black-ter is-size-6">损失函数</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/欠拟合与过拟合/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/Overfitting0.png" alt="欠拟合与过拟合">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:18:46.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/欠拟合与过拟合/" class="has-link-black-ter is-size-6">欠拟合与过拟合</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/06/27/随机梯度下降法/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="http://blog-009.test.upcdn.net/机器学习/SGD0.png" alt="随机梯度下降">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-27T02:18:06.000Z">2019-06-27</time></div>
-                    <a href="/2019/06/27/随机梯度下降法/" class="has-link-black-ter is-size-6">随机梯度下降</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Machine-Learning/">Machine Learning</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-    </div>
-</div>
-
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-        <h3 class="menu-label">
-            Archives
-        </h3>
-        <ul class="menu-list">
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/06/">
-                <span class="level-start">
-                    <span class="level-item">June 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">11</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/05/">
-                <span class="level-start">
-                    <span class="level-item">May 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">2</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/04/">
-                <span class="level-start">
-                    <span class="level-item">April 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">13</span>
-                </span>
-            </a>
-        </li>
-        
-        </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Tags
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/AlexNet/">
-                        <span class="tag">AlexNet</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Hexo/">
-                        <span class="tag">Hexo</span>
-                        <span class="tag is-grey">6</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/ICARUS/">
-                        <span class="tag">ICARUS</span>
-                        <span class="tag is-grey">2</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Loss-Function/">
-                        <span class="tag">Loss Function</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Neural-NetWorks/">
-                        <span class="tag">Neural NetWorks</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Opencv/">
-                        <span class="tag">Opencv</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Overfitting/">
-                        <span class="tag">Overfitting</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Regularization/">
-                        <span class="tag">Regularization</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/SGD/">
-                        <span class="tag">SGD</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/activation-function/">
-                        <span class="tag">activation function</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/python/">
-                        <span class="tag">python</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-    
-    
-</div>
-
-            </div>
-        </div>
-    </section>
     <footer class="footer">
-    <div class="container">
-        <div class="level">
-            <div class="level-start has-text-centered-mobile">
-                <a class="footer-logo is-block has-mb-6" href="/">
-                
-                    <img src="/images/logo.svg" alt="Ubuntu18.04上Github的安装" height="28">
-                
-                </a>
-                <p class="is-size-7">
-                &copy; 2019 John Doe&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
-                
-                <br>
-                <span id="busuanzi_container_site_uv">
-                Visited by <span id="busuanzi_value_site_uv">0</span> users
-                </span>
-                
-                </p>
-            </div>
-            <div class="level-end">
-            
-                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
-                
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
-                        
-                        <i class="fab fa-creative-commons"></i>
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                </p>
-                
-                </div>
-            
-            </div>
-        </div>
-    </div>
-</footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
-<script>moment.locale("en");</script>
+      <div class="footer-inner">
+        
 
+        
 
-    
-    
-    
-    <script src="/js/animation.js"></script>
-    
-
-    
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
-    <script src="/js/gallery.js" defer></script>
-    
-
-    
-    
-
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
-            my browser now </a></p>
-    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        outdatedBrowser({
-            bgColor: '#f25648',
-            color: '#ffffff',
-            lowerThan: 'flex'
-        });
-    });
-</script>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
 
 
-    
-    
-<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    MathJax.Hub.Config({
-        'HTML-CSS': {
-            matchFontHeight: false
-        },
-        SVG: {
-            matchFontHeight: false
-        },
-        CommonHTML: {
-            matchFontHeight: false
-        },
-        tex2jax: {
-            inlineMath: [
-                ['$','$'],
-                ['\\(','\\)']
-            ]
-        }
-    });
-});
-</script>
-
-    
-    
-
-<a id="back-to-top" title="Back to Top" href="javascript:;">
-    <i class="fas fa-chevron-up"></i>
-</a>
-<script src="/js/back-to-top.js" defer></script>
 
 
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
-    <script src="/js/clipboard.js" defer></script>
-    
-
-    
-    
-    
-
-    
 
 
-<script src="/js/main.js" defer></script>
 
-    
-    <div class="searchbox ins-search">
-    <div class="searchbox-container ins-search-container">
-        <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="searchbox-result-wrapper ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-    (function (window) {
-        var INSIGHT_CONFIG = {
-            TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
-            },
-            CONTENT_URL: '/content.json',
-        };
-        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-    })(window);
-</script>
-<script src="/js/insight.js" defer></script>
-<link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/insight.css">
-    
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
