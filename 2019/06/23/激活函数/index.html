@@ -37,7 +37,7 @@
 <meta property="og:image" content="http://blog-009.test.upcdn.net/机器学习/Activation function 3.bmp">
 <meta property="og:image" content="http://blog-009.test.upcdn.net/机器学习/Activation function 4.bmp">
 <meta property="og:image" content="http://blog-009.test.upcdn.net/机器学习/Activation function 5.bmp">
-<meta property="og:updated_time" content="2020-03-29T13:32:28.360Z">
+<meta property="og:updated_time" content="2020-03-29T13:36:02.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="激活函数">
 <meta name="twitter:description" content="一：引入激活函数（activation function）用于对输入信息进行非线性变换，然后将变换后的输出信息作为输入信息传给下一层神经元，解决了线性模型表达能力不足的问题（如果没有非线性的激活函数，每一层节点的输入都是上一层输出的线性组合，线性函数容易解决，但是其复杂性有限，无法学习复杂类型的数据，而且无论网络有多少层，输出都是输入的线性组合）。 激活函数使反向传播成为可能，因为激活函数的误差梯">
@@ -198,7 +198,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-29 21:32:28" itemprop="dateModified" datetime="2020-03-29T21:32:28+08:00">2020-03-29</time>
+                <time title="Modified: 2020-03-29 21:36:02" itemprop="dateModified" datetime="2020-03-29T21:36:02+08:00">2020-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -482,6 +482,61 @@ ELU=\begin{cases}x\  \ x>0 \\\\ \alpha(e^x-1)\  \ others \end{cases}</script><p>
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
