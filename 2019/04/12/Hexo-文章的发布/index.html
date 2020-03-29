@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="用 Hexo 框架结合 Github pages 搭建好博客平台后，接下来便是博客文章的创建和发布，本文主要对博客文章的创建和发布方法做了详细介绍。">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/04/12/Hexo-文章的发布/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
 <meta property="og:description" content="用 Hexo 框架结合 Github pages 搭建好博客平台后，接下来便是博客文章的创建和发布，本文主要对博客文章的创建和发布方法做了详细介绍。">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-04-23T12:50:41.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 文章的发布">
@@ -42,7 +42,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'default'
+    lang   : 'en'
   };
 </script>
 
@@ -86,7 +86,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -104,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -118,16 +119,51 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-about">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>الأرشيفات</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -151,12 +187,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/Hexo-文章的发布/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Xavier">
       <meta itemprop="description" content>
     </span>
 
@@ -173,22 +209,22 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="أُنشأ: 2019-04-12 21:36:37" itemprop="dateCreated datePublished" datetime="2019-04-12T21:36:37+08:00">2019-04-12</time>
+              <time title="Created: 2019-04-12 21:36:37" itemprop="dateCreated datePublished" datetime="2019-04-12T21:36:37+08:00">2019-04-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2019-04-23 20:50:41" itemprop="dateModified" datetime="2019-04-23T20:50:41+08:00">2019-04-23</time>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-04-23 20:50:41" itemprop="dateModified" datetime="2019-04-23T20:50:41+08:00">2019-04-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">في</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
@@ -208,15 +244,15 @@
         <p>用 Hexo 框架结合 Github pages 搭建好博客平台后，接下来便是博客文章的创建和发布，本文主要对博客文章的创建和发布方法做了详细介绍。</p>
 <a id="more"></a>
 <h2 id="1-文章标题的创建"><a href="#1-文章标题的创建" class="headerlink" title="1.文章标题的创建"></a>1.文章标题的创建</h2><p>将Git Bash定位在 E:\Hexo_blog\Hexo 目录下，并运行如下指令创建一个带有标题的新空白文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;article title&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"article title"</span></span><br></pre></td></tr></table></figure>
 <p>其中，E:\Hexo_blog 为 Hexo 的安装目录，E:\Hexo_blog\Hexo 为 Hexo 的初始化目录，“article title” 为博客文章的标题。</p>
 <h2 id="2-文章信息的完善"><a href="#2-文章信息的完善" class="headerlink" title="2.文章信息的完善"></a>2.文章信息的完善</h2><p>执行上述指令后，将会在 E:\Hexo_blog\Hexo\source_posts 文件目录下生成一个名为 “article title” 格式为 .md 的文档，用 Markdown 编辑器进行所创建文档的编辑，完善 “tags”，“categories” 等信息，格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &quot;article title&quot;                # 文章标题</span><br><span class="line">date: 2019-04-10 10:48:14             # 文章创建时间</span><br><span class="line">tags: [ubuntu,windows]                # 标签信息</span><br><span class="line">categories: operate system            # 分类信息</span><br></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: "article title"                # 文章标题</span><br><span class="line">date: 2019<span class="string">-04</span><span class="string">-10</span> 10:48:14             # 文章创建时间</span><br><span class="line"><span class="keyword">tags:</span> [ubuntu,windows]                # 标签信息</span><br><span class="line">categories: operate system            # 分类信息</span><br></pre></td></tr></table></figure>
 <p>“tags”、“categories” 等项可以在/Hexo/scaffolds目录下的“post”文件中作相应的修改，可以根据实际需求添加该项或者删除该项。</p>
 <h2 id="3-文章的预览和发布"><a href="#3-文章的预览和发布" class="headerlink" title="3.文章的预览和发布"></a>3.文章的预览和发布</h2><p>将编辑完的文章保存，运行如下指令即可进行文章样式的预览和将本地文章发布到博客网站：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g             # 生成静态文件</span><br><span class="line">hexo s             # 预览</span><br><span class="line">hexo d             # 部署</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> g             <span class="comment"># 生成静态文件</span></span><br><span class="line">hexo s             <span class="comment"># 预览</span></span><br><span class="line">hexo d             <span class="comment"># 部署</span></span><br></pre></td></tr></table></figure>
 <p>运行 <code>hexo s</code> 进行预览时，如果用 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 访问出现加载无效的问题，则有可能默认端口被占用，换个端口即可，比如将4000换为4001，端口切换指令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -p 4001</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -<span class="selector-tag">p</span> <span class="number">4001</span></span><br></pre></td></tr></table></figure>
 <h2 id="4-博客文章的访问"><a href="#4-博客文章的访问" class="headerlink" title="4.博客文章的访问"></a>4.博客文章的访问</h2><p>文章部署完成后，即可通过搜索引擎访问 “<a href="https://suyuann.github.io”" target="_blank" rel="noopener">https://suyuann.github.io”</a>  进行新发布文章的查询。</p>
 
     </div>
@@ -293,10 +329,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          المحتويات
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          Overview
         </li>
       </ul>
 
@@ -308,7 +344,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Xavier</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -317,19 +353,24 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">التصنيفات</span>
+        <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">الوسوم</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -356,10 +397,8 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Xavier</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -388,6 +427,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="一、Capture Video from camera1234567891011121314151617import numpy as npimport cv2 as cvcap = cv.VideoCapture(0)while(True):    ret, frame = cap.read() #从摄像头读取图片    gray = cv.cvtColor(frame, cv.COLOR_BG">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/06/21/OpenCV-Python-视频的基本操作/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
 <meta property="og:description" content="一、Capture Video from camera1234567891011121314151617import numpy as npimport cv2 as cvcap = cv.VideoCapture(0)while(True):    ret, frame = cap.read() #从摄像头读取图片    gray = cv.cvtColor(frame, cv.COLOR_BG">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-06-21T04:15:33.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenCV-Python 视频的基本操作">
@@ -41,7 +41,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'default'
+    lang   : 'en'
   };
 </script>
 
@@ -85,7 +85,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -103,6 +103,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -117,16 +118,51 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-about">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>الأرشيفات</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -150,12 +186,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/21/OpenCV-Python-视频的基本操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Xavier">
       <meta itemprop="description" content>
     </span>
 
@@ -172,16 +208,16 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="أُنشأ: 2019-06-21 12:13:11 / عُدل: 12:15:33" itemprop="dateCreated datePublished" datetime="2019-06-21T12:13:11+08:00">2019-06-21</time>
+              <time title="Created: 2019-06-21 12:13:11 / Modified: 12:15:33" itemprop="dateCreated datePublished" datetime="2019-06-21T12:13:11+08:00">2019-06-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">في</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/OpenCV/" itemprop="url" rel="index"><span itemprop="name">OpenCV</span></a>
                 </span>
@@ -198,11 +234,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="一、Capture-Video-from-camera"><a href="#一、Capture-Video-from-camera" class="headerlink" title="一、Capture Video from camera"></a><strong>一、Capture Video from camera</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(0)</span><br><span class="line">while(True):</span><br><span class="line">    ret, frame = cap.read() #从摄像头读取图片</span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) # 转为灰度图</span><br><span class="line">    cv.imshow(&apos;frame&apos;,gray) # 显示图像</span><br><span class="line">    k = cv.waitKey(0)</span><br><span class="line">    if k == 27:             # 按ESC键推出摄像</span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        break</span><br><span class="line">    elif k == ord(&quot;s&quot;):     # 按S键保存图像</span><br><span class="line">        cv.imwrite(&quot;image2.jpg&quot;,frame)</span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        break</span><br><span class="line">cap.release() # 关闭摄像头</span><br></pre></td></tr></table></figure>
+        <h4 id="一、Capture-Video-from-camera"><a href="#一、Capture-Video-from-camera" class="headerlink" title="一、Capture Video from camera"></a><strong>一、Capture Video from camera</strong></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">    ret, frame = cap.read() <span class="comment">#从摄像头读取图片</span></span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) <span class="comment"># 转为灰度图</span></span><br><span class="line">    cv.imshow(<span class="string">'frame'</span>,gray) <span class="comment"># 显示图像</span></span><br><span class="line">    k = cv.waitKey(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">if</span> k == <span class="number">27</span>:             <span class="comment"># 按ESC键推出摄像</span></span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">elif</span> k == ord(<span class="string">"s"</span>):     <span class="comment"># 按S键保存图像</span></span><br><span class="line">        cv.imwrite(<span class="string">"image2.jpg"</span>,frame)</span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cap.release() <span class="comment"># 关闭摄像头</span></span><br></pre></td></tr></table></figure>
 <p>注：ESC的ASCLL码为27。</p>
 <a id="more"></a>
-<h4 id="二、Playing-Video-from-file"><a href="#二、Playing-Video-from-file" class="headerlink" title="二、Playing Video from file"></a><strong>二、Playing Video from file</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(&quot;test.mp4&quot;)</span><br><span class="line"></span><br><span class="line">while(cap.isOpened()):</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)</span><br><span class="line">    cv.imshow(&apos;frame&apos;,gray)</span><br><span class="line">    if cv.waitKey(1) &amp; 0xFF == ord(&apos;q&apos;):</span><br><span class="line">        break</span><br><span class="line">cap.release()</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-<h4 id="三、Saving-a-Video"><a href="#三、Saving-a-Video" class="headerlink" title="三、Saving a Video"></a><strong>三、Saving a Video</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(0)</span><br><span class="line">fourcc = cv.VideoWriter_fourcc(*&apos;XVID&apos;) #编码解码形式</span><br><span class="line">out = cv.VideoWriter(&apos;output.avi&apos;,fourcc, 20.0, (640,480))</span><br><span class="line">while(cap.isOpened()):</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    if ret==True:</span><br><span class="line">        frame = cv.flip(frame,0)</span><br><span class="line">        out.write(frame)</span><br><span class="line">        cv.imshow(&apos;frame&apos;,frame)</span><br><span class="line">        if cv.waitKey(1) &amp; 0xFF == ord(&apos;q&apos;):</span><br><span class="line">            break</span><br><span class="line">    else:</span><br><span class="line">        break</span><br><span class="line">cap.release()</span><br><span class="line">out.release()</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="二、Playing-Video-from-file"><a href="#二、Playing-Video-from-file" class="headerlink" title="二、Playing Video from file"></a><strong>二、Playing Video from file</strong></h4><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import numpy as <span class="built_in">np</span></span><br><span class="line">import cv2 as <span class="built_in">cv</span></span><br><span class="line"></span><br><span class="line">cap = <span class="built_in">cv</span>.VideoCapture(<span class="string">"test.mp4"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(cap.isOpened()):</span><br><span class="line">    ret, frame = cap.<span class="built_in">read</span>()</span><br><span class="line">    gray = <span class="built_in">cv</span>.cvtColor(frame, <span class="built_in">cv</span>.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="built_in">cv</span>.imshow('frame',gray)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">cv</span>.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord('q'):</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">cap.release()</span><br><span class="line"><span class="built_in">cv</span>.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="三、Saving-a-Video"><a href="#三、Saving-a-Video" class="headerlink" title="三、Saving a Video"></a><strong>三、Saving a Video</strong></h4><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(<span class="number">0</span>)</span><br><span class="line">fourcc = cv.VideoWriter_fourcc(*<span class="string">'XVID'</span>) #编码解码形式</span><br><span class="line"><span class="keyword">out</span> = cv.VideoWriter(<span class="string">'output.avi'</span>,fourcc, <span class="number">20.0</span>, (<span class="number">640</span>,<span class="number">480</span>))</span><br><span class="line"><span class="keyword">while</span>(cap.isOpened()):</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    <span class="keyword">if</span> ret==True:</span><br><span class="line">        frame = cv.flip(frame,<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">out</span>.write(frame)</span><br><span class="line">        cv.imshow(<span class="string">'frame'</span>,frame)</span><br><span class="line">        <span class="keyword">if</span> cv.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cap.release()</span><br><span class="line"><span class="keyword">out</span>.release()</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 <p>FourCC ：用以指定视频编码解码方式，其所有的格式及描述：<a href="https://blog.csdn.net/u013943420/article/details/78779197" target="_blank" rel="noopener">here</a></p>
 <p>XVID：一个开放源代码的MPEG-4的视频编解码器，文件扩展名可以是avi、mkv、mp4等；</p>
 <p>FPS（Frame Per-Second，每秒传输的帧数）：通常电影为24帧，电视30帧。</p>
@@ -282,10 +318,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          المحتويات
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          Overview
         </li>
       </ul>
 
@@ -297,7 +333,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Xavier</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -306,19 +342,24 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">التصنيفات</span>
+        <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">الوسوم</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -345,10 +386,8 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Xavier</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -377,6 +416,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 

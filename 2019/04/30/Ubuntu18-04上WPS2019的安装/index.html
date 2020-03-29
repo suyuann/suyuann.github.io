@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="一、WPS安装包的下载在 WPS官网 下载 WPS Office 2019 For Linux 的 Deb 格式安装包：  二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：1sudo dpkg -i wps-office_11.1.0.8392_amd64.deb">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/04/30/Ubuntu18-04上WPS2019的安装/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
 <meta property="og:description" content="一、WPS安装包的下载在 WPS官网 下载 WPS Office 2019 For Linux 的 Deb 格式安装包：  二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：1sudo dpkg -i wps-office_11.1.0.8392_amd64.deb">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://blog-009.test.upcdn.net//wps01.png">
 <meta property="og:updated_time" content="2019-05-01T00:40:17.887Z">
 <meta name="twitter:card" content="summary">
@@ -43,7 +43,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'default'
+    lang   : 'en'
   };
 </script>
 
@@ -87,7 +87,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -105,6 +105,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -119,16 +120,51 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-about">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>الأرشيفات</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -152,12 +188,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/30/Ubuntu18-04上WPS2019的安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Xavier">
       <meta itemprop="description" content>
     </span>
 
@@ -174,22 +210,22 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="أُنشأ: 2019-04-30 22:11:53" itemprop="dateCreated datePublished" datetime="2019-04-30T22:11:53+08:00">2019-04-30</time>
+              <time title="Created: 2019-04-30 22:11:53" itemprop="dateCreated datePublished" datetime="2019-04-30T22:11:53+08:00">2019-04-30</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2019-05-01 08:40:17" itemprop="dateModified" datetime="2019-05-01T08:40:17+08:00">2019-05-01</time>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-05-01 08:40:17" itemprop="dateModified" datetime="2019-05-01T08:40:17+08:00">2019-05-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">في</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
                 </span>
@@ -208,14 +244,14 @@
       
         <h4 id="一、WPS安装包的下载"><a href="#一、WPS安装包的下载" class="headerlink" title="一、WPS安装包的下载"></a>一、WPS安装包的下载</h4><p>在 <a href="https://www.wps.cn/product/wpslinux/#" target="_blank" rel="noopener">WPS官网</a> 下载 WPS Office 2019 For Linux 的 Deb 格式安装包：</p>
 <p><img src="http://blog-009.test.upcdn.net//wps01.png" alt="图1 安装包下载"></p>
-<h4 id="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："><a href="#二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：" class="headerlink" title="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："></a>二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i wps-office_11.1.0.8392_amd64.deb</span><br></pre></td></tr></table></figure>
+<h4 id="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："><a href="#二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：" class="headerlink" title="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："></a>二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">dpkg</span> <span class="selector-tag">-i</span> <span class="selector-tag">wps-office_11</span><span class="selector-class">.1</span><span class="selector-class">.0</span><span class="selector-class">.8392_amd64</span><span class="selector-class">.deb</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h4 id="三、修复字体缺失"><a href="#三、修复字体缺失" class="headerlink" title="三、修复字体缺失"></a>三、修复字体缺失</h4><p>安装好的WPS在第一次打开时，会提示系统缺失字体。</p>
 <p>下载 <a href="https://pan.baidu.com/s/1mh0lcbY" target="_blank" rel="noopener">字体包</a> 并解压，运行如下的命令将解压后的字体文件移至 <code>/usr/share/fonts</code> 目录下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line">sudo mv /home/suyuan/下载/wps_symbol_fonts/ /usr/share/fonts/</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line">sudo mv <span class="regexp">/home/</span>suyuan<span class="regexp">/下载/</span>wps_symbol_fonts<span class="regexp">/ /u</span>sr<span class="regexp">/share/</span>fonts<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
 <p>之后运行以下指令生成字体的索引信息以及更新字体的缓存：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/share/fonts</span><br><span class="line">sudo mkfontscale</span><br><span class="line">sudo mkfontdir</span><br><span class="line">sudo fc-cache</span><br></pre></td></tr></table></figure>
-<h4 id="四、Libreoffice-的卸载"><a href="#四、Libreoffice-的卸载" class="headerlink" title="四、Libreoffice 的卸载"></a>四、Libreoffice 的卸载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/fonts</span><br><span class="line">sudo mkfontscale</span><br><span class="line">sudo mkfontdir</span><br><span class="line">sudo <span class="built_in">fc</span>-cache</span><br></pre></td></tr></table></figure>
+<h4 id="四、Libreoffice-的卸载"><a href="#四、Libreoffice-的卸载" class="headerlink" title="四、Libreoffice 的卸载"></a>四、Libreoffice 的卸载</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> <span class="builtin-name">remove</span> libreoffice-common</span><br></pre></td></tr></table></figure>
 <p>或者进入软件管理中心进行卸载。</p>
 
     </div>
@@ -289,10 +325,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          المحتويات
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          Overview
         </li>
       </ul>
 
@@ -304,7 +340,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Xavier</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -313,19 +349,24 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">التصنيفات</span>
+        <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">الوسوم</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -352,10 +393,8 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Xavier</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -384,6 +423,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 

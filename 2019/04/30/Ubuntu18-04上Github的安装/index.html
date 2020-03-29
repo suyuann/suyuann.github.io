@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="git 安装前，需先进行 Github 账号的注册。 一、Git 的安装在 Ubuntu 命令终端输入如下指令进行 git 的安装： 1sudo apt install git 根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://yoursite.com/2019/04/30/Ubuntu18-04上Github的安装/index.html">
 <meta property="og:site_name" content="Suyuan&#39;s Blog">
 <meta property="og:description" content="git 安装前，需先进行 Github 账号的注册。 一、Git 的安装在 Ubuntu 命令终端输入如下指令进行 git 的安装： 1sudo apt install git 根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz01.png">
 <meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz02.png">
 <meta property="og:image" content="http://blog-009.test.upcdn.net//gitaz03.png">
@@ -51,7 +51,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'default'
+    lang   : 'en'
   };
 </script>
 
@@ -95,7 +95,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -113,6 +113,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -127,16 +128,51 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-about">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>الأرشيفات</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -160,12 +196,12 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="default">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/30/Ubuntu18-04上Github的安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Xavier">
       <meta itemprop="description" content>
     </span>
 
@@ -182,16 +218,16 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="أُنشأ: 2019-04-30 22:02:59 / عُدل: 22:28:18" itemprop="dateCreated datePublished" datetime="2019-04-30T22:02:59+08:00">2019-04-30</time>
+              <time title="Created: 2019-04-30 22:02:59 / Modified: 22:28:18" itemprop="dateCreated datePublished" datetime="2019-04-30T22:02:59+08:00">2019-04-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">في</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
                 </span>
@@ -210,24 +246,24 @@
       
         <p>git 安装前，需先进行 Github 账号的注册。</p>
 <h4 id="一、Git-的安装"><a href="#一、Git-的安装" class="headerlink" title="一、Git 的安装"></a>一、Git 的安装</h4><p>在 Ubuntu 命令终端输入如下指令进行 git 的安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt <span class="keyword">install</span> git</span><br></pre></td></tr></table></figure>
 <p>根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。</p>
 <a id="more"></a>
 <p><img src="http://blog-009.test.upcdn.net//gitaz01.png" alt="图1 git 的安装"></p>
 <p> 接下来进行用户名和密码的配置</p>
 <p>在命令终端依次输入如下的指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;此处填入注册的github用户名&quot;</span><br><span class="line">git config --global user.email &quot;此处填入注册github时的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"此处填入注册的github用户名"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">"此处填入注册github时的邮箱"</span></span><br></pre></td></tr></table></figure>
 <p>user.name 后边填入注册的 github 用户名；user.email 后边填入注册 github 时的邮箱。</p>
 <p>再次输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--list</span><br></pre></td></tr></table></figure>
 <p>将会显示注册 github 时的用户名和邮箱地址。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz02.png" alt="图2 用户名和密码的配置"></p>
-<h4 id="二、SSH-Keys-的添加"><a href="#二、SSH-Keys-的添加" class="headerlink" title="二、SSH Keys 的添加"></a>二、SSH Keys 的添加</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;注册邮箱&quot;  # 此处填入注册邮箱</span><br></pre></td></tr></table></figure>
+<h4 id="二、SSH-Keys-的添加"><a href="#二、SSH-Keys-的添加" class="headerlink" title="二、SSH Keys 的添加"></a>二、SSH Keys 的添加</h4><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"注册邮箱"</span>  <span class="meta"># 此处填入注册邮箱</span></span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz03.png" alt="图3 SSH Keys的生成"></p>
 <p>上述指令执行过程中连续回车即可，key 的默认保存位置为 /.ssh 目录，接下来转到该目录下，并输入如下的指令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /home/suyuan/.ssh</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/home/suyuan/.ssh</span></span><br><span class="line"><span class="keyword">ls</span></span><br></pre></td></tr></table></figure>
 <p>会出现 id_rsa  id_rsa.pub , 接着输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">cat</span> <span class="selector-tag">id_rsa</span><span class="selector-class">.pub</span></span><br></pre></td></tr></table></figure>
 <p>将会生成所需的一串公钥：</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz04.png" alt="图4 公钥"></p>
 <p>将该公钥进行备份，接下来登陆自己的 github 账号，点击自己头像处的小三角，在下拉菜单中找到 “Settings” ，进去后选择 “SSH and GPG keys” 这一项，之后点击 “New SSH key” 新建一个 SSH key。</p>
@@ -235,19 +271,19 @@
 <p>在 “ Title ” 处随意填写一个名称；</p>
 <p>在 “ Key ” 处，将刚才生成的一串公钥复制进去并保存。</p>
 <p>返回根目录，输入如下指令测试密钥是否配置成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /                       # 返回根目录</span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cd</span> /                       <span class="comment"># 返回根目录</span></span><br><span class="line">ssh -T git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>
 <p>出现 “ You’ve successfully authenticated, but GitHub does not provide shell access. ” 等字样时，说明配置成功。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz06.png" alt="图6 密钥配置成功与否的验证"></p>
 <h4 id="三、远程仓库的创建"><a href="#三、远程仓库的创建" class="headerlink" title="三、远程仓库的创建"></a>三、远程仓库的创建</h4><p>点击自己 Github 头像左边的 “+” ，选择 “New Repository” 新建一个远程仓库，创建完成后，会生成一个如下所示的网页，HTTPS SSH 后面的那个网址保存下来以备创建本地仓库时用。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz07.png" alt="图7 远程仓库的创建"></p>
 <h4 id="四、本地仓库的创建"><a href="#四、本地仓库的创建" class="headerlink" title="四、本地仓库的创建"></a>四、本地仓库的创建</h4><p>在命令终端输入如下指令进行远程仓库的克隆和初始化：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &quot;此处复制进上述保存的那个网址&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> <span class="string">"此处复制进上述保存的那个网址"</span></span><br></pre></td></tr></table></figure>
 <p>此时会在根目录下生成一个与远程仓库同名的文件夹，例如我所创建的仓库名称为 “github” 。</p>
 <p>转至所生成的本地仓库目录下，将仓库初始化：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd “本地仓库名”</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> “本地仓库名”</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz08.png" alt="图8 本地仓库初始化"></p>
 <h4 id="五、将本地仓库文件推送至远程仓库"><a href="#五、将本地仓库文件推送至远程仓库" class="headerlink" title="五、将本地仓库文件推送至远程仓库"></a>五、将本地仓库文件推送至远程仓库</h4><p>在本地仓库新建一个名为 “ceshi” 的文本，执行如下的指令将该文件即可推送至远程仓库：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add ceshi</span><br><span class="line">git commit -m &quot;first commit&quot;  # 提交说明</span><br><span class="line">git remote add origin https: https//github.com/Xavier01/github.git # 仓库地址</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> ceshi</span></span><br><span class="line">git commit -m <span class="string">"first commit"</span>  <span class="comment"># 提交说明</span></span><br><span class="line">git remote <span class="keyword">add</span><span class="bash"> origin https: https//github.com/Xavier01/github.git <span class="comment"># 仓库地址</span></span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz09.png" alt="图9 本地文件的提交"></p>
 <p>登陆Github 账号，在所创建的仓库中，即可看到从本地提交的文件及其信息。</p>
 
@@ -322,10 +358,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          المحتويات
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          Overview
         </li>
       </ul>
 
@@ -337,7 +373,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Xavier</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -346,19 +382,24 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">التصنيفات</span>
+        <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">الوسوم</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -385,10 +426,8 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Xavier</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
 
         
 
@@ -417,6 +456,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 
