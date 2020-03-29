@@ -100,7 +100,7 @@
       <h1 class="site-title">Notebook</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">stay hungry,stay foolish.</p>
+      <p class="site-subtitle" itemprop="description">Stay hungry,Stay foolish.</p>
   </div>
 
   <div class="site-nav-right">
@@ -199,11 +199,11 @@
         <p>ICARUS主题不经配置的 “About” 菜单在访问时，会转至 404 页面，为了在 “About” 链接页面中添加个人简介及相关信息时，应进行相应的配置！</p>
 <a id="more"></a>
 <h2 id="一：ICARUS主题配置文件的更改"><a href="#一：ICARUS主题配置文件的更改" class="headerlink" title="一：ICARUS主题配置文件的更改"></a>一：ICARUS主题配置文件的更改</h2><p>在ICARUS主题的配置文件 _config.yml 文件中找到关键字 “menu” ，按如下方式修改并保存：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu</span><br><span class="line"><span class="symbol">	Home:</span> /</span><br><span class="line"><span class="symbol">	Archives:</span> /archives</span><br><span class="line"><span class="symbol">	Categories:</span> /categories</span><br><span class="line"><span class="symbol">	Tags:</span> /tags</span><br><span class="line"><span class="symbol">	About:</span> /about               <span class="meta"># 与该项修改一致即可</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu</span><br><span class="line">	Home: /</span><br><span class="line">	Archives: /archives</span><br><span class="line">	Categories: /categories</span><br><span class="line">	Tags: /tags</span><br><span class="line">	About: /about               # 与该项修改一致即可</span><br></pre></td></tr></table></figure>
 <h2 id="二：-“About”-页面的创建"><a href="#二：-“About”-页面的创建" class="headerlink" title="二： “About” 页面的创建"></a>二： “About” 页面的创建</h2><p>将 Git Bash 定位至 Hexo 配置文件所在目录下，运行如下指令：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new<span class="built_in"> page </span><span class="string">"about"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br></pre></td></tr></table></figure>
 <p>此时会在 “source” 文件夹中生成一个名为 “about” 的文件夹，打开该文件夹中的 index.md 文件并添加自己需要展示的个人介绍等信息，保存后运行如下的指令进行博客的更新部署：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
     </div>
 

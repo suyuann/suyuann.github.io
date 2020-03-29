@@ -218,16 +218,16 @@
   <entry>
     <title>OpenCV-Python 绘图基本操作</title>
     <url>/2019/06/21/OpenCV-Python-%E7%BB%98%E5%9B%BE%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<h4 id="一、直线的绘制"><a href="#一、直线的绘制" class="headerlink" title="一、直线的绘制"></a><strong>一、直线的绘制</strong></h4><figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">import numpy as <span class="built_in">np</span></span><br><span class="line">import cv2 as <span class="built_in">cv</span></span><br><span class="line"></span><br><span class="line">img = <span class="built_in">np</span>.zeros((<span class="number">512</span>,<span class="number">512</span>,<span class="number">3</span>), <span class="built_in">np</span>.uint8)    # 画布大小<span class="number">512</span>*<span class="number">512</span>，空白</span><br><span class="line"></span><br><span class="line"><span class="built_in">cv</span>.line(img,(<span class="number">0</span>,<span class="number">0</span>),(<span class="number">511</span>,<span class="number">511</span>),(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>),<span class="number">5</span>) # 第一条直线，宽度5px</span><br><span class="line"><span class="built_in">cv</span>.line(img,(<span class="number">0</span>,<span class="number">511</span>),(<span class="number">511</span>,<span class="number">0</span>),(<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>),<span class="number">5</span>) # 第二条直线 宽度5px</span><br><span class="line"></span><br><span class="line"><span class="built_in">cv</span>.imshow('<span class="built_in">image</span>', img)</span><br><span class="line"></span><br><span class="line">k = <span class="built_in">cv</span>.waitKey(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">if</span> k == <span class="number">27</span>:</span><br><span class="line">    <span class="built_in">cv</span>.destroyAllWindows()</span><br><span class="line">elif k == ord('s'):</span><br><span class="line">    <span class="built_in">cv</span>.imwrite('line.png',img)</span><br><span class="line">    <span class="built_in">cv</span>.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h4 id="一、直线的绘制"><a href="#一、直线的绘制" class="headerlink" title="一、直线的绘制"></a><strong>一、直线的绘制</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">img = np.zeros((512,512,3), np.uint8)    # 画布大小512*512，空白</span><br><span class="line"></span><br><span class="line">cv.line(img,(0,0),(511,511),(255,0,0),5) # 第一条直线，宽度5px</span><br><span class="line">cv.line(img,(0,511),(511,0),(0,255,0),5) # 第二条直线 宽度5px</span><br><span class="line"></span><br><span class="line">cv.imshow(&apos;image&apos;, img)</span><br><span class="line"></span><br><span class="line">k = cv.waitKey(0)</span><br><span class="line">if k == 27:</span><br><span class="line">    cv.destroyAllWindows()</span><br><span class="line">elif k == ord(&apos;s&apos;):</span><br><span class="line">    cv.imwrite(&apos;line.png&apos;,img)</span><br><span class="line">    cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="二、矩形的绘制"><a href="#二、矩形的绘制" class="headerlink" title="二、矩形的绘制"></a><strong>二、矩形的绘制</strong></h4><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">cv.rectangle(img,(<span class="number">206</span>,<span class="number">206</span>),(<span class="number">306</span>,<span class="number">306</span>),(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>),<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="三、圆的绘制"><a href="#三、圆的绘制" class="headerlink" title="三、圆的绘制"></a><strong>三、圆的绘制</strong></h4><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">cv.circle(img,(<span class="number">256</span>,<span class="number">256</span>), <span class="number">100</span>, (<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>))      # 圆形，线宽<span class="number">1</span>px</span><br><span class="line">cv.circle(img,(<span class="number">256</span>,<span class="number">256</span>), <span class="number">100</span>, (<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>), <span class="number">-1</span>)  # 填充的圆</span><br></pre></td></tr></table></figure>
-<h4 id="四、椭圆的绘制"><a href="#四、椭圆的绘制" class="headerlink" title="四、椭圆的绘制"></a><strong>四、椭圆的绘制</strong></h4><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">cv.ellipse(img,(<span class="number">256</span>,<span class="number">256</span>),(<span class="number">100</span>,<span class="number">50</span>),<span class="number">0</span>,<span class="number">0</span>,<span class="number">360</span>,(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>),<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="二、矩形的绘制"><a href="#二、矩形的绘制" class="headerlink" title="二、矩形的绘制"></a><strong>二、矩形的绘制</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cv.rectangle(img,(206,206),(306,306),(255,0,0),5)</span><br></pre></td></tr></table></figure>
+<h4 id="三、圆的绘制"><a href="#三、圆的绘制" class="headerlink" title="三、圆的绘制"></a><strong>三、圆的绘制</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cv.circle(img,(256,256), 100, (0,0,255))      # 圆形，线宽1px</span><br><span class="line">cv.circle(img,(256,256), 100, (0,0,255), -1)  # 填充的圆</span><br></pre></td></tr></table></figure>
+<h4 id="四、椭圆的绘制"><a href="#四、椭圆的绘制" class="headerlink" title="四、椭圆的绘制"></a><strong>四、椭圆的绘制</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cv.ellipse(img,(256,256),(100,50),0,0,360,(255,0,0),5)</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//01-17:27:37.png" alt></p>
-<h4 id="五、多边形的绘制"><a href="#五、多边形的绘制" class="headerlink" title="五、多边形的绘制"></a><strong>五、多边形的绘制</strong></h4><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">pts = np.array([[<span class="number">10</span>,<span class="number">5</span>],[<span class="number">20</span>,<span class="number">30</span>],[<span class="number">70</span>,<span class="number">20</span>],[<span class="number">50</span>,<span class="number">10</span>]], np.int32)</span><br><span class="line">pts = pts.reshape((<span class="number">-1</span>,<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line">cv.polylines(img,[pts],True,(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+<h4 id="五、多边形的绘制"><a href="#五、多边形的绘制" class="headerlink" title="五、多边形的绘制"></a><strong>五、多边形的绘制</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pts = np.array([[10,5],[20,30],[70,20],[50,10]], np.int32)</span><br><span class="line">pts = pts.reshape((-1,1,2))</span><br><span class="line">cv.polylines(img,[pts],True,(255,0,0))</span><br></pre></td></tr></table></figure>
 <p>绘制多边形先指定多边形各个顶点的坐标，</p>
 <p>第三行第三个参数为False时，则绘制出一些列多边形的顶点而非闭合图形。</p>
-<h4 id="六、图像中文字的添加"><a href="#六、图像中文字的添加" class="headerlink" title="六、图像中文字的添加"></a><strong>六、图像中文字的添加</strong></h4><figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">font = cv.FONT_HERSHEY_SIMPLEX  # 字体</span><br><span class="line">cv.putText(img,'OpenCV',(<span class="number">10</span>,<span class="number">500</span>), font, <span class="number">4</span>,(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>),<span class="number">2</span>,cv.LINE_AA)</span><br><span class="line"># 字体大小为<span class="number">4</span>，线型为cv.LINE_AA</span><br></pre></td></tr></table></figure>
+<h4 id="六、图像中文字的添加"><a href="#六、图像中文字的添加" class="headerlink" title="六、图像中文字的添加"></a><strong>六、图像中文字的添加</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">font = cv.FONT_HERSHEY_SIMPLEX  # 字体</span><br><span class="line">cv.putText(img,&apos;OpenCV&apos;,(10,500), font, 4,(255,255,255),2,cv.LINE_AA)</span><br><span class="line"># 字体大小为4，线型为cv.LINE_AA</span><br></pre></td></tr></table></figure>
 <h4 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a><strong>参考文献：</strong></h4><blockquote>
 <p><a href="https://docs.opencv.org/3.4.0/dc/da5/tutorial_py_drawing_functions.html" target="_blank" rel="noopener">https://docs.opencv.org/3.4.0/dc/da5/tutorial_py_drawing_functions.html</a></p>
 </blockquote>
@@ -239,11 +239,11 @@
   <entry>
     <title>OpenCV-Python 视频的基本操作</title>
     <url>/2019/06/21/OpenCV-Python-%E8%A7%86%E9%A2%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<h4 id="一、Capture-Video-from-camera"><a href="#一、Capture-Video-from-camera" class="headerlink" title="一、Capture Video from camera"></a><strong>一、Capture Video from camera</strong></h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">    ret, frame = cap.read() <span class="comment">#从摄像头读取图片</span></span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) <span class="comment"># 转为灰度图</span></span><br><span class="line">    cv.imshow(<span class="string">'frame'</span>,gray) <span class="comment"># 显示图像</span></span><br><span class="line">    k = cv.waitKey(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">if</span> k == <span class="number">27</span>:             <span class="comment"># 按ESC键推出摄像</span></span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">elif</span> k == ord(<span class="string">"s"</span>):     <span class="comment"># 按S键保存图像</span></span><br><span class="line">        cv.imwrite(<span class="string">"image2.jpg"</span>,frame)</span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cap.release() <span class="comment"># 关闭摄像头</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h4 id="一、Capture-Video-from-camera"><a href="#一、Capture-Video-from-camera" class="headerlink" title="一、Capture Video from camera"></a><strong>一、Capture Video from camera</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(0)</span><br><span class="line">while(True):</span><br><span class="line">    ret, frame = cap.read() #从摄像头读取图片</span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) # 转为灰度图</span><br><span class="line">    cv.imshow(&apos;frame&apos;,gray) # 显示图像</span><br><span class="line">    k = cv.waitKey(0)</span><br><span class="line">    if k == 27:             # 按ESC键推出摄像</span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        break</span><br><span class="line">    elif k == ord(&quot;s&quot;):     # 按S键保存图像</span><br><span class="line">        cv.imwrite(&quot;image2.jpg&quot;,frame)</span><br><span class="line">        cv.destroyAllWindows()</span><br><span class="line">        break</span><br><span class="line">cap.release() # 关闭摄像头</span><br></pre></td></tr></table></figure>
 <p>注：ESC的ASCLL码为27。</p>
 <a id="more"></a>
-<h4 id="二、Playing-Video-from-file"><a href="#二、Playing-Video-from-file" class="headerlink" title="二、Playing Video from file"></a><strong>二、Playing Video from file</strong></h4><figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">import numpy as <span class="built_in">np</span></span><br><span class="line">import cv2 as <span class="built_in">cv</span></span><br><span class="line"></span><br><span class="line">cap = <span class="built_in">cv</span>.VideoCapture(<span class="string">"test.mp4"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(cap.isOpened()):</span><br><span class="line">    ret, frame = cap.<span class="built_in">read</span>()</span><br><span class="line">    gray = <span class="built_in">cv</span>.cvtColor(frame, <span class="built_in">cv</span>.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="built_in">cv</span>.imshow('frame',gray)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">cv</span>.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord('q'):</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">cap.release()</span><br><span class="line"><span class="built_in">cv</span>.destroyAllWindows()</span><br></pre></td></tr></table></figure>
-<h4 id="三、Saving-a-Video"><a href="#三、Saving-a-Video" class="headerlink" title="三、Saving a Video"></a><strong>三、Saving a Video</strong></h4><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(<span class="number">0</span>)</span><br><span class="line">fourcc = cv.VideoWriter_fourcc(*<span class="string">'XVID'</span>) #编码解码形式</span><br><span class="line"><span class="keyword">out</span> = cv.VideoWriter(<span class="string">'output.avi'</span>,fourcc, <span class="number">20.0</span>, (<span class="number">640</span>,<span class="number">480</span>))</span><br><span class="line"><span class="keyword">while</span>(cap.isOpened()):</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    <span class="keyword">if</span> ret==True:</span><br><span class="line">        frame = cv.flip(frame,<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">out</span>.write(frame)</span><br><span class="line">        cv.imshow(<span class="string">'frame'</span>,frame)</span><br><span class="line">        <span class="keyword">if</span> cv.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == ord(<span class="string">'q'</span>):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cap.release()</span><br><span class="line"><span class="keyword">out</span>.release()</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="二、Playing-Video-from-file"><a href="#二、Playing-Video-from-file" class="headerlink" title="二、Playing Video from file"></a><strong>二、Playing Video from file</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(&quot;test.mp4&quot;)</span><br><span class="line"></span><br><span class="line">while(cap.isOpened()):</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)</span><br><span class="line">    cv.imshow(&apos;frame&apos;,gray)</span><br><span class="line">    if cv.waitKey(1) &amp; 0xFF == ord(&apos;q&apos;):</span><br><span class="line">        break</span><br><span class="line">cap.release()</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="三、Saving-a-Video"><a href="#三、Saving-a-Video" class="headerlink" title="三、Saving a Video"></a><strong>三、Saving a Video</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">cap = cv.VideoCapture(0)</span><br><span class="line">fourcc = cv.VideoWriter_fourcc(*&apos;XVID&apos;) #编码解码形式</span><br><span class="line">out = cv.VideoWriter(&apos;output.avi&apos;,fourcc, 20.0, (640,480))</span><br><span class="line">while(cap.isOpened()):</span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    if ret==True:</span><br><span class="line">        frame = cv.flip(frame,0)</span><br><span class="line">        out.write(frame)</span><br><span class="line">        cv.imshow(&apos;frame&apos;,frame)</span><br><span class="line">        if cv.waitKey(1) &amp; 0xFF == ord(&apos;q&apos;):</span><br><span class="line">            break</span><br><span class="line">    else:</span><br><span class="line">        break</span><br><span class="line">cap.release()</span><br><span class="line">out.release()</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 <p>FourCC ：用以指定视频编码解码方式，其所有的格式及描述：<a href="https://blog.csdn.net/u013943420/article/details/78779197" target="_blank" rel="noopener">here</a></p>
 <p>XVID：一个开放源代码的MPEG-4的视频编解码器，文件扩展名可以是avi、mkv、mp4等；</p>
 <p>FPS（Frame Per-Second，每秒传输的帧数）：通常电影为24帧，电视30帧。</p>
@@ -265,12 +265,12 @@
 <li><strong>cv.imwrite()</strong> : 保存图像</li>
 </ul>
 <a id="more"></a>
-<h4 id="一、图像的读取和显示"><a href="#一、图像的读取和显示" class="headerlink" title="一、图像的读取和显示"></a><strong>一、图像的读取和显示</strong></h4><figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">img = cv.imread(<span class="string">'test.jpg'</span>,<span class="number">0</span>)     # 以灰度模式读取图像，<span class="number">0</span>为灰度模式，<span class="number">1</span>为彩色模式</span><br><span class="line"></span><br><span class="line">cv.imshow(<span class="string">'image'</span>,img)            # 显示图像，“image”和“img”分别为窗口和图片的名称，</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()            # 删除窗口</span><br></pre></td></tr></table></figure>
+<h4 id="一、图像的读取和显示"><a href="#一、图像的读取和显示" class="headerlink" title="一、图像的读取和显示"></a><strong>一、图像的读取和显示</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">img = cv.imread(&apos;test.jpg&apos;,0)     # 以灰度模式读取图像，0为灰度模式，1为彩色模式</span><br><span class="line"></span><br><span class="line">cv.imshow(&apos;image&apos;,img)            # 显示图像，“image”和“img”分别为窗口和图片的名称，</span><br><span class="line">cv.waitKey(0)</span><br><span class="line">cv.destroyAllWindows()            # 删除窗口</span><br></pre></td></tr></table></figure>
 <p>删除指定窗口：</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">cv</span><span class="selector-class">.destroyWindow</span>(<span class="string">"image"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cv.destroyWindow(&quot;image&quot;)</span><br></pre></td></tr></table></figure>
 <p>cv.waitKey(0)：表示程序无限期等待，直到用户触发任意键。</p>
-<h4 id="二、读取并更改图像名称及格式"><a href="#二、读取并更改图像名称及格式" class="headerlink" title="二、读取并更改图像名称及格式"></a><strong>二、读取并更改图像名称及格式</strong></h4><figure class="highlight xl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"></span><br><span class="line">img = cv.imread(<span class="string">'test.jpg'</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">cv.imwrite(<span class="string">'test01.png'</span>,img)      # 以名为test01格式为png保存图像</span><br></pre></td></tr></table></figure>
-<h4 id="三、用Matplotlib读取并显示图像"><a href="#三、用Matplotlib读取并显示图像" class="headerlink" title="三、用Matplotlib读取并显示图像"></a><strong>三、用Matplotlib读取并显示图像</strong></h4><figure class="highlight xl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line">from matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">img = cv.imread(<span class="string">'test.jpg'</span>,<span class="number">0</span>)</span><br><span class="line">plt.imshow(img, cmap = <span class="string">'gray'</span>, interpolation = <span class="string">'bicubic'</span>)</span><br><span class="line">plt.xticks([]), plt.yticks([])  # 隐藏X与Y轴</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<h4 id="二、读取并更改图像名称及格式"><a href="#二、读取并更改图像名称及格式" class="headerlink" title="二、读取并更改图像名称及格式"></a><strong>二、读取并更改图像名称及格式</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">img = cv.imread(&apos;test.jpg&apos;,0)</span><br><span class="line"></span><br><span class="line">cv.imwrite(&apos;test01.png&apos;,img)      # 以名为test01格式为png保存图像</span><br></pre></td></tr></table></figure>
+<h4 id="三、用Matplotlib读取并显示图像"><a href="#三、用Matplotlib读取并显示图像" class="headerlink" title="三、用Matplotlib读取并显示图像"></a><strong>三、用Matplotlib读取并显示图像</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"></span><br><span class="line">img = cv.imread(&apos;test.jpg&apos;,0)</span><br><span class="line">plt.imshow(img, cmap = &apos;gray&apos;, interpolation = &apos;bicubic&apos;)</span><br><span class="line">plt.xticks([]), plt.yticks([])  # 隐藏X与Y轴</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <p><strong>Warning：</strong>如果用OpenCV读取RGB模式的彩色图像，则无法在Matplotlib正常显示（OpenCV加载的彩色图像为BGR模式）。</p>
 <h4 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a><strong>参考文献：</strong></h4><blockquote>
 <p><a href="https://docs.opencv.org/3.4.0/dc/d2e/tutorial_py_image_display.html" target="_blank" rel="noopener">https://docs.opencv.org/3.4.0/dc/d2e/tutorial_py_image_display.html</a></p>
@@ -287,27 +287,27 @@
 <a id="more"></a>
 <h4 id="一：You-get的安装"><a href="#一：You-get的安装" class="headerlink" title="一：You-get的安装"></a><strong>一：You-get的安装</strong></h4><ol>
 <li><p>在windows命令控制窗口中输入如下指令进行You-get的安装：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> you-<span class="keyword">get</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip3 install you-get</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>You-get工具的升级：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> <span class="comment">--upgrade you-get</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip3 install --upgrade you-get</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>pip的更新：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">python -m pip <span class="keyword">install</span> <span class="comment">--upgrade pip</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h4 id="二：视频的下载"><a href="#二：视频的下载" class="headerlink" title="二：视频的下载"></a><strong>二：视频的下载</strong></h4><ol>
 <li><p>画质的选择：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">you-<span class="builtin-name">get</span> -i 视频链接</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">you-get -i 视频链接</span><br></pre></td></tr></table></figure>
 <p>在cmd命令控制窗口中输入上述指令后，将会出现一系列视频画质选项及其相应的下载指令，如下图所示：</p>
 <p><img src="http://blog-009.test.upcdn.net//you-get.png" alt="画质及格式的查看"></p>
 </li>
 <li><p>视频的下载：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">you-<span class="builtin-name">get</span> -i <span class="attribute">--format</span>=mp4hd URL</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">you-get -i --format=mp4hd URL</span><br></pre></td></tr></table></figure>
 <p>将上述指令中的 URL 替换成所要下载的视频链接即可（具体画质和下载格式见指令）</p>
 </li>
 </ol>
-<h4 id="三：暂停下载"><a href="#三：暂停下载" class="headerlink" title="三：暂停下载"></a><strong>三：暂停下载</strong></h4><figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line">Ctrl+<span class="keyword">C</span></span><br></pre></td></tr></table></figure>
+<h4 id="三：暂停下载"><a href="#三：暂停下载" class="headerlink" title="三：暂停下载"></a><strong>三：暂停下载</strong></h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Ctrl+C</span><br></pre></td></tr></table></figure>
 <h4 id="四：支持的部分国内网站"><a href="#四：支持的部分国内网站" class="headerlink" title="四：支持的部分国内网站"></a><strong>四：支持的部分国内网站</strong></h4><ol>
 <li>哔哩哔哩（<a href="http://www.bilibili.com/" target="_blank" rel="noopener">http://www.bilibili.com/</a>）</li>
 <li>爱奇艺（<a href="http://www.iqiyi.com/" target="_blank" rel="noopener">http://www.iqiyi.com/</a>）</li>
@@ -334,60 +334,60 @@
 <p>为了解决这个问题，有必要将Ubuntu18.04中默认的Python2.7启动版本修改为Python3.6版本（Ubuntu18.04中默认安装了两个 Python 版本：Python 2.7.15 和 Python 3.6.7）</p>
 <p>修改方法为：</p>
 <p>移除 /usr/bin 目录下指向 Python2 的软链接（该目录下有一个名为 “python” 的文件，移除之），并与Python3.6建立新的链接（不要删除安装的Python2.7版本，否则可能后果很严重）。</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">sudo rm <span class="meta-keyword">/usr/</span>bin/python</span><br><span class="line">sudo ln -s <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/bin/</span>python3<span class="number">.6</span> <span class="meta-keyword">/usr/</span>bin/python</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo rm /usr/bin/python</span><br><span class="line">sudo ln -s /usr/local/bin/python3.6 /usr/bin/python</span><br></pre></td></tr></table></figure>
 <p>上述 /usr/local/bin/python3.6 是 Python 3.6.7 的安装位置，执行第二条指令后将会在 /usr/bin 目录下重新生成一个名为 “python” 的文件, 再于终端输入 python 时，将会默认启动Python 3.6 版本。</p>
 <h4 id="三、OpenCV相关依赖安装"><a href="#三、OpenCV相关依赖安装" class="headerlink" title="三、OpenCV相关依赖安装"></a>三、OpenCV相关依赖安装</h4><ol>
 <li>软件列表及软件的更新</li>
 </ol>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> update</span><br><span class="line">sudo apt-<span class="builtin-name">get</span> upgrade</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
 <ol start="2">
 <li>开发工具的安装</li>
 </ol>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">sudo apt-get <span class="keyword">install </span><span class="keyword">build-essential </span>cmake pkg-<span class="built_in">config</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install build-essential cmake pkg-config</span><br></pre></td></tr></table></figure>
 <ol start="3">
 <li>图像处理相关库安装</li>
 </ol>
-<figure class="highlight q"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install libjpeg8-<span class="built_in">dev</span> libtiff5-<span class="built_in">dev</span> libjasper-<span class="built_in">dev</span> libpng12-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev</span><br></pre></td></tr></table></figure>
 <p>libjpeg8-dev、libtiff5-dev、libpng12-dev可能存在新的版本，可用如下的指令进行升级：</p>
-<figure class="highlight q"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install libjpeg8-<span class="built_in">dev</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install libtiff-<span class="built_in">dev</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install libpng-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libjpeg8-dev</span><br><span class="line">sudo apt-get install libtiff-dev</span><br><span class="line">sudo apt-get install libpng-dev</span><br></pre></td></tr></table></figure>
 <ol start="4">
 <li>视频处理相关库安装</li>
 </ol>
-<figure class="highlight q"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install libavcodec-<span class="built_in">dev</span> libavformat-<span class="built_in">dev</span> libswscale-<span class="built_in">dev</span> libv4l-<span class="built_in">dev</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install libxvidcore-<span class="built_in">dev</span> libx264-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev</span><br><span class="line">sudo apt-get install libxvidcore-dev libx264-dev</span><br></pre></td></tr></table></figure>
 <ol start="5">
 <li>GTK库的安装</li>
 </ol>
-<figure class="highlight q"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install libgtk<span class="number">-3</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libgtk-3-dev</span><br></pre></td></tr></table></figure>
 <ol start="6">
 <li>用于优化opencv内部各种功能的库的安装</li>
 </ol>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">sudo</span> apt-<span class="meta">get</span> install libatlas-<span class="keyword">base-dev </span>gfortran</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install libatlas-base-dev gfortran</span><br></pre></td></tr></table></figure>
 <ol start="7">
 <li>numpy库的安装</li>
 </ol>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install python3-numpy</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install python3-numpy</span><br></pre></td></tr></table></figure>
 <h4 id="四、编译及安装"><a href="#四、编译及安装" class="headerlink" title="四、编译及安装"></a>四、编译及安装</h4><ol>
 <li>进入已解压的文件opencv-3.4.0目录下，执行如下指令：</li>
 </ol>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake -D <span class="attribute">CMAKE_BUILD_TYPE</span>=RELEASE \</span><br><span class="line">-D <span class="attribute">CMAKE_INSTALL_PREFIX</span>=/usr/local \</span><br><span class="line">-D <span class="attribute">PYTHON3_EXECUTABLE</span>=/usr/bin/python3 \</span><br><span class="line">-D <span class="attribute">PYTHON_INCLUDE_DIR</span>=/usr/include/python3.6 \</span><br><span class="line">-D <span class="attribute">PYTHON_LIBRARY</span>=/usr/lib/x86_64-linux-gnu/libpython3.6m.so \</span><br><span class="line">-D <span class="attribute">PYTHON3_NUMPY_INCLUDE_DIRS</span>=/usr/local/lib/python3.6/dist-packages/numpy/core/include \</span><br><span class="line">-D <span class="attribute">INSTALL_PYTHON_EXAMPLES</span>=ON \</span><br><span class="line">-D <span class="attribute">INSTALL_C_EXAMPLES</span>=OFF \</span><br><span class="line">-D <span class="attribute">PYTHON_EXECUTABLE</span>=/usr/lib/python3 \</span><br><span class="line">-D <span class="attribute">BUILD_EXAMPLES</span>=ON <span class="built_in">..</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE \</span><br><span class="line">-D CMAKE_INSTALL_PREFIX=/usr/local \</span><br><span class="line">-D PYTHON3_EXECUTABLE=/usr/bin/python3 \</span><br><span class="line">-D PYTHON_INCLUDE_DIR=/usr/include/python3.6 \</span><br><span class="line">-D PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.6m.so \</span><br><span class="line">-D PYTHON3_NUMPY_INCLUDE_DIRS=/usr/local/lib/python3.6/dist-packages/numpy/core/include \</span><br><span class="line">-D INSTALL_PYTHON_EXAMPLES=ON \</span><br><span class="line">-D INSTALL_C_EXAMPLES=OFF \</span><br><span class="line">-D PYTHON_EXECUTABLE=/usr/lib/python3 \</span><br><span class="line">-D BUILD_EXAMPLES=ON ..</span><br></pre></td></tr></table></figure>
 <p>运行完成后会出现如下的信息，可以看到 Python(for build)          /usr/bin/python3 这一项。</p>
 <p><img src="http://blog-009.test.upcdn.net//cv02.png" alt></p>
 <ol start="2">
 <li>编译</li>
 </ol>
-<figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line"><span class="built_in">make</span> -j4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">make -j4</span><br></pre></td></tr></table></figure>
 <p>编译过程比较漫长，完成后如下图所示：</p>
 <p><img src="http://blog-009.test.upcdn.net//cv03.png" alt></p>
 <ol start="3">
 <li>安装</li>
 </ol>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">sudo make <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
 <p>如果不出什么意外，安装的过程将会比较顺利，完成后会如下图所示：</p>
 <p><img src="http://blog-009.test.upcdn.net//cv04.png" alt></p>
 <h4 id="五、安装成功与否的测试"><a href="#五、安装成功与否的测试" class="headerlink" title="五、安装成功与否的测试"></a>五、安装成功与否的测试</h4><ol>
 <li>首先在终端输入：</li>
 </ol>
-<figure class="highlight elm"><table><tr><td class="code"><pre><span class="line"><span class="title">python</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python</span><br><span class="line">import cv2</span><br></pre></td></tr></table></figure>
 <p>如果没有提示任何错误，接下来用HOG特征的提取代码做一下测试：</p>
 <ol start="2">
 <li>HOG特征提取的测试</li>
@@ -396,12 +396,12 @@
 <p><img src="http://blog-009.test.upcdn.net//test.jpg" alt></p>
 <p>将该图片下载并重命名为 “test”，临时放在根目录下。</p>
 <p>HOG特征提取代码：</p>
-<figure class="highlight moonscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> skimage.feature <span class="keyword">import</span> hog</span><br><span class="line"><span class="keyword">from</span> skimage <span class="keyword">import</span> <span class="built_in">io</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">img = cv2.cvtColor(cv2.imread(<span class="string">'/home/suyuan/test.jpg'</span>), cv2.COLOR_BGR2GRAY)</span><br><span class="line"><span class="built_in">print</span>(img.shape)</span><br><span class="line">normalised_blocks, hog_image = hog(img, orientations=<span class="number">9</span>, pixels_per_cell=(<span class="number">8</span>, <span class="number">8</span>), cells_per_block=(<span class="number">2</span>, <span class="number">2</span>), block_norm=<span class="string">'L2-Hys'</span>,visualise=True)</span><br><span class="line"><span class="built_in">io</span>.imshow(hog_image)</span><br><span class="line"><span class="built_in">io</span>.show()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from skimage.feature import hog</span><br><span class="line">from skimage import io</span><br><span class="line">from PIL import Image</span><br><span class="line">import cv2</span><br><span class="line"></span><br><span class="line">img = cv2.cvtColor(cv2.imread(&apos;/home/suyuan/test.jpg&apos;), cv2.COLOR_BGR2GRAY)</span><br><span class="line">print(img.shape)</span><br><span class="line">normalised_blocks, hog_image = hog(img, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2), block_norm=&apos;L2-Hys&apos;,visualise=True)</span><br><span class="line">io.imshow(hog_image)</span><br><span class="line">io.show()</span><br></pre></td></tr></table></figure>
 <p>将该代码复制下来并保存为名为 test 的 .py 格式文件，与测试图片放在同一目录下。</p>
 <p>在终端输入如下的指令进行HOG特征提取所需要的 skimage 库的安装：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install python3-skimage</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install python3-skimage</span><br></pre></td></tr></table></figure>
 <p>安装好skimage库后，在终端运行HOG特征提取代码：</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="keyword">python</span> test.<span class="keyword">py</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python test.py</span><br></pre></td></tr></table></figure>
 <p>此时不出意外的话，会跳出如下一张HOG特征图，说明OpenCV安装成功。</p>
 <p><img src="http://blog-009.test.upcdn.net//cv05.png" alt></p>
 <p>本文的安装方法只能说明照这样安装可以安装成功，并不代表一定得这样安装，OpenCV安装成功与否的测试也可以选择其他较为简单且直观的方法，。</p>
@@ -424,13 +424,13 @@
     <url>/2019/05/03/%C2%96Ubuntu18-04%E4%B8%8A%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E5%90%AF%E5%8A%A8%E7%9A%84python%E7%89%88%E6%9C%AC/</url>
     <content><![CDATA[<p>Ubuntu18.04中默认安装了两个 Python 版本：Python 2.7.15 和 Python 3.6.7 ，在命令终端输入 python 时，默认的启动版本是 python 2.7.15 ，通过以下两种方式可以将默认启动的 Python 版本修改为 3.6.7 ：</p>
 <h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><p>直接在终端执行以下两条命令：</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">sudo <span class="keyword">update</span>-alternatives --install /usr/bin/<span class="keyword">python</span> <span class="keyword">python</span> /usr/bin/python2 <span class="number">100</span></span><br><span class="line">sudo <span class="keyword">update</span>-alternatives --install /usr/bin/<span class="keyword">python</span> <span class="keyword">python</span> /usr/bin/<span class="keyword">python3</span> <span class="number">150</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100</span><br><span class="line">sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h4 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h4><p>移除 /usr/bin 目录下指向 Python2 的软链接（该目录下有一个名为 “python” 的文件，移除之）</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">sudo rm <span class="meta-keyword">/usr/</span>bin/python</span><br><span class="line">sudo ln -s <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/bin/</span>python3<span class="number">.6</span> <span class="meta-keyword">/usr/</span>bin/python</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo rm /usr/bin/python</span><br><span class="line">sudo ln -s /usr/local/bin/python3.6 /usr/bin/python</span><br></pre></td></tr></table></figure>
 <p>上述 /usr/local/bin/python3.6 是 Python 3.6.7 的安装位置，执行第二条指令后将会在 /usr/bin 目录下重新生成一个名为 “python” 的文件, 再于终端输入 python 时，将会默认启动Python 3.6 版本。</p>
 <p>Python安装位置的查询方法为：</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">whereis python</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">whereis python</span><br></pre></td></tr></table></figure>
 <p><strong>注意：请勿删除python2.7版本。</strong></p>
 ]]></content>
       <categories>
@@ -445,14 +445,14 @@
     <url>/2019/04/30/Ubuntu18-04%E4%B8%8AWPS2019%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h4 id="一、WPS安装包的下载"><a href="#一、WPS安装包的下载" class="headerlink" title="一、WPS安装包的下载"></a>一、WPS安装包的下载</h4><p>在 <a href="https://www.wps.cn/product/wpslinux/#" target="_blank" rel="noopener">WPS官网</a> 下载 WPS Office 2019 For Linux 的 Deb 格式安装包：</p>
 <p><img src="http://blog-009.test.upcdn.net//wps01.png" alt="图1 安装包下载"></p>
-<h4 id="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："><a href="#二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：" class="headerlink" title="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："></a>二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">sudo</span> <span class="selector-tag">dpkg</span> <span class="selector-tag">-i</span> <span class="selector-tag">wps-office_11</span><span class="selector-class">.1</span><span class="selector-class">.0</span><span class="selector-class">.8392_amd64</span><span class="selector-class">.deb</span></span><br></pre></td></tr></table></figure>
+<h4 id="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："><a href="#二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：" class="headerlink" title="二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装："></a>二、将下载的安装包右键用“软件安装“打开并安装，或者终端输入如下指令进行安装：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo dpkg -i wps-office_11.1.0.8392_amd64.deb</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h4 id="三、修复字体缺失"><a href="#三、修复字体缺失" class="headerlink" title="三、修复字体缺失"></a>三、修复字体缺失</h4><p>安装好的WPS在第一次打开时，会提示系统缺失字体。</p>
 <p>下载 <a href="https://pan.baidu.com/s/1mh0lcbY" target="_blank" rel="noopener">字体包</a> 并解压，运行如下的命令将解压后的字体文件移至 <code>/usr/share/fonts</code> 目录下：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">sudo su</span><br><span class="line">sudo mv <span class="regexp">/home/</span>suyuan<span class="regexp">/下载/</span>wps_symbol_fonts<span class="regexp">/ /u</span>sr<span class="regexp">/share/</span>fonts<span class="regexp">/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo su</span><br><span class="line">sudo mv /home/suyuan/下载/wps_symbol_fonts/ /usr/share/fonts/</span><br></pre></td></tr></table></figure>
 <p>之后运行以下指令生成字体的索引信息以及更新字体的缓存：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/fonts</span><br><span class="line">sudo mkfontscale</span><br><span class="line">sudo mkfontdir</span><br><span class="line">sudo <span class="built_in">fc</span>-cache</span><br></pre></td></tr></table></figure>
-<h4 id="四、Libreoffice-的卸载"><a href="#四、Libreoffice-的卸载" class="headerlink" title="四、Libreoffice 的卸载"></a>四、Libreoffice 的卸载</h4><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> <span class="builtin-name">remove</span> libreoffice-common</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd /usr/share/fonts</span><br><span class="line">sudo mkfontscale</span><br><span class="line">sudo mkfontdir</span><br><span class="line">sudo fc-cache</span><br></pre></td></tr></table></figure>
+<h4 id="四、Libreoffice-的卸载"><a href="#四、Libreoffice-的卸载" class="headerlink" title="四、Libreoffice 的卸载"></a>四、Libreoffice 的卸载</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common</span><br></pre></td></tr></table></figure>
 <p>或者进入软件管理中心进行卸载。</p>
 ]]></content>
       <categories>
@@ -464,7 +464,7 @@
     <url>/2019/04/30/Ubuntu18-04%E5%85%B3%E6%9C%BA%E5%8D%A1%E6%AD%BB%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>联想拯救者R720因为带有独立显卡，在安装Win10/Ubuntu18.04双系统时大概率上会遇到Ubuntu系统关机或者关机重启电脑时就卡死的情况。解决方法如下：</p>
 <p>在终端输入如下命令：</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">software-properties-gtk</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">software-properties-gtk</span><br></pre></td></tr></table></figure>
 <p>会弹出如下的 “软件和更新” 窗口：</p>
 <a id="more"></a> 
 <p><img src="http://blog-009.test.upcdn.net//$001.png" alt></p>
@@ -479,24 +479,24 @@
     <url>/2019/04/30/Ubuntu18-04%E4%B8%8AGithub%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<p>git 安装前，需先进行 Github 账号的注册。</p>
 <h4 id="一、Git-的安装"><a href="#一、Git-的安装" class="headerlink" title="一、Git 的安装"></a>一、Git 的安装</h4><p>在 Ubuntu 命令终端输入如下指令进行 git 的安装：</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">sudo apt <span class="keyword">install</span> git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
 <p>根据提示输入管理员密码，之后询问是否安装，输入 “y” 即可。</p>
 <a id="more"></a>
 <p><img src="http://blog-009.test.upcdn.net//gitaz01.png" alt="图1 git 的安装"></p>
 <p> 接下来进行用户名和密码的配置</p>
 <p>在命令终端依次输入如下的指令：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"此处填入注册的github用户名"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">"此处填入注册github时的邮箱"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;此处填入注册的github用户名&quot;</span><br><span class="line">git config --global user.email &quot;此处填入注册github时的邮箱&quot;</span><br></pre></td></tr></table></figure>
 <p>user.name 后边填入注册的 github 用户名；user.email 后边填入注册 github 时的邮箱。</p>
 <p>再次输入</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--list</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 <p>将会显示注册 github 时的用户名和邮箱地址。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz02.png" alt="图2 用户名和密码的配置"></p>
-<h4 id="二、SSH-Keys-的添加"><a href="#二、SSH-Keys-的添加" class="headerlink" title="二、SSH Keys 的添加"></a>二、SSH Keys 的添加</h4><figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"注册邮箱"</span>  <span class="meta"># 此处填入注册邮箱</span></span><br></pre></td></tr></table></figure>
+<h4 id="二、SSH-Keys-的添加"><a href="#二、SSH-Keys-的添加" class="headerlink" title="二、SSH Keys 的添加"></a>二、SSH Keys 的添加</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;注册邮箱&quot;  # 此处填入注册邮箱</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz03.png" alt="图3 SSH Keys的生成"></p>
 <p>上述指令执行过程中连续回车即可，key 的默认保存位置为 /.ssh 目录，接下来转到该目录下，并输入如下的指令：</p>
-<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">/home/suyuan/.ssh</span></span><br><span class="line"><span class="keyword">ls</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd /home/suyuan/.ssh</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
 <p>会出现 id_rsa  id_rsa.pub , 接着输入：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">cat</span> <span class="selector-tag">id_rsa</span><span class="selector-class">.pub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>将会生成所需的一串公钥：</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz04.png" alt="图4 公钥"></p>
 <p>将该公钥进行备份，接下来登陆自己的 github 账号，点击自己头像处的小三角，在下拉菜单中找到 “Settings” ，进去后选择 “SSH and GPG keys” 这一项，之后点击 “New SSH key” 新建一个 SSH key。</p>
@@ -504,19 +504,19 @@
 <p>在 “ Title ” 处随意填写一个名称；</p>
 <p>在 “ Key ” 处，将刚才生成的一串公钥复制进去并保存。</p>
 <p>返回根目录，输入如下指令测试密钥是否配置成功</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">cd</span> /                       <span class="comment"># 返回根目录</span></span><br><span class="line">ssh -T git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd /                       # 返回根目录</span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>出现 “ You’ve successfully authenticated, but GitHub does not provide shell access. ” 等字样时，说明配置成功。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz06.png" alt="图6 密钥配置成功与否的验证"></p>
 <h4 id="三、远程仓库的创建"><a href="#三、远程仓库的创建" class="headerlink" title="三、远程仓库的创建"></a>三、远程仓库的创建</h4><p>点击自己 Github 头像左边的 “+” ，选择 “New Repository” 新建一个远程仓库，创建完成后，会生成一个如下所示的网页，HTTPS SSH 后面的那个网址保存下来以备创建本地仓库时用。</p>
 <p><img src="http://blog-009.test.upcdn.net//gitaz07.png" alt="图7 远程仓库的创建"></p>
 <h4 id="四、本地仓库的创建"><a href="#四、本地仓库的创建" class="headerlink" title="四、本地仓库的创建"></a>四、本地仓库的创建</h4><p>在命令终端输入如下指令进行远程仓库的克隆和初始化：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> <span class="string">"此处复制进上述保存的那个网址"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone &quot;此处复制进上述保存的那个网址&quot;</span><br></pre></td></tr></table></figure>
 <p>此时会在根目录下生成一个与远程仓库同名的文件夹，例如我所创建的仓库名称为 “github” 。</p>
 <p>转至所生成的本地仓库目录下，将仓库初始化：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> “本地仓库名”</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd “本地仓库名”</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz08.png" alt="图8 本地仓库初始化"></p>
 <h4 id="五、将本地仓库文件推送至远程仓库"><a href="#五、将本地仓库文件推送至远程仓库" class="headerlink" title="五、将本地仓库文件推送至远程仓库"></a>五、将本地仓库文件推送至远程仓库</h4><p>在本地仓库新建一个名为 “ceshi” 的文本，执行如下的指令将该文件即可推送至远程仓库：</p>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> ceshi</span></span><br><span class="line">git commit -m <span class="string">"first commit"</span>  <span class="comment"># 提交说明</span></span><br><span class="line">git remote <span class="keyword">add</span><span class="bash"> origin https: https//github.com/Xavier01/github.git <span class="comment"># 仓库地址</span></span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add ceshi</span><br><span class="line">git commit -m &quot;first commit&quot;  # 提交说明</span><br><span class="line">git remote add origin https: https//github.com/Xavier01/github.git # 仓库地址</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 <p><img src="http://blog-009.test.upcdn.net//gitaz09.png" alt="图9 本地文件的提交"></p>
 <p>登陆Github 账号，在所创建的仓库中，即可看到从本地提交的文件及其信息。</p>
 ]]></content>
@@ -529,10 +529,10 @@
     <url>/2019/04/24/Hexo-%E7%BD%91%E7%AB%99%E5%88%86%E6%9E%90%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p>为了统计博客的访问量等信息，需要安装并配置相关网站分析插件，ICRUS主题提供了四种分析插件：谷歌分析（Google Analytics）、百度分析(Baidu Analytics)、Hotjar 以及不蒜子(Busuanzi)。</p>
 <p><strong>不蒜子：两行代码搞定计数</strong></p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span>本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>由于不蒜子可永久免费使用，且已经在ICRAUS中配置好了，只需打开 “使用开关” 即可，具体方法为在主题的配置文件 <code>_config.yml</code> 中找到 “busuanzi” 关键字，然后将其后默认的 “false” 修改为 “true” ，保存并重新部署即会在博客底部显示访客量，之后也可随时关闭统计。</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta"># https:<span class="comment">//busuanzi.ibruce.info     </span></span></span><br><span class="line"><span class="symbol">busuanzi:</span> ture                        <span class="meta"># 修改此项</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># https://busuanzi.ibruce.info     </span><br><span class="line">busuanzi: ture                        # 修改此项</span><br></pre></td></tr></table></figure>
 <p><strong>更多信息可参考：</strong></p>
 <ol>
 <li>不蒜子官网: <a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></li>
@@ -553,11 +553,11 @@
     <content><![CDATA[<p>ICARUS主题不经配置的 “About” 菜单在访问时，会转至 404 页面，为了在 “About” 链接页面中添加个人简介及相关信息时，应进行相应的配置！</p>
 <a id="more"></a>
 <h2 id="一：ICARUS主题配置文件的更改"><a href="#一：ICARUS主题配置文件的更改" class="headerlink" title="一：ICARUS主题配置文件的更改"></a>一：ICARUS主题配置文件的更改</h2><p>在ICARUS主题的配置文件 _config.yml 文件中找到关键字 “menu” ，按如下方式修改并保存：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line">menu</span><br><span class="line"><span class="symbol">	Home:</span> /</span><br><span class="line"><span class="symbol">	Archives:</span> /archives</span><br><span class="line"><span class="symbol">	Categories:</span> /categories</span><br><span class="line"><span class="symbol">	Tags:</span> /tags</span><br><span class="line"><span class="symbol">	About:</span> /about               <span class="meta"># 与该项修改一致即可</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu</span><br><span class="line">	Home: /</span><br><span class="line">	Archives: /archives</span><br><span class="line">	Categories: /categories</span><br><span class="line">	Tags: /tags</span><br><span class="line">	About: /about               # 与该项修改一致即可</span><br></pre></td></tr></table></figure>
 <h2 id="二：-“About”-页面的创建"><a href="#二：-“About”-页面的创建" class="headerlink" title="二： “About” 页面的创建"></a>二： “About” 页面的创建</h2><p>将 Git Bash 定位至 Hexo 配置文件所在目录下，运行如下指令：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">hexo new<span class="built_in"> page </span><span class="string">"about"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br></pre></td></tr></table></figure>
 <p>此时会在 “source” 文件夹中生成一个名为 “about” 的文件夹，打开该文件夹中的 index.md 文件并添加自己需要展示的个人介绍等信息，保存后运行如下的指令进行博客的更新部署：</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Hexo</tag>
@@ -571,23 +571,23 @@
 <a id="more"></a>
 <h2 id="一：缩略图（thumbnail）的添加"><a href="#一：缩略图（thumbnail）的添加" class="headerlink" title="一：缩略图（thumbnail）的添加"></a>一：缩略图（thumbnail）的添加</h2><ol>
 <li><p>首先将 ICARUS 主题的配置文件 <code>_config.yml</code> 中的 thumbnail 这一项设置成 “true”：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Article display setting</span></span><br><span class="line"><span class="attr">thumbnail:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Article display setting</span><br><span class="line">thumbnail: true</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在 <code>/Hexo /scaffolds</code> 目录下的 <code>post</code> 文件中添加 thumbnail 这一项：</p>
-<figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line"><span class="built_in">title</span>: &#123;&#123; <span class="built_in">title</span> &#125;&#125;</span><br><span class="line"><span class="built_in">date</span>: &#123;&#123; <span class="built_in">date</span> &#125;&#125;</span><br><span class="line">thumbnail:                  <span class="meta"># 添加该项</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">thumbnail:                  # 添加该项</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>每次创建新的文件后，将要插入的缩略图的链接（URL）填入上述 thumbnail 后面即可。</p>
 </li>
 <li><p>缩略图如果在本地的话，则需要在  <code>/Hexo /source</code> 目录下新建一个名为 <code>gallery</code> 的文件夹，并将缩略图放在该文件夹中，这种情况下缩略图的路径格式为：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">thumbnail：<span class="regexp">/gallery/</span>picturename.jpg</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">thumbnail：/gallery/picturename.jpg</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="二：目录（catalogue）的添加"><a href="#二：目录（catalogue）的添加" class="headerlink" title="二：目录（catalogue）的添加"></a>二：目录（catalogue）的添加</h2><ol>
 <li><p>在 <code>/Hexo /scaffolds</code> 目录下的 <code>post</code> 文件中添加 toc 这一项：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">thumbnail:</span> </span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                    <span class="comment"># 添加该项</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">thumbnail: </span><br><span class="line">toc: true                    # 添加该项</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在 ICARUS 主题的配置文件<code>_config.yml</code> 中添加 toc 控件：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">widgets:</span></span><br><span class="line">    -</span><br><span class="line"><span class="symbol">        type:</span> toc</span><br><span class="line"><span class="symbol">        position:</span> left</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">widgets:</span><br><span class="line">    -</span><br><span class="line">        type: toc</span><br><span class="line">        position: left</span><br></pre></td></tr></table></figure>
 <p>一般来说 toc 控件在ICARUS 主题的 <code>_config.yml</code> 配置文件中就已经存在的，已经有的情况下，就不需要再添加。 </p>
 </li>
 </ol>
@@ -705,7 +705,7 @@
 <p>第二条记录值中的 “yourname.github.io” 为自己的博客地址，两条记录添加完之后，经过一定的时间域名解析即可完成。</p>
 <h2 id="三：域名的绑定"><a href="#三：域名的绑定" class="headerlink" title="三：域名的绑定"></a>三：域名的绑定</h2><p>域名购买并解析成功后，在 <code>/source</code> 文件目录下新建一个不带后缀的名为 “CNAME” 的空白文件，以记事本打开后，输入购买的域名。例如所买的域名为 “123.com” ,则输入 “123.com” 即可，不用添加任何前缀。该文件保证了 “<a href="www.123.com">www.123.com</a>”、 “123.com”、 “yourname.github.io” 三种方式都能正常访问博客地址。</p>
 <p>无后缀文件的创建可在 linux系统下用如下指令进行创建：</p>
-<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="params">---</span> <span class="keyword">cd</span> source                 <span class="comment"># 先转到 /source 路径下</span></span><br><span class="line"><span class="params">---</span> touch CNAME               <span class="comment"># CNAME 文件的创建</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">--- cd source                 # 先转到 /source 路径下</span><br><span class="line">--- touch CNAME               # CNAME 文件的创建</span><br></pre></td></tr></table></figure>
 <p>“CNAME” 文件创建并修改完成后，经过博客的重新提交和部署即可用购买的域名进行访问。</p>
 <p>如果无法进行访问，则有以下可能：</p>
 <p>1.解析没有完成，一般需要在解析十分钟后域名才能生效，如果期间对记录值进行了修改，  也需要等一段时间。</p>
@@ -738,15 +738,15 @@
 <a id="more"></a>
 <h2 id="方法一：文章资源文件夹"><a href="#方法一：文章资源文件夹" class="headerlink" title="方法一：文章资源文件夹"></a>方法一：文章资源文件夹</h2><p>将 <code>\Hexo</code> 目录下的 <code>_config.yml</code> 配置文件中的 “post_asset_folder: false” 改为 “post_asset_folder: true”，再执行文章创建命令 <code>$ hexo new &quot;article title&quot;</code>  时，将会在  <code>\ _posts</code> 目录下生成一个与所创建的文章标题同名的文件夹。</p>
 <p>将要插入的图片放在生成的该文件夹内，引用时，首先将图片拖入文中，然后对 Markdown 中图片的引用格式作如下的修改：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图题</span>](<span class="link">文章标题\picturename.png</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图题](文章标题\picturename.png)</span><br></pre></td></tr></table></figure>
 <p>其中 “picture name” 为所引用图片的名称。</p>
 <p>通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确，为了解决这个问题，可以采用如下的方法进行图片的引用：</p>
 <h2 id="方法二：相对路径引用的标签插件"><a href="#方法二：相对路径引用的标签插件" class="headerlink" title="方法二：相对路径引用的标签插件"></a>方法二：相对路径引用的标签插件</h2><p>标签插件的下载：</p>
-<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-<span class="built_in">image</span> --<span class="built_in">save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 <p>或者通过：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">npm install https:<span class="regexp">//gi</span>thub.com<span class="regexp">/CodeFalling/</span>hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
 <p>插件下载成功后，将要插入的图片放在文章资源文件夹中，文章中图片的引用格式如下：</p>
-<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">asset_img</span> picturename.jpg 图题 %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img picturename.jpg 图题 %&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Hexo</tag>
@@ -758,15 +758,15 @@
     <content><![CDATA[<p>用 Hexo 框架结合 Github pages 搭建好博客平台后，接下来便是博客文章的创建和发布，本文主要对博客文章的创建和发布方法做了详细介绍。</p>
 <a id="more"></a>
 <h2 id="1-文章标题的创建"><a href="#1-文章标题的创建" class="headerlink" title="1.文章标题的创建"></a>1.文章标题的创建</h2><p>将Git Bash定位在 E:\Hexo_blog\Hexo 目录下，并运行如下指令创建一个带有标题的新空白文件：</p>
-<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"article title"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;article title&quot;</span><br></pre></td></tr></table></figure>
 <p>其中，E:\Hexo_blog 为 Hexo 的安装目录，E:\Hexo_blog\Hexo 为 Hexo 的初始化目录，“article title” 为博客文章的标题。</p>
 <h2 id="2-文章信息的完善"><a href="#2-文章信息的完善" class="headerlink" title="2.文章信息的完善"></a>2.文章信息的完善</h2><p>执行上述指令后，将会在 E:\Hexo_blog\Hexo\source_posts 文件目录下生成一个名为 “article title” 格式为 .md 的文档，用 Markdown 编辑器进行所创建文档的编辑，完善 “tags”，“categories” 等信息，格式如下：</p>
-<figure class="highlight subunit"><table><tr><td class="code"><pre><span class="line">title: "article title"                # 文章标题</span><br><span class="line">date: 2019<span class="string">-04</span><span class="string">-10</span> 10:48:14             # 文章创建时间</span><br><span class="line"><span class="keyword">tags:</span> [ubuntu,windows]                # 标签信息</span><br><span class="line">categories: operate system            # 分类信息</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: &quot;article title&quot;                # 文章标题</span><br><span class="line">date: 2019-04-10 10:48:14             # 文章创建时间</span><br><span class="line">tags: [ubuntu,windows]                # 标签信息</span><br><span class="line">categories: operate system            # 分类信息</span><br></pre></td></tr></table></figure>
 <p>“tags”、“categories” 等项可以在/Hexo/scaffolds目录下的“post”文件中作相应的修改，可以根据实际需求添加该项或者删除该项。</p>
 <h2 id="3-文章的预览和发布"><a href="#3-文章的预览和发布" class="headerlink" title="3.文章的预览和发布"></a>3.文章的预览和发布</h2><p>将编辑完的文章保存，运行如下指令即可进行文章样式的预览和将本地文章发布到博客网站：</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo</span> g             <span class="comment"># 生成静态文件</span></span><br><span class="line">hexo s             <span class="comment"># 预览</span></span><br><span class="line">hexo d             <span class="comment"># 部署</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g             # 生成静态文件</span><br><span class="line">hexo s             # 预览</span><br><span class="line">hexo d             # 部署</span><br></pre></td></tr></table></figure>
 <p>运行 <code>hexo s</code> 进行预览时，如果用 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 访问出现加载无效的问题，则有可能默认端口被占用，换个端口即可，比如将4000换为4001，端口切换指令如下：</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">hexo s -<span class="selector-tag">p</span> <span class="number">4001</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s -p 4001</span><br></pre></td></tr></table></figure>
 <h2 id="4-博客文章的访问"><a href="#4-博客文章的访问" class="headerlink" title="4.博客文章的访问"></a>4.博客文章的访问</h2><p>文章部署完成后，即可通过搜索引擎访问 “<a href="https://suyuann.github.io”" target="_blank" rel="noopener">https://suyuann.github.io”</a>  进行新发布文章的查询。</p>
 ]]></content>
       <categories>
@@ -782,22 +782,22 @@
     <content><![CDATA[<p>Hexo 是一个快速、简洁而且高效的博客框架，本文主要对 Hexo 的常用指令含义和用法作简要说明。</p>
 <a id="more"></a>
 <p> <img src="/2019/04/12/Hexo-常用指令/hexo01.png" alt="Hexo主要指令"></p>
-<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo clean</span></span><br></pre></td></tr></table></figure>
+<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 <p>清除缓存文件（<code>db.json</code>）和已经生成的静态文件（<code>public</code>）</p>
 <p>当 Hexo 更改新的主题后或者创建新的文章后，有时候会出现即使提交部署博客页面仍不见更新的情况，此时便可能需要执行此命令。</p>
-<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"article title"</span></span><br></pre></td></tr></table></figure>
+<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;article title&quot;</span><br></pre></td></tr></table></figure>
 <p>创建一篇名为 “article title” 的博客。如果标题包含空格，则需要用双引号括起来。</p>
-<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br></pre></td></tr></table></figure>
+<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 <p>生成静态网页。</p>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo s</span></span><br></pre></td></tr></table></figure>
+<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>启动服务器。对 “generate” 生成的静态网页样式进行预览。</p>
-<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
+<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>网站部署，部署 “generate” 生成的静态网页。</p>
-<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure>
+<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 <p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo默认在目前的文件夹建立网站。</p>
-<h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo migrate</span></span><br></pre></td></tr></table></figure>
+<h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo migrate</span><br></pre></td></tr></table></figure>
 <p>从其他博客系统 <a href="https://hexo.io/zh-cn/docs/migration" target="_blank" rel="noopener">迁移内容</a>。</p>
-<h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">hexo <span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+<h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
 <p>查看 Hexo 的版本信息。</p>
 <blockquote>
 <p>参考文献：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo文档</a>  </p>

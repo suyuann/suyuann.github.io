@@ -100,7 +100,7 @@
       <h1 class="site-title">Notebook</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">stay hungry,stay foolish.</p>
+      <p class="site-subtitle" itemprop="description">Stay hungry,Stay foolish.</p>
   </div>
 
   <div class="site-nav-right">
@@ -216,23 +216,23 @@
 <a id="more"></a>
 <h2 id="一：缩略图（thumbnail）的添加"><a href="#一：缩略图（thumbnail）的添加" class="headerlink" title="一：缩略图（thumbnail）的添加"></a>一：缩略图（thumbnail）的添加</h2><ol>
 <li><p>首先将 ICARUS 主题的配置文件 <code>_config.yml</code> 中的 thumbnail 这一项设置成 “true”：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Article display setting</span></span><br><span class="line"><span class="attr">thumbnail:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Article display setting</span><br><span class="line">thumbnail: true</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在 <code>/Hexo /scaffolds</code> 目录下的 <code>post</code> 文件中添加 thumbnail 这一项：</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">title</span>: &#123;&#123; <span class="built_in">title</span> &#125;&#125;</span><br><span class="line"><span class="built_in">date</span>: &#123;&#123; <span class="built_in">date</span> &#125;&#125;</span><br><span class="line">thumbnail:                  <span class="meta"># 添加该项</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">thumbnail:                  # 添加该项</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>每次创建新的文件后，将要插入的缩略图的链接（URL）填入上述 thumbnail 后面即可。</p>
 </li>
 <li><p>缩略图如果在本地的话，则需要在  <code>/Hexo /source</code> 目录下新建一个名为 <code>gallery</code> 的文件夹，并将缩略图放在该文件夹中，这种情况下缩略图的路径格式为：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thumbnail：<span class="regexp">/gallery/</span>picturename.jpg</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thumbnail：/gallery/picturename.jpg</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="二：目录（catalogue）的添加"><a href="#二：目录（catalogue）的添加" class="headerlink" title="二：目录（catalogue）的添加"></a>二：目录（catalogue）的添加</h2><ol>
 <li><p>在 <code>/Hexo /scaffolds</code> 目录下的 <code>post</code> 文件中添加 toc 这一项：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">thumbnail:</span> </span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                    <span class="comment"># 添加该项</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">thumbnail: </span><br><span class="line">toc: true                    # 添加该项</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在 ICARUS 主题的配置文件<code>_config.yml</code> 中添加 toc 控件：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">widgets:</span></span><br><span class="line">    -</span><br><span class="line"><span class="symbol">        type:</span> toc</span><br><span class="line"><span class="symbol">        position:</span> left</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">widgets:</span><br><span class="line">    -</span><br><span class="line">        type: toc</span><br><span class="line">        position: left</span><br></pre></td></tr></table></figure>
 <p>一般来说 toc 控件在ICARUS 主题的 <code>_config.yml</code> 配置文件中就已经存在的，已经有的情况下，就不需要再添加。 </p>
 </li>
 </ol>

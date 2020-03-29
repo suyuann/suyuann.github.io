@@ -102,7 +102,7 @@
       <h1 class="site-title">Notebook</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">stay hungry,stay foolish.</p>
+      <p class="site-subtitle" itemprop="description">Stay hungry,Stay foolish.</p>
   </div>
 
   <div class="site-nav-right">
@@ -216,22 +216,22 @@
         <p>Hexo 是一个快速、简洁而且高效的博客框架，本文主要对 Hexo 的常用指令含义和用法作简要说明。</p>
 <a id="more"></a>
 <p> <img src="/2019/04/12/Hexo-常用指令/hexo01.png" alt="Hexo主要指令"></p>
-<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo clean</span></span><br></pre></td></tr></table></figure>
+<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 <p>清除缓存文件（<code>db.json</code>）和已经生成的静态文件（<code>public</code>）</p>
 <p>当 Hexo 更改新的主题后或者创建新的文章后，有时候会出现即使提交部署博客页面仍不见更新的情况，此时便可能需要执行此命令。</p>
-<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"article title"</span></span><br></pre></td></tr></table></figure>
+<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;article title&quot;</span><br></pre></td></tr></table></figure>
 <p>创建一篇名为 “article title” 的博客。如果标题包含空格，则需要用双引号括起来。</p>
-<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br></pre></td></tr></table></figure>
+<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 <p>生成静态网页。</p>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo s</span></span><br></pre></td></tr></table></figure>
+<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>启动服务器。对 “generate” 生成的静态网页样式进行预览。</p>
-<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
+<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>网站部署，部署 “generate” 生成的静态网页。</p>
-<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure>
+<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 <p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo默认在目前的文件夹建立网站。</p>
-<h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo migrate</span></span><br></pre></td></tr></table></figure>
+<h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo migrate</span><br></pre></td></tr></table></figure>
 <p>从其他博客系统 <a href="https://hexo.io/zh-cn/docs/migration" target="_blank" rel="noopener">迁移内容</a>。</p>
-<h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+<h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
 <p>查看 Hexo 的版本信息。</p>
 <blockquote>
 <p>参考文献：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo文档</a>  </p>

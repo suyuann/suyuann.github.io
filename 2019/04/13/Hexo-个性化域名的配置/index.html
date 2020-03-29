@@ -104,7 +104,7 @@
       <h1 class="site-title">Notebook</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">stay hungry,stay foolish.</p>
+      <p class="site-subtitle" itemprop="description">Stay hungry,Stay foolish.</p>
   </div>
 
   <div class="site-nav-right">
@@ -254,7 +254,7 @@
 <p>第二条记录值中的 “yourname.github.io” 为自己的博客地址，两条记录添加完之后，经过一定的时间域名解析即可完成。</p>
 <h2 id="三：域名的绑定"><a href="#三：域名的绑定" class="headerlink" title="三：域名的绑定"></a>三：域名的绑定</h2><p>域名购买并解析成功后，在 <code>/source</code> 文件目录下新建一个不带后缀的名为 “CNAME” 的空白文件，以记事本打开后，输入购买的域名。例如所买的域名为 “123.com” ,则输入 “123.com” 即可，不用添加任何前缀。该文件保证了 “<a href="www.123.com">www.123.com</a>”、 “123.com”、 “yourname.github.io” 三种方式都能正常访问博客地址。</p>
 <p>无后缀文件的创建可在 linux系统下用如下指令进行创建：</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">---</span> <span class="keyword">cd</span> source                 <span class="comment"># 先转到 /source 路径下</span></span><br><span class="line"><span class="params">---</span> touch CNAME               <span class="comment"># CNAME 文件的创建</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--- cd source                 # 先转到 /source 路径下</span><br><span class="line">--- touch CNAME               # CNAME 文件的创建</span><br></pre></td></tr></table></figure>
 <p>“CNAME” 文件创建并修改完成后，经过博客的重新提交和部署即可用购买的域名进行访问。</p>
 <p>如果无法进行访问，则有以下可能：</p>
 <p>1.解析没有完成，一般需要在解析十分钟后域名才能生效，如果期间对记录值进行了修改，  也需要等一段时间。</p>

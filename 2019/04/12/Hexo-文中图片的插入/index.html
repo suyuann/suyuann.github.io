@@ -100,7 +100,7 @@
       <h1 class="site-title">Notebook</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">stay hungry,stay foolish.</p>
+      <p class="site-subtitle" itemprop="description">Stay hungry,Stay foolish.</p>
   </div>
 
   <div class="site-nav-right">
@@ -207,15 +207,15 @@
 <a id="more"></a>
 <h2 id="方法一：文章资源文件夹"><a href="#方法一：文章资源文件夹" class="headerlink" title="方法一：文章资源文件夹"></a>方法一：文章资源文件夹</h2><p>将 <code>\Hexo</code> 目录下的 <code>_config.yml</code> 配置文件中的 “post_asset_folder: false” 改为 “post_asset_folder: true”，再执行文章创建命令 <code>$ hexo new &quot;article title&quot;</code>  时，将会在  <code>\ _posts</code> 目录下生成一个与所创建的文章标题同名的文件夹。</p>
 <p>将要插入的图片放在生成的该文件夹内，引用时，首先将图片拖入文中，然后对 Markdown 中图片的引用格式作如下的修改：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图题</span>](<span class="link">文章标题\picturename.png</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图题](文章标题\picturename.png)</span><br></pre></td></tr></table></figure>
 <p>其中 “picture name” 为所引用图片的名称。</p>
 <p>通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确，为了解决这个问题，可以采用如下的方法进行图片的引用：</p>
 <h2 id="方法二：相对路径引用的标签插件"><a href="#方法二：相对路径引用的标签插件" class="headerlink" title="方法二：相对路径引用的标签插件"></a>方法二：相对路径引用的标签插件</h2><p>标签插件的下载：</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-<span class="built_in">image</span> --<span class="built_in">save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 <p>或者通过：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https:<span class="regexp">//gi</span>thub.com<span class="regexp">/CodeFalling/</span>hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image -- save</span><br></pre></td></tr></table></figure>
 <p>插件下载成功后，将要插入的图片放在文章资源文件夹中，文章中图片的引用格式如下：</p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">asset_img</span> picturename.jpg 图题 %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img picturename.jpg 图题 %&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
