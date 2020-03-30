@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta property="og:type" content="website">
@@ -114,6 +114,11 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
@@ -122,6 +127,11 @@
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
   </ul>
@@ -149,82 +159,6 @@
             
 
   <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/30/经验风险最小化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Xavier">
-      <meta itemprop="description" content>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Notebook">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/30/经验风险最小化/" class="post-title-link" itemprop="url">经验风险最小化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-03-30 21:10:23 / Modified: 21:11:31" itemprop="dateCreated datePublished" datetime="2020-03-30T21:10:23+08:00">2020-03-30</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="经验风险最小化和结构风险最小化"><a href="#经验风险最小化和结构风险最小化" class="headerlink" title="经验风险最小化和结构风险最小化"></a>经验风险最小化和结构风险最小化</h2><p>Empirirical Risk Minimization and Structure Risk Minimization</p>
-<hr>
-<script type="math/tex; mode=display">
-R_{erm}(f)=\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i)) \tag{1}</script><p>经验风险是模型关于训练样本集的平均损失，ERM策略认为，经验风险最小的模型即是最优的模型，根据这一策略，按照ERM求解最优模型就是求解最优化问题。</p>
-<script type="math/tex; mode=display">
-\min_{f\in F}\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i)) \tag{2}</script><p>在小样本情况下，ERM学习未必很好，容易产生过拟合问题。而结构风险最小化即是为了解决此问题提出的。</p>
-<hr>
-<p>结构风险最小化注重于对风险上界的最小化，而不是单纯的使经验风险最小化，SRM在ERN的基础上加上了表示模型复杂度的正则化项，在假设空间，损失函数以及训练集确定的情况下，结构风险定义如下：</p>
-<script type="math/tex; mode=display">
-R_{srm}(f)=\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i)) \tag{3}+\lambda J(f)</script><p>上式中：</p>
-<p>$L(y_i,f(x_i))$ 表示损失函数；</p>
-<p>$J(f)$ 为模型的复杂度，模型$f$越复杂，复杂度$J(f)$就越大​，也就是说复杂度表示了对复杂模型的惩罚（从而使得模型趋于精简）。</p>
-<p>SRM由两部分组成：经验风险和VC置信范围，VC维反映了函数集的学习能力，VC维越大则学习机器越复杂。SRM模型对训练数据与未知的测试数据都有较好的预测。</p>
-<p>结构风险最小化策略认为结构风险最小的模型是最优的模型，所以求解模型就是求解最优化问题：</p>
-<script type="math/tex; mode=display">
-\min_{f\in F}\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i))+\lambda J(f) \tag{4}</script><hr>
-<p>人工神经网络，优化目标是基于经验风险最小化，容易陷入局部最优，一般需要大样本的训练来得到较优的结果；</p>
-<p>支持向量机有着严格的理论和数学基础，基于结构风险最小化原则，泛化能力优于前者，算法具有全局最优解，对小样本有着很好的适用性。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
         
   
   
@@ -731,6 +665,81 @@ R_{srm}(f)=\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i)) \tag{3}+\lambda J(f)</script><
   
   
 
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/21/OpenCV-Python-绘图基本操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Xavier">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Notebook">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/06/21/OpenCV-Python-绘图基本操作/" class="post-title-link" itemprop="url">OpenCV-Python 绘图基本操作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-06-21 12:16:55 / Modified: 12:30:22" itemprop="dateCreated datePublished" datetime="2019-06-21T12:16:55+08:00">2019-06-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OpenCV/" itemprop="url" rel="index"><span itemprop="name">OpenCV</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="一、直线的绘制"><a href="#一、直线的绘制" class="headerlink" title="一、直线的绘制"></a><strong>一、直线的绘制</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import cv2 as cv</span><br><span class="line"></span><br><span class="line">img = np.zeros((512,512,3), np.uint8)    # 画布大小512*512，空白</span><br><span class="line"></span><br><span class="line">cv.line(img,(0,0),(511,511),(255,0,0),5) # 第一条直线，宽度5px</span><br><span class="line">cv.line(img,(0,511),(511,0),(0,255,0),5) # 第二条直线 宽度5px</span><br><span class="line"></span><br><span class="line">cv.imshow(&apos;image&apos;, img)</span><br><span class="line"></span><br><span class="line">k = cv.waitKey(0)</span><br><span class="line">if k == 27:</span><br><span class="line">    cv.destroyAllWindows()</span><br><span class="line">elif k == ord(&apos;s&apos;):</span><br><span class="line">    cv.imwrite(&apos;line.png&apos;,img)</span><br><span class="line">    cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/06/21/OpenCV-Python-绘图基本操作/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
   </div>
 
   
@@ -802,7 +811,7 @@ R_{srm}(f)=\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i)) \tag{3}+\lambda J(f)</script><
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -814,6 +823,7 @@ R_{srm}(f)=\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i)) \tag{3}+\lambda J(f)</script><
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
