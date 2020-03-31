@@ -37,7 +37,7 @@
 <meta property="og:image" content="http://blog-009.test.upcdn.net/机器学习/Activation function 3.bmp">
 <meta property="og:image" content="http://blog-009.test.upcdn.net/机器学习/Activation function 4.bmp">
 <meta property="og:image" content="http://blog-009.test.upcdn.net/机器学习/Activation function 5.bmp">
-<meta property="og:updated_time" content="2020-03-31T13:48:07.503Z">
+<meta property="og:updated_time" content="2020-03-31T13:57:20.032Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="激活函数">
 <meta name="twitter:description" content="一：引入激活函数（activation function）用于对输入信息进行非线性变换，然后将变换后的输出信息作为输入信息传给下一层神经元，解决了线性模型表达能力不足的问题（如果没有非线性的激活函数，每一层节点的输入都是上一层输出的线性组合，线性函数容易解决，但是其复杂性有限，无法学习复杂类型的数据，而且无论网络有多少层，输出都是输入的线性组合）。 激活函数使反向传播成为可能，因为激活函数的误差梯">
@@ -208,7 +208,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-31 21:48:07" itemprop="dateModified" datetime="2020-03-31T21:48:07+08:00">2020-03-31</time>
+                <time title="Modified: 2020-03-31 21:57:20" itemprop="dateModified" datetime="2020-03-31T21:57:20+08:00">2020-03-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -244,8 +244,8 @@ y=w_1x_1+w_2x_2+b</script><p>如果将其用于线性不可分的二分类情况
 <p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 7.png" alt="图3 多个单层感知机的组合"></p>
 <p>得到的最终输出为：</p>
 <script type="math/tex; mode=display">
-y=w_{211}(w_{111}x_1+w_{121}x_2+b_{11})\\\\
-+w_{221}(w_{112}x_1+w_{122}x_2+b_{12})\\\\
+y=w_{211}(w_{111}x_1+w_{121}x_2+b_{11})\\
++w_{221}(w_{112}x_1+w_{122}x_2+b_{12})\\
 +w_{231}(w_{113}x_1+w_{123}x_2+b_{13})</script><p>整理上式得到：</p>
 <script type="math/tex; mode=display">
 y=（w_{211}w_{111}+w_{221}w_{112}+w_{231}w_{113}）x_1\\\\
@@ -262,8 +262,8 @@ y=\sigma(a)</script><p>在图（3）的网络中加入非线性的激活函数�
 <p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 9.png" alt="图5 加入激活函数的组合感知机"></p>
 <p>经过计算得到：</p>
 <script type="math/tex; mode=display">
-a_1=w_{111}x_1+w_{121}x_2+b_{11}\\
-a_2=w_{112}x_1+w_{122}x_2+b_{12}\\
+a_1=w_{111}x_1+w_{121}x_2+b_{11}\\\
+a_2=w_{112}x_1+w_{122}x_2+b_{12}\\\
 a_3=w_{113}x_1+w_{123}x_2+b_{13}</script><p>网络最终的输出为：</p>
 <script type="math/tex; mode=display">
 y=\sigma[(w_{211}\sigma(a_1))+(w_{221}\sigma(a_2))+(w_{231}\sigma(a_3))]</script><p>非线性激活函数的加入，解决了线性模型不能解决的问题。</p>
