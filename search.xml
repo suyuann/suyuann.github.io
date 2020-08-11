@@ -7,34 +7,34 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note class_name %&#125; Content &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 <p>以下效果的 class_name 分别为：<strong>default</strong>、<strong>primary</strong>、<strong>success</strong>、<strong>info</strong>、<strong>warning</strong>、<strong>danger</strong>。</p>
 <p>样式指令及样式效果如下：</p>
-<p>>&gt;&gt; <strong>default</strong></p>
+<p><strong>default</strong></p>
 <div class="note dafault">
             <p>Hello World </p>
           </div>
 
-\>>> **primary**
+**primary**
 
 <div class="note primary">
             <p>Hello World </p>
           </div>
-<p>>&gt;&gt; <strong>success</strong></p>
+<p><strong>success</strong></p>
 <div class="note success">
             <p>Hello World </p>
           </div>
 
 <a id="more"></a>
 
-\>>> **info**
+**info**
 
 <div class="note info">
             <p>Hello World </p>
           </div>
-<p>>&gt;&gt; <strong>warning</strong></p>
+<p><strong>warning</strong></p>
 <div class="note warning">
             <p>Hello World </p>
           </div>
 
-\>>> **danger**
+**danger**
 
 <div class="note danger">
             <p>Hello World </p>
