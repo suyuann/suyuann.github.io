@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Just Test</title>
-    <url>/2020/08/11/Just-Test/</url>
-    <content><![CDATA[<h4 id><a href="#" class="headerlink" title></a><div class="note warning">
-            <p>This is a title  (md partial supported) </p>
+    <title>Hexo-特殊样式的生成</title>
+    <url>/2020/08/11/Hexo-%E7%89%B9%E6%AE%8A%E6%A0%B7%E5%BC%8F%E7%9A%84%E7%94%9F%E6%88%90/</url>
+    <content><![CDATA[<p>样式指令及样式效果如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note dafault %&#125; Hello World &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note dafault">
+            <p>Hello World </p>
           </div>
 
+undefined
 
+<div class="note primary">
+            <p>Hello World </p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125; Hello World &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note success">
+            <p>Hello World </p>
+          </div>
 
-<div class="note class_name">
-            <p>Content (md partial supported) </p>
-          </div></h4>]]></content>
+undefined
+
+<div class="note info">
+            <p>Hello World </p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125; Hello World &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning">
+            <p>Hello World </p>
+          </div>
+
+undefined
+
+<div class="note danger">
+            <p>Hello World </p>
+          </div>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>神经网络</title>
@@ -461,7 +490,7 @@ ELU=\begin{cases}x\  \ x>0 \\\\ \alpha(e^x-1)\  \ others \end{cases}</script><p>
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu18.04上修改默认启动的python版本</title>
+    <title>Ubuntu18.04上修改默认启动的python版本</title>
     <url>/2019/05/03/%C2%96Ubuntu18-04%E4%B8%8A%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E5%90%AF%E5%8A%A8%E7%9A%84python%E7%89%88%E6%9C%AC/</url>
     <content><![CDATA[<p>Ubuntu18.04中默认安装了两个 Python 版本：Python 2.7.15 和 Python 3.6.7 ，在命令终端输入 python 时，默认的启动版本是 python 2.7.15 ，通过以下两种方式可以将默认启动的 Python 版本修改为 3.6.7 ：</p>
 <h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><p>直接在终端执行以下两条命令：</p>
