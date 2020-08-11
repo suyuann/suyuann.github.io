@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Just Test</title>
+    <url>/2020/08/11/Just-Test/</url>
+    <content><![CDATA[<h4 id><a href="#" class="headerlink" title></a><div class="note warning">
+            <p>This is a title  (md partial supported) </p>
+          </div>
+
+
+
+<div class="note class_name">
+            <p>Content (md partial supported) </p>
+          </div></h4>]]></content>
+  </entry>
+  <entry>
     <title>神经网络</title>
     <url>/2019/06/27/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[]]></content>
@@ -71,13 +84,17 @@ y=w_1x_1+w_2x_2+b</script><p>如果将其用于线性不可分的二分类情况
 <p><img src="http://blog-009.test.upcdn.net/机器学习/Activation function 7.png" alt="图3 多个单层感知机的组合"></p>
 <p>得到的最终输出为：</p>
 <script type="math/tex; mode=display">
-y=w_{211}(w_{111}x_1+w_{121}x_2+b_{11})\\
-+w_{221}(w_{112}x_1+w_{122}x_2+b_{12})\\
-+w_{231}(w_{113}x_1+w_{123}x_2+b_{13})</script><p>整理上式得到：</p>
+\begin{split}
+y &= w_{211}(w_{111}x_1+w_{121}x_2+b_{11})\\
+&+ w_{221}(w_{112}x_1+w_{122}x_2+b_{12})\\
+&+ w_{231}(w_{113}x_1+w_{123}x_2+b_{13})
+\end{split}</script><p>整理上式得到：</p>
 <script type="math/tex; mode=display">
-y=（w_{211}w_{111}+w_{221}w_{112}+w_{231}w_{113}）x_1\\\\
-+(w_{211}w_{121}+w_{221}w_{122}+w_{231}w_{123})x_2\\\\
-+(w_{211}b_{11}+w_{221}b_{12}+w_{231}b_{13})</script><p>从上式可以看出网络的输出结果是类似式单层感知机输出的线性方程，只不过是直线的位置和角度发生了变化而已。</p>
+\begin{split}
+y &=（w_{211}w_{111}+w_{221}w_{112}+w_{231}w_{113}）x_1\\
+&+ (w_{211}w_{121}+w_{221}w_{122}+w_{231}w_{123})x_2\\
+& +(w_{211}b_{11}+w_{221}b_{12}+w_{231}b_{13})
+\end{split}</script><p>从上式可以看出网络的输出结果是类似式单层感知机输出的线性方程，只不过是直线的位置和角度发生了变化而已。</p>
 <p>再继续将网络加深，依然得到类似的结果。也就是说不管神经网络有多少层，它都会像单层网络一样工作，最终只能得到一个线性函数，而这根本不足解决线性不可分乃至更复杂的分类问题。</p>
 <p>正是为了应对这一问题，在神经网络中引入了激活函数，非线性的激活函数使得输入到输出的映射变成非线性，从而能够学习和执行更复杂的任务。</p>
 <p>如下图所示，在网络中添加一个非线性的激活函数：</p>
